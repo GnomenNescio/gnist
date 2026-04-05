@@ -23,4 +23,126 @@
   "toys": "baking supplies",
   "description": "Bake cookies together! Easy and fun. Bonus: you get to eat them!"
 },
+
+  {
+    "title": "Build a LEGO Maze",
+    "location": "Inside",
+    "energy": "Calm",
+    "age": "6+",
+    "toys": "LEGO bricks",
+    "description": "Create a maze with LEGO bricks and use a marble or a small ball to navigate through it!"
+  },
+  {
+    "title": "Kapla Tower Challenge",
+    "location": "Inside",
+    "energy": "Calm",
+    "age": "5+",
+    "toys": "Kapla blocks",
+    "description": "Challenge each other to build the tallest tower you can using only Kapla blocks before it tumbles down!"
+  },
+  {
+    "title": "Magnetic Tile City",
+    "location": "Inside",
+    "energy": "Calm",
+    "age": "4+",
+    "toys": "MagnaTiles",
+    "description": "Build a whole city with magnetic tiles! Add tiny figures or use Brio train toys to enhance the setup."
+  },
+  {
+    "title": "Train Adventure",
+    "location": "Inside",
+    "energy": "Calm",
+    "age": "4+",
+    "toys": "Brio train set",
+    "description": "Set up your wooden train track in a creative new shape and imagine the story of the train's journey. Kids can draw the scenery on paper!"
+  },
+  {
+    "title": "Chalk Obstacle Course",
+    "location": "Outside",
+    "energy": "Active",
+    "age": "3+",
+    "toys": "Chalk",
+    "description": "Draw a course on the pavement with chalk. Include activities like 'jump three times,' 'spin in a circle,' and 'hop like a frog!'"
+  },
+  {
+    "title": "Football Trick Shots",
+    "location": "Outside",
+    "energy": "Active",
+    "age": "5+",
+    "toys": "Football",
+    "description": "Try to hit specific targets in the garden with your football (e.g., knock over cones, land the ball in a bucket)."
+  },
+  {
+    "title": "Backyard Water Fun",
+    "location": "Garden",
+    "energy": "Active",
+    "age": "4+",
+    "toys": "Hose, buckets, cups",
+    "description": "Set up a water play zone with a hose, buckets, and cups for pouring. Let kids experiment with how to fill, spill, and squirt in different ways."
+  },
+  {
+    "title": "DIY Water Painting",
+    "location": "Garden",
+    "energy": "Calm",
+    "age": "3+",
+    "toys": "Water, sponge or paintbrushes",
+    "description": "Give your kids a bucket of water and a paintbrush or sponge, and let them 'paint' the fence, pavement, or garden stones. No mess, all fun!"
+  },
+  {
+    "title": "Miniature Cooking Day",
+    "location": "Inside",
+    "energy": "Calm",
+    "age": "5+",
+    "toys": "Kitchen tools",
+    "description": "Let them help choose and prepare simple recipes, like cookies, sandwiches, or fruit kabobs!"
+  },
+  {
+    "title": "Mud Kitchen Recipes",
+    "location": "Garden",
+    "energy": "Calm",
+    "age": "4+",
+    "toys": "Water, mud, leaves, small bowls",
+    "description": "Set up a 'mud kitchen' to make leafy soup, dirt pies, or grass sandwiches! Let imaginations run wild."
+  },
+  {
+    "title": "Chalk & Water Science",
+    "location": "Garden",
+    "energy": "Calm",
+    "age": "4+",
+    "toys": "Chalk, water spray bottle",
+    "description": "Draw with chalk on the pavement, then spray it with water to watch the colors change and blend. Great mini science experiment!"
+  },
+  {
+    "title": "Bicycle Obstacle Course",
+    "location": "Outside",
+    "energy": "Active",
+    "age": "6+",
+    "toys": "Bicycle, chalk",
+    "description": "Use chalk to mark a bike obstacle course on the pavement, including curves, circles, or places to stop and wave."
+  },
+  {
+    "title": "LEGO Cooking Show",
+    "location": "Inside",
+    "energy": "Calm",
+    "age": "6+",
+    "toys": "LEGO bricks",
+    "description": "Create a pretend kitchen out of LEGO bricks—cook a pretend LEGO pizza or LEGO burger and serve it to each other!"
+  },
+  {
+    "title": "Magnatile Garden Habitat",
+    "location": "Garden",
+    "energy": "Calm",
+    "age": "5+",
+    "toys": "MagnaTiles, natural garden materials",
+    "description": "Build a house or 'habitat' using magnetic tiles and natural materials like leaves, sticks, or small stones."
+  },
+  {
+    "title": "Art from Nature",
+    "location": "Garden",
+    "energy": "Calm",
+    "age": "4+",
+    "toys": "Art supplies",
+    "description": "Collect leaves, flowers, or sticks and use them to create nature-inspired collages with glue on paper."
+  },
 ]
+
