@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gnist: Activity Finder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Gnist: Activity Finder</h1>
+    <p>Find something fun to do with your kids!</p>
+  </header>
+
+  <main>
+    <section id="filters">
+      <h2>Filters</h2>
+      <label for="location">Location:</label>
+      <select id="location">
+        <option value="All">All</option>
+        <option value="Inside">Inside</option>
+        <option value="Outside">Outside</option>
+        <option value="Snow">Snow</option>
+        <option value="Car">Car</option>
+      </select>
+
+      <label for="energy">Energy Level:</label>
+      <select id="energy">
+        <option value="All">All</option>
+        <option value="Calm">Calm</option>
+        <option value="Active">Active</option>
+      </select>
+
+      <button id="generate">Generate Ideas</button>
+    </section>
+
+    <section id="results">
+      <h2>Ideas</h2>
+      <div id="ideas">
+        <p>Select filters and click "Generate Ideas."</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made with ❤️ for busy parents</p>
+  </footer>
+  
+  <script src="script.js"></script>
+</body>
+</html>
