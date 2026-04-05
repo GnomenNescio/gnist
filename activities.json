@@ -16,14 +16,13 @@
     "description": "Use snowballs to knock down plastic bottles as bowling pins!"
   },
   {
-  "title": "Baking cookies",
-  "location": "Inside",
-  "energy": "Calm",
-  "age": "6+",
-  "toys": "baking supplies",
-  "description": "Bake cookies together! Easy and fun. Bonus: you get to eat them!"
-},
-
+    "title": "Baking cookies",
+    "location": "Inside",
+    "energy": "Calm",
+    "age": "6+",
+    "toys": "baking supplies",
+    "description": "Bake cookies together! Easy and fun. Bonus: you get to eat them!"
+  },
   {
     "title": "Build a LEGO Maze",
     "location": "Inside",
@@ -134,15 +133,4 @@
     "energy": "Calm",
     "age": "5+",
     "toys": "MagnaTiles, natural garden materials",
-    "description": "Build a house or 'habitat' using magnetic tiles and natural materials like leaves, sticks, or small stones."
-  },
-  {
-    "title": "Art from Nature",
-    "location": "Garden",
-    "energy": "Calm",
-    "age": "4+",
-    "toys": "Art supplies",
-    "description": "Collect leaves, flowers, or sticks and use them to create nature-inspired collages with glue on paper."
-  },
-]
-
+    "description": "Build a house
