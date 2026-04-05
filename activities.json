@@ -15,4 +15,12 @@
     "toys": "plastic bottles, snowballs",
     "description": "Use snowballs to knock down plastic bottles as bowling pins!"
   }
+  {
+  "title": "Baking cookies",
+  "location": "Inside",
+  "energy": "Calm",
+  "age": "6+",
+  "toys": "baking supplies",
+  "description": "Bake cookies together! Easy and fun. Bonus: you get to eat them!"
+}
 ]
