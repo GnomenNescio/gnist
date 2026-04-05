@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Build a blanket fort",
+    "location": "Inside",
+    "energy": "Calm",
+    "age": "4+",
+    "toys": "blankets, pillows",
+    "description": "Create a cozy fort with your kids using blankets and pillows. Bring in flashlights for extra fun."
+  },
+  {
+    "title": "Snowball Bowling",
+    "location": "Snow",
+    "energy": "Active",
+    "age": "6+",
+    "toys": "plastic bottles, snowballs",
+    "description": "Use snowballs to knock down plastic bottles as bowling pins!"
+  }
+]
