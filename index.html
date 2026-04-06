@@ -7,16 +7,13 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div id="top-bar">
-    <div id="top-bar-header">
-      <h1><span aria-hidden="true">🌟</span> Gnist</h1>
-      <span class="tagline">Activity Finder for Kids</span>
-    </div>
+  <header id="top-bar">
+    <h1>Gnist</h1>
 
-    <section id="filters">
+    <section id="filters" aria-label="Filters">
       <div class="filters-bar">
-        <div class="filter-group">
-          <span class="filter-label">Location</span>
+        <div class="filter-group" role="group" aria-labelledby="location-label">
+          <span class="filter-label" id="location-label">Location</span>
           <div class="checkbox-group">
             <label class="checkbox-label">
               <input type="checkbox" name="location" value="Inside" checked>
@@ -41,10 +38,10 @@
           </div>
         </div>
 
-        <div class="filter-divider"></div>
+        <div class="filter-divider" aria-hidden="true"></div>
 
-        <div class="filter-group">
-          <span class="filter-label">Energy</span>
+        <div class="filter-group" role="group" aria-labelledby="energy-label">
+          <span class="filter-label" id="energy-label">Energy</span>
           <div class="checkbox-group">
             <label class="checkbox-label">
               <input type="checkbox" name="energy" value="Calm" checked>
@@ -57,13 +54,14 @@
           </div>
         </div>
 
-        <button id="generate" aria-label="Generate activity ideas">✨ Generate</button>
+        <button id="generate" aria-label="Generate activity ideas">Generate</button>
       </div>
     </section>
-  </div>
+  </header>
 
   <main>
-    <section id="results">
+    <section id="results" aria-labelledby="results-heading">
+      <h2 id="results-heading" class="visually-hidden">Ideas</h2>
       <div id="ideas">
         <p class="placeholder">Choose your filters above and hit <strong>Generate</strong> to find ideas!</p>
       </div>

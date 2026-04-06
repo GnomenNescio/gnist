@@ -12,33 +12,33 @@ body {
   flex-direction: column;
 }
 
+/* ── Visually-hidden utility ──────────────────────────────────────── */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 /* ── Top bar (header + filters, all in one compact block) ─────────── */
 #top-bar {
   background: linear-gradient(135deg, #2e7d32 0%, #43a047 100%);
   color: #fff;
-  padding: 0.6rem 1.2rem 0.7rem;
+  padding: 0.5rem 1rem 0.6rem;
   box-shadow: 0 2px 8px rgba(0,0,0,0.18);
 }
 
-#top-bar-header {
-  display: flex;
-  align-items: baseline;
-  gap: 0.6rem;
-  margin-bottom: 0.45rem;
-}
-
-#top-bar-header h1 {
-  margin: 0;
-  font-size: 1.3rem;
+#top-bar h1 {
+  margin: 0 0 0.4rem;
+  font-size: 1.2rem;
   font-weight: 700;
   letter-spacing: 0.01em;
   line-height: 1;
-}
-
-.tagline {
-  font-size: 0.78rem;
-  opacity: 0.85;
-  font-weight: 400;
 }
 
 /* ── Filters bar (single horizontal row) ─────────────────────────── */
@@ -80,6 +80,7 @@ body {
 }
 
 .checkbox-label {
+  position: relative;
   display: inline-flex;
   align-items: center;
   gap: 0.25rem;
@@ -117,7 +118,8 @@ body {
   border-radius: 999px;
 }
 
-/* Active (checked) state */
+/* Active (checked) state — JS-toggled class as primary, :has() as enhancement */
+.checkbox-label.is-checked,
 .checkbox-label:has(input[type="checkbox"]:checked) {
   background: #fff;
   border-color: #fff;
@@ -153,7 +155,7 @@ body {
 /* ── Main results area ────────────────────────────────────────────── */
 main {
   flex: 1;
-  padding: 1rem 1.2rem;
+  padding: 1rem 1rem;
   max-width: 900px;
   width: 100%;
   margin: 0 auto;

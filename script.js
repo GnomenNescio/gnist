@@ -1,3 +1,11 @@
+// Sync is-checked class so pill styling works without :has() support
+document.querySelectorAll('.checkbox-label input[type="checkbox"]').forEach(cb => {
+  cb.closest('.checkbox-label').classList.toggle('is-checked', cb.checked);
+  cb.addEventListener('change', function () {
+    this.closest('.checkbox-label').classList.toggle('is-checked', this.checked);
+  });
+});
+
 // Fetch data and display ideas
 document.getElementById("generate").addEventListener("click", function () {
   // Get all checked location checkboxes
