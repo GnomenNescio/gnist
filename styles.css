@@ -5,8 +5,8 @@ body {
   font-family: 'Segoe UI', Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: #f0f7f0;
-  color: #2d3a2d;
+  background: #f7f5f1;
+  color: #3d3532;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -27,7 +27,7 @@ body {
 
 /* ── Top bar (header + filters, all in one compact block) ─────────── */
 #top-bar {
-  background: linear-gradient(135deg, #2e7d32 0%, #43a047 100%);
+  background: linear-gradient(135deg, #9a7b6a 0%, #b09482 100%);
   color: #fff;
   padding: 0 1rem;
   box-shadow: 0 2px 8px rgba(0,0,0,0.18);
@@ -109,18 +109,17 @@ body {
   box-shadow: 0 4px 16px rgba(0,0,0,0.14);
   z-index: 100;
   padding: 0.3rem 0;
-  color: #2d3a2d;
+  color: #3d3532;
 }
 
 .dropdown-panel[hidden] {
   display: none;
 }
 
-/* ── Dropdown checkbox items ─────────────────────────────────────── */
+/* ── Dropdown items ──────────────────────────────────────────────────── */
 .dropdown-item {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
   padding: 0.4rem 0.75rem;
   font-size: 0.85rem;
   cursor: pointer;
@@ -129,15 +128,11 @@ body {
 }
 
 .dropdown-item:hover {
-  background: #f0f7f0;
+  background: #f5f0eb;
 }
 
-.dropdown-item input[type="checkbox"] {
-  accent-color: #2e7d32;
-  width: 0.9rem;
-  height: 0.9rem;
-  cursor: pointer;
-  flex-shrink: 0;
+.dropdown-item.selected {
+  background: #f5f0eb;
 }
 
 /* ── Main results area ────────────────────────────────────────────── */
@@ -156,7 +151,7 @@ main {
 }
 
 .placeholder {
-  color: #6a8a6a;
+  color: #9a8e88;
   font-size: 0.9rem;
   margin: 0.5rem 0 0;
 }
@@ -166,13 +161,13 @@ main {
   border-radius: 10px;
   padding: 0.8rem 1rem;
   box-shadow: 0 1px 4px rgba(0,0,0,0.08);
-  border-left: 4px solid #43a047;
+  border-left: 4px solid #b09482;
 }
 
 .idea-card h3 {
   margin: 0 0 0.3rem;
   font-size: 1rem;
-  color: #2e7d32;
+  color: #9a7b6a;
 }
 
 .idea-card p {

@@ -39,19 +39,19 @@ setupDropdown('location-trigger', 'location-panel');
 setupDropdown('energy-trigger', 'energy-panel');
 
 // ── Label summary helpers ──────────────────────────────────────────────
-function updateTriggerLabel(labelElId, checkboxName) {
-  const checked = Array.from(document.querySelectorAll(`input[name="${checkboxName}"]:checked`))
-    .map(cb => cb.value);
+function updateTriggerLabel(labelElId, group) {
+  const selected = Array.from(document.querySelectorAll(`.dropdown-item[data-group="${group}"].selected`))
+    .map(el => el.dataset.value);
   const labelEl = document.getElementById(labelElId);
-  const all = document.querySelectorAll(`input[name="${checkboxName}"]`).length;
-  if (checked.length === 0) {
-    labelEl.textContent = checkboxName === 'location' ? 'Location' : 'Energy';
-  } else if (checked.length === all) {
-    labelEl.textContent = checkboxName === 'location' ? 'Location' : 'Energy';
-  } else if (checked.length <= 2) {
-    labelEl.textContent = checked.join(', ');
+  const all = document.querySelectorAll(`.dropdown-item[data-group="${group}"]`).length;
+  if (selected.length === 0) {
+    labelEl.textContent = group === 'location' ? 'Location' : 'Energy';
+  } else if (selected.length === all) {
+    labelEl.textContent = group === 'location' ? 'Location' : 'Energy';
+  } else if (selected.length <= 2) {
+    labelEl.textContent = selected.join(', ');
   } else {
-    labelEl.textContent = `${checked.length} selected`;
+    labelEl.textContent = `${selected.length} selected`;
   }
 }
 
@@ -66,8 +66,8 @@ function getActivities() {
 }
 
 function applyFilters() {
-  const selectedLocations = Array.from(document.querySelectorAll('input[name="location"]:checked')).map(cb => cb.value);
-  const selectedEnergies = Array.from(document.querySelectorAll('input[name="energy"]:checked')).map(cb => cb.value);
+  const selectedLocations = Array.from(document.querySelectorAll('.dropdown-item[data-group="location"].selected')).map(el => el.dataset.value);
+  const selectedEnergies = Array.from(document.querySelectorAll('.dropdown-item[data-group="energy"].selected')).map(el => el.dataset.value);
 
   getActivities()
     .then(data => {
@@ -83,12 +83,54 @@ function applyFilters() {
     });
 }
 
-document.querySelectorAll('input[name="location"], input[name="energy"]').forEach(cb => {
-  cb.addEventListener('change', function () {
+// ── Drag-to-select logic ───────────────────────────────────────────────
+let dragActive = false;
+let dragMode = null; // 'select' or 'deselect'
+
+function toggleItem(item, mode) {
+  if (mode === 'select') {
+    item.classList.add('selected');
+    item.setAttribute('aria-checked', 'true');
+  } else {
+    item.classList.remove('selected');
+    item.setAttribute('aria-checked', 'false');
+  }
+}
+
+document.querySelectorAll('.dropdown-item').forEach(item => {
+  item.addEventListener('mousedown', function (e) {
+    e.preventDefault(); // prevent text selection
+    dragActive = true;
+    dragMode = item.classList.contains('selected') ? 'deselect' : 'select';
+    toggleItem(item, dragMode);
+  });
+
+  item.addEventListener('mouseenter', function () {
+    if (dragActive) {
+      toggleItem(item, dragMode);
+    }
+  });
+
+  item.addEventListener('keydown', function (e) {
+    if (e.key === ' ' || e.key === 'Enter') {
+      e.preventDefault();
+      const mode = item.classList.contains('selected') ? 'deselect' : 'select';
+      toggleItem(item, mode);
+      updateTriggerLabel('location-label-text', 'location');
+      updateTriggerLabel('energy-label-text', 'energy');
+      applyFilters();
+    }
+  });
+});
+
+document.addEventListener('mouseup', function () {
+  if (dragActive) {
+    dragActive = false;
+    dragMode = null;
     updateTriggerLabel('location-label-text', 'location');
     updateTriggerLabel('energy-label-text', 'energy');
     applyFilters();
-  });
+  }
 });
 
 // ── Display ideas ──────────────────────────────────────────────────────

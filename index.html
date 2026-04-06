@@ -15,49 +15,26 @@
 
         <div class="dropdown" id="location-dropdown">
           <button class="dropdown-trigger" id="location-trigger" aria-haspopup="true" aria-expanded="false" aria-controls="location-panel">
-            <span class="dropdown-icon">📍</span>
             <span class="dropdown-label" id="location-label-text">Location</span>
             <span class="dropdown-chevron" aria-hidden="true">▾</span>
           </button>
           <div class="dropdown-panel" id="location-panel" role="group" aria-labelledby="location-trigger" hidden>
-            <label class="dropdown-item">
-              <input type="checkbox" name="location" value="Inside" checked>
-              <span>Inside</span>
-            </label>
-            <label class="dropdown-item">
-              <input type="checkbox" name="location" value="Outside" checked>
-              <span>Outside</span>
-            </label>
-            <label class="dropdown-item">
-              <input type="checkbox" name="location" value="Garden" checked>
-              <span>Garden</span>
-            </label>
-            <label class="dropdown-item">
-              <input type="checkbox" name="location" value="Snow" checked>
-              <span>Snow</span>
-            </label>
-            <label class="dropdown-item">
-              <input type="checkbox" name="location" value="Car" checked>
-              <span>Car</span>
-            </label>
+            <div class="dropdown-item selected" role="checkbox" aria-checked="true" tabindex="0" data-group="location" data-value="Inside">Inside</div>
+            <div class="dropdown-item selected" role="checkbox" aria-checked="true" tabindex="0" data-group="location" data-value="Outside">Outside</div>
+            <div class="dropdown-item selected" role="checkbox" aria-checked="true" tabindex="0" data-group="location" data-value="Garden">Garden</div>
+            <div class="dropdown-item selected" role="checkbox" aria-checked="true" tabindex="0" data-group="location" data-value="Snow">Snow</div>
+            <div class="dropdown-item selected" role="checkbox" aria-checked="true" tabindex="0" data-group="location" data-value="Car">Car</div>
           </div>
         </div>
 
         <div class="dropdown" id="energy-dropdown">
           <button class="dropdown-trigger" id="energy-trigger" aria-haspopup="true" aria-expanded="false" aria-controls="energy-panel">
-            <span class="dropdown-icon">⚡</span>
             <span class="dropdown-label" id="energy-label-text">Energy</span>
             <span class="dropdown-chevron" aria-hidden="true">▾</span>
           </button>
           <div class="dropdown-panel" id="energy-panel" role="group" aria-labelledby="energy-trigger" hidden>
-            <label class="dropdown-item">
-              <input type="checkbox" name="energy" value="Calm" checked>
-              <span>Calm</span>
-            </label>
-            <label class="dropdown-item">
-              <input type="checkbox" name="energy" value="Active" checked>
-              <span>Active</span>
-            </label>
+            <div class="dropdown-item selected" role="checkbox" aria-checked="true" tabindex="0" data-group="energy" data-value="Calm">Calm</div>
+            <div class="dropdown-item selected" role="checkbox" aria-checked="true" tabindex="0" data-group="energy" data-value="Active">Active</div>
           </div>
         </div>
 
