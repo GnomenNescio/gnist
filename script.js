@@ -38,6 +38,16 @@ document.addEventListener('click', function () {
 setupDropdown('location-trigger', 'location-panel');
 setupDropdown('energy-trigger', 'energy-panel');
 
+// Stop propagation on panels so clicks/mousedowns inside don't trigger closeAllDropdowns()
+document.querySelectorAll('.dropdown-panel').forEach(panel => {
+  panel.addEventListener('mousedown', function (e) {
+    e.stopPropagation();
+  });
+  panel.addEventListener('click', function (e) {
+    e.stopPropagation();
+  });
+});
+
 // ── Label summary helpers ──────────────────────────────────────────────
 function updateTriggerLabel(labelElId, group) {
   const selected = Array.from(document.querySelectorAll(`.dropdown-item[data-group="${group}"].selected`))
@@ -100,6 +110,7 @@ function toggleItem(item, mode) {
 document.querySelectorAll('.dropdown-item').forEach(item => {
   item.addEventListener('mousedown', function (e) {
     e.preventDefault(); // prevent text selection
+    e.stopPropagation(); // prevent document click from closing the panel
     dragActive = true;
     dragMode = item.classList.contains('selected') ? 'deselect' : 'select';
     toggleItem(item, dragMode);
