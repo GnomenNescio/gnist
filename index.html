@@ -10,58 +10,66 @@
   <header id="top-bar">
     <h1>Gnist</h1>
 
-    <section id="filters" aria-label="Filters">
+    <nav id="filters" aria-label="Filters">
       <div class="filters-bar">
-        <div class="filter-group" role="group" aria-labelledby="location-label">
-          <span class="filter-label visually-hidden" id="location-label">Location</span>
-          <div class="checkbox-group">
-            <label class="checkbox-label">
+
+        <div class="dropdown" id="location-dropdown">
+          <button class="dropdown-trigger" id="location-trigger" aria-haspopup="true" aria-expanded="false" aria-controls="location-panel">
+            <span class="dropdown-icon">📍</span>
+            <span class="dropdown-label" id="location-label-text">Location</span>
+            <span class="dropdown-chevron" aria-hidden="true">▾</span>
+          </button>
+          <div class="dropdown-panel" id="location-panel" role="group" aria-labelledby="location-trigger" hidden>
+            <label class="dropdown-item">
               <input type="checkbox" name="location" value="Inside" checked>
               <span>Inside</span>
             </label>
-            <label class="checkbox-label">
+            <label class="dropdown-item">
               <input type="checkbox" name="location" value="Outside" checked>
               <span>Outside</span>
             </label>
-            <label class="checkbox-label">
+            <label class="dropdown-item">
               <input type="checkbox" name="location" value="Garden" checked>
               <span>Garden</span>
             </label>
-            <label class="checkbox-label">
+            <label class="dropdown-item">
               <input type="checkbox" name="location" value="Snow" checked>
               <span>Snow</span>
             </label>
-            <label class="checkbox-label">
+            <label class="dropdown-item">
               <input type="checkbox" name="location" value="Car" checked>
               <span>Car</span>
             </label>
           </div>
         </div>
 
-        <div class="filter-group" role="group" aria-labelledby="energy-label">
-          <span class="filter-label visually-hidden" id="energy-label">Energy</span>
-          <div class="checkbox-group">
-            <label class="checkbox-label">
+        <div class="dropdown" id="energy-dropdown">
+          <button class="dropdown-trigger" id="energy-trigger" aria-haspopup="true" aria-expanded="false" aria-controls="energy-panel">
+            <span class="dropdown-icon">⚡</span>
+            <span class="dropdown-label" id="energy-label-text">Energy</span>
+            <span class="dropdown-chevron" aria-hidden="true">▾</span>
+          </button>
+          <div class="dropdown-panel" id="energy-panel" role="group" aria-labelledby="energy-trigger" hidden>
+            <label class="dropdown-item">
               <input type="checkbox" name="energy" value="Calm" checked>
               <span>Calm</span>
             </label>
-            <label class="checkbox-label">
+            <label class="dropdown-item">
               <input type="checkbox" name="energy" value="Active" checked>
               <span>Active</span>
             </label>
           </div>
         </div>
 
-        <button id="generate" aria-label="Generate activity ideas">Generate</button>
       </div>
-    </section>
+    </nav>
   </header>
 
   <main>
     <section id="results" aria-labelledby="results-heading">
       <h2 id="results-heading" class="visually-hidden">Ideas</h2>
       <div id="ideas">
-        <p class="placeholder">Choose your filters above and hit <strong>Generate</strong> to find ideas!</p>
+        <p class="placeholder">Use the filters above to find activity ideas!</p>
       </div>
     </section>
   </main>
