@@ -1,15 +1,22 @@
 // Fetch data and display ideas
 document.getElementById("generate").addEventListener("click", function () {
-  const locationFilter = document.getElementById("location").value;
-  const energyFilter = document.getElementById("energy").value;
+  // Get all checked location checkboxes
+  const locationCheckboxes = document.querySelectorAll('input[name="location"]:checked');
+  const selectedLocations = Array.from(locationCheckboxes).map(cb => cb.value);
+
+  // Get all checked energy checkboxes
+  const energyCheckboxes = document.querySelectorAll('input[name="energy"]:checked');
+  const selectedEnergies = Array.from(energyCheckboxes).map(cb => cb.value);
 
   // Fetch the data from the activities.json file
   fetch("activities.json")
     .then(response => response.json())
     .then(data => {
       const filteredActivities = data.filter(activity => {
-        const matchesLocation = locationFilter === "All" || activity.location === locationFilter;
-        const matchesEnergy = energyFilter === "All" || activity.energy === energyFilter;
+        // If no locations selected, show nothing. If locations selected, must match one of them
+        const matchesLocation = selectedLocations.length === 0 ? false : selectedLocations.includes(activity.location);
+        // If no energies selected, show nothing. If energies selected, must match one of them
+        const matchesEnergy = selectedEnergies.length === 0 ? false : selectedEnergies.includes(activity.energy);
         return matchesLocation && matchesEnergy;
       });
 
