@@ -116,6 +116,7 @@ document.querySelectorAll('.dropdown-item').forEach(item => {
   item.addEventListener('mousedown', function (e) {
     e.preventDefault(); // prevent text selection
     e.stopPropagation(); // prevent document click from closing the panel
+    document.body.style.userSelect = 'none';
     dragActive = true;
     dragMode = item.classList.contains('selected') ? 'deselect' : 'select';
     toggleItem(item, dragMode);
@@ -126,6 +127,15 @@ document.querySelectorAll('.dropdown-item').forEach(item => {
       toggleItem(item, dragMode);
     }
   });
+
+  item.addEventListener('touchstart', function (e) {
+    e.preventDefault(); // prevent scrolling during swipe-to-select
+    e.stopPropagation();
+    document.body.style.userSelect = 'none';
+    dragActive = true;
+    dragMode = item.classList.contains('selected') ? 'deselect' : 'select';
+    toggleItem(item, dragMode);
+  }, { passive: false });
 
   item.addEventListener('keydown', function (e) {
     if (e.key === ' ' || e.key === 'Enter') {
@@ -143,6 +153,27 @@ document.addEventListener('mouseup', function () {
   if (dragActive) {
     dragActive = false;
     dragMode = null;
+    document.body.style.userSelect = '';
+    updateTriggerLabel('location-label-text', 'location');
+    updateTriggerLabel('energy-label-text', 'energy');
+    applyFilters();
+  }
+});
+
+document.addEventListener('touchmove', function (e) {
+  if (!dragActive) return;
+  const touch = e.touches[0];
+  const target = document.elementFromPoint(touch.clientX, touch.clientY);
+  if (target && target.classList.contains('dropdown-item')) {
+    toggleItem(target, dragMode);
+  }
+}, { passive: false });
+
+document.addEventListener('touchend', function () {
+  if (dragActive) {
+    dragActive = false;
+    dragMode = null;
+    document.body.style.userSelect = '';
     updateTriggerLabel('location-label-text', 'location');
     updateTriggerLabel('energy-label-text', 'energy');
     applyFilters();
