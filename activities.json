@@ -142,5 +142,165 @@
     "age": "4+",
     "toys": "Art supplies",
     "description": "Collect leaves, flowers, or sticks and use them to create nature-inspired collages with glue on paper."
+  },
+  {
+    "title": "Snow Painting",
+    "location": "Snow",
+    "energy": "Calm",
+    "age": "3+",
+    "toys": "Spray bottles, food coloring",
+    "description": "Fill spray bottles with water and a few drops of food coloring, then spray colorful patterns onto freshly fallen snow."
+  },
+  {
+    "title": "Snow Sculptures",
+    "location": "Snow",
+    "energy": "Active",
+    "age": "4+",
+    "toys": "Buckets, shovels",
+    "description": "Use buckets and shovels to build snow sculptures — animals, castles, or whatever your imagination conjures!"
+  },
+  {
+    "title": "Snow Angel Contest",
+    "location": "Snow",
+    "energy": "Active",
+    "age": "3+",
+    "toys": "None",
+    "description": "See who can make the biggest or most creative snow angel. Compare them from above for a fun bird's-eye view!"
+  },
+  {
+    "title": "Snowy Treasure Hunt",
+    "location": "Snow",
+    "energy": "Active",
+    "age": "4+",
+    "toys": "Small toys or objects",
+    "description": "Hide small objects in the snow and give your kids clues to dig them up. Great for developing problem-solving skills in the cold!"
+  },
+  {
+    "title": "Snowflake Science",
+    "location": "Snow",
+    "energy": "Calm",
+    "age": "5+",
+    "toys": "Dark paper or fabric",
+    "description": "Catch snowflakes on dark paper or fabric and use a magnifying glass to look at their unique crystal shapes."
+  },
+  {
+    "title": "Audiobook Road Trip",
+    "location": "Car",
+    "energy": "Calm",
+    "age": "5+",
+    "toys": "None",
+    "description": "Play an age-appropriate audiobook or podcast for kids during the drive. Discuss the story together when you arrive."
+  },
+  {
+    "title": "Car Bingo",
+    "location": "Car",
+    "energy": "Calm",
+    "age": "4+",
+    "toys": "Printed bingo cards or paper",
+    "description": "Create bingo cards with things to spot out the window (red car, church, cow, etc.). First to shout 'Bingo!' wins!"
+  },
+  {
+    "title": "20 Questions",
+    "location": "Car",
+    "energy": "Calm",
+    "age": "6+",
+    "toys": "None",
+    "description": "One person thinks of an animal, object, or person. Others take turns asking yes/no questions to guess it within 20 tries."
+  },
+  {
+    "title": "Car Karaoke",
+    "location": "Car",
+    "energy": "Active",
+    "age": "3+",
+    "toys": "Phone or music player",
+    "description": "Queue up your kids' favourite songs and have a sing-along karaoke session. Silly voices encouraged!"
+  },
+  {
+    "title": "Alphabet Game",
+    "location": "Car",
+    "energy": "Calm",
+    "age": "5+",
+    "toys": "None",
+    "description": "Spot words outside the car (signs, shops, number plates) that start with each letter of the alphabet in order."
+  },
+  {
+    "title": "Storytelling Chain",
+    "location": "Car",
+    "energy": "Calm",
+    "age": "4+",
+    "toys": "None",
+    "description": "One person starts a story with a sentence, the next person adds a sentence, and so on. See where the story ends up!"
+  },
+  {
+    "title": "Nature Scavenger Hunt",
+    "location": "Outside",
+    "energy": "Active",
+    "age": "4+",
+    "toys": "Paper, pencil",
+    "description": "Make a list of natural things to find on your walk — a feather, a round stone, a yellow leaf, a snail shell. Tick them off as you go!"
+  },
+  {
+    "title": "Puddle Jumping",
+    "location": "Outside",
+    "energy": "Active",
+    "age": "2+",
+    "toys": "Wellies",
+    "description": "Pull on the wellies and go find the biggest puddles to jump in. Classic, messy, and endlessly entertaining."
+  },
+  {
+    "title": "Stick Sword Fight",
+    "location": "Outside",
+    "energy": "Active",
+    "age": "5+",
+    "toys": "Sticks",
+    "description": "Find two similar-sized sticks and have a safe, gentle sword fight. Set rules for fair play and take turns being the winner."
+  },
+  {
+    "title": "Cloud Watching",
+    "location": "Outside",
+    "energy": "Calm",
+    "age": "3+",
+    "toys": "Blanket",
+    "description": "Lie on a blanket and look up at the clouds. What shapes and animals can you spot? Take turns pointing out what you see."
+  },
+  {
+    "title": "Bug Safari",
+    "location": "Outside",
+    "energy": "Calm",
+    "age": "3+",
+    "toys": "Magnifying glass, jar",
+    "description": "Go on a bug safari in the park or garden. Look under logs and leaves for beetles, woodlice, and worms. Observe and release!"
+  },
+  {
+    "title": "Shadow Drawing",
+    "location": "Outside",
+    "energy": "Calm",
+    "age": "4+",
+    "toys": "Chalk",
+    "description": "On a sunny day, trace each other's shadows on the pavement with chalk. Come back later to see how the shadows have moved."
+  },
+  {
+    "title": "DIY Obstacle Run",
+    "location": "Outside",
+    "energy": "Active",
+    "age": "4+",
+    "toys": "Cones, rope, hula hoops",
+    "description": "Set up a fun obstacle run using whatever you have — cones to weave around, a rope to jump over, hoops to hop through. Time each other!"
+  },
+  {
+    "title": "Kite Flying",
+    "location": "Outside",
+    "energy": "Active",
+    "age": "4+",
+    "toys": "Kite",
+    "description": "Head to an open field or hilltop on a breezy day and fly a kite together. Kids can take turns holding the string."
+  },
+  {
+    "title": "Garden Yoga",
+    "location": "Garden",
+    "energy": "Calm",
+    "age": "3+",
+    "toys": "Yoga mat or towel",
+    "description": "Follow along to a kids' yoga video outdoors. Try poses like the tree, the cat, or the downward dog in the fresh air."
   }
 ]
