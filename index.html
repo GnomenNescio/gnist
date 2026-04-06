@@ -15,22 +15,46 @@
   <main>
     <section id="filters">
       <h2>Filters</h2>
-      <label for="location">Location:</label>
-      <select id="location">
-        <option value="All">All</option>
-        <option value="Inside">Inside</option>
-        <option value="Outside">Outside</option>
-        <option value="Garden">Garden</option>
-        <option value="Snow">Snow</option>
-        <option value="Car">Car</option>
-      </select>
 
-      <label for="energy">Energy Level:</label>
-      <select id="energy">
-        <option value="All">All</option>
-        <option value="Calm">Calm</option>
-        <option value="Active">Active</option>
-      </select>
+      <div class="filter-group">
+        <h3>Location:</h3>
+        <div class="checkbox-group">
+          <label class="checkbox-label">
+            <input type="checkbox" name="location" value="Inside" checked>
+            <span>Inside</span>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" name="location" value="Outside" checked>
+            <span>Outside</span>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" name="location" value="Garden" checked>
+            <span>Garden</span>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" name="location" value="Snow" checked>
+            <span>Snow</span>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" name="location" value="Car" checked>
+            <span>Car</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <h3>Energy Level:</h3>
+        <div class="checkbox-group">
+          <label class="checkbox-label">
+            <input type="checkbox" name="energy" value="Calm" checked>
+            <span>Calm</span>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" name="energy" value="Active" checked>
+            <span>Active</span>
+          </label>
+        </div>
+      </div>
 
       <button id="generate">Generate Ideas</button>
     </section>
