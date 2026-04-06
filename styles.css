@@ -57,7 +57,7 @@ body {
 }
 
 .filter-label {
-  font-size: 0.72rem;
+  font-size: 0.8rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.06em;
@@ -102,11 +102,19 @@ body {
 }
 
 .checkbox-label input[type="checkbox"] {
-  width: 0;
-  height: 0;
-  opacity: 0;
+  /* Visually hidden but remains in accessibility tree and keyboard-focusable */
   position: absolute;
-  pointer-events: none;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.checkbox-label input[type="checkbox"]:focus-visible + span {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+  border-radius: 999px;
 }
 
 /* Active (checked) state */
