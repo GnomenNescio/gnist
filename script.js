@@ -20,6 +20,11 @@ function setupDropdown(triggerId, panelId) {
     closeAllDropdowns();
     if (!isOpen) openDropdown(trigger, panel);
   });
+
+  // Prevent clicks inside the panel from closing the dropdown
+  panel.addEventListener('click', function (e) {
+    e.stopPropagation();
+  });
 }
 
 function closeAllDropdowns() {
