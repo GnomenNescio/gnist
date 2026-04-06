@@ -1,56 +1,116 @@
-// Sync is-checked class so pill styling works without :has() support
-document.querySelectorAll('.checkbox-label input[type="checkbox"]').forEach(cb => {
-  cb.closest('.checkbox-label').classList.toggle('is-checked', cb.checked);
-  cb.addEventListener('change', function () {
-    this.closest('.checkbox-label').classList.toggle('is-checked', this.checked);
+// ── Dropdown toggle logic ──────────────────────────────────────────────
+function openDropdown(trigger, panel) {
+  panel.hidden = false;
+  trigger.setAttribute('aria-expanded', 'true');
+}
+
+function closeDropdown(trigger, panel) {
+  panel.hidden = true;
+  trigger.setAttribute('aria-expanded', 'false');
+}
+
+function setupDropdown(triggerId, panelId) {
+  const trigger = document.getElementById(triggerId);
+  const panel = document.getElementById(panelId);
+
+  trigger.addEventListener('click', function (e) {
+    e.stopPropagation();
+    const isOpen = !panel.hidden;
+    // Close all dropdowns first
+    closeAllDropdowns();
+    if (!isOpen) openDropdown(trigger, panel);
   });
+}
+
+function closeAllDropdowns() {
+  document.querySelectorAll('.dropdown-trigger').forEach(trigger => {
+    const panelId = trigger.getAttribute('aria-controls');
+    const panel = document.getElementById(panelId);
+    if (panel) closeDropdown(trigger, panel);
+  });
+}
+
+// Close dropdowns when clicking outside
+document.addEventListener('click', function () {
+  closeAllDropdowns();
 });
 
-// Fetch data and display ideas
-document.getElementById("generate").addEventListener("click", function () {
-  // Get all checked location checkboxes
-  const locationCheckboxes = document.querySelectorAll('input[name="location"]:checked');
-  const selectedLocations = Array.from(locationCheckboxes).map(cb => cb.value);
+setupDropdown('location-trigger', 'location-panel');
+setupDropdown('energy-trigger', 'energy-panel');
 
-  // Get all checked energy checkboxes
-  const energyCheckboxes = document.querySelectorAll('input[name="energy"]:checked');
-  const selectedEnergies = Array.from(energyCheckboxes).map(cb => cb.value);
+// ── Label summary helpers ──────────────────────────────────────────────
+function updateTriggerLabel(labelElId, checkboxName) {
+  const checked = Array.from(document.querySelectorAll(`input[name="${checkboxName}"]:checked`))
+    .map(cb => cb.value);
+  const labelEl = document.getElementById(labelElId);
+  const all = document.querySelectorAll(`input[name="${checkboxName}"]`).length;
+  if (checked.length === 0) {
+    labelEl.textContent = checkboxName === 'location' ? 'Location' : 'Energy';
+  } else if (checked.length === all) {
+    labelEl.textContent = checkboxName === 'location' ? 'Location' : 'Energy';
+  } else if (checked.length <= 2) {
+    labelEl.textContent = checked.join(', ');
+  } else {
+    labelEl.textContent = `${checked.length} selected`;
+  }
+}
 
-  // Fetch the data from the activities.json file
-  fetch("activities.json")
+// ── Activities cache ───────────────────────────────────────────────────
+let activitiesCache = null;
+
+function getActivities() {
+  if (activitiesCache) return Promise.resolve(activitiesCache);
+  return fetch('activities.json')
     .then(response => response.json())
+    .then(data => { activitiesCache = data; return data; });
+}
+
+function applyFilters() {
+  const selectedLocations = Array.from(document.querySelectorAll('input[name="location"]:checked')).map(cb => cb.value);
+  const selectedEnergies = Array.from(document.querySelectorAll('input[name="energy"]:checked')).map(cb => cb.value);
+
+  getActivities()
     .then(data => {
-      const filteredActivities = data.filter(activity => {
-        // If no locations selected, show nothing. If locations selected, must match one of them
+      const filtered = data.filter(activity => {
         const matchesLocation = selectedLocations.length === 0 ? false : selectedLocations.includes(activity.location);
-        // If no energies selected, show nothing. If energies selected, must match one of them
         const matchesEnergy = selectedEnergies.length === 0 ? false : selectedEnergies.includes(activity.energy);
         return matchesLocation && matchesEnergy;
       });
-
-      displayIdeas(filteredActivities);
+      displayIdeas(filtered);
     })
     .catch(error => {
-      console.error("Error fetching activities:", error);
+      console.error('Error fetching activities:', error);
     });
+}
+
+document.querySelectorAll('input[name="location"], input[name="energy"]').forEach(cb => {
+  cb.addEventListener('change', function () {
+    updateTriggerLabel('location-label-text', 'location');
+    updateTriggerLabel('energy-label-text', 'energy');
+    applyFilters();
+  });
 });
 
-// Display ideas in the results section
+// ── Display ideas ──────────────────────────────────────────────────────
 function displayIdeas(activities) {
-  const ideasDiv = document.getElementById("ideas");
-  ideasDiv.innerHTML = ""; // Clear previous results
+  const ideasDiv = document.getElementById('ideas');
+  ideasDiv.innerHTML = '';
 
   if (activities.length === 0) {
-    ideasDiv.innerHTML = "<p>No ideas match your filters. Try adjusting them!</p>";
+    ideasDiv.innerHTML = '<p>No ideas match your filters. Try adjusting them!</p>';
   } else {
     activities.forEach(activity => {
-      const ideaCard = document.createElement("div");
-      ideaCard.className = "idea-card";
+      const ideaCard = document.createElement('div');
+      ideaCard.className = 'idea-card';
       ideaCard.innerHTML = `<h3>${activity.title}</h3>
-                            <p>${activity.description || "No description available"}</p>
-                            <p><strong>Best for:</strong> ${activity.age || "All ages"}</p>
-                            <p><strong>Toys:</strong> ${activity.toys || "None"}</p>`;
+                            <p>${activity.description || 'No description available'}</p>
+                            <p><strong>Best for:</strong> ${activity.age || 'All ages'}</p>
+                            <p><strong>Toys:</strong> ${activity.toys || 'None'}</p>`;
       ideasDiv.appendChild(ideaCard);
     });
   }
 }
+
+// ── Run initial filter on page load ───────────────────────────────────
+applyFilters();
+
