@@ -7,69 +7,65 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>Gnist: Activity Finder</h1>
-    <p>Find something fun to do with your kids!</p>
+  <header id="top-bar">
+    <h1>Gnist</h1>
+
+    <section id="filters" aria-label="Filters">
+      <div class="filters-bar">
+        <div class="filter-group" role="group" aria-labelledby="location-label">
+          <span class="filter-label visually-hidden" id="location-label">Location</span>
+          <div class="checkbox-group">
+            <label class="checkbox-label">
+              <input type="checkbox" name="location" value="Inside" checked>
+              <span>Inside</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="location" value="Outside" checked>
+              <span>Outside</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="location" value="Garden" checked>
+              <span>Garden</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="location" value="Snow" checked>
+              <span>Snow</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="location" value="Car" checked>
+              <span>Car</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="filter-group" role="group" aria-labelledby="energy-label">
+          <span class="filter-label visually-hidden" id="energy-label">Energy</span>
+          <div class="checkbox-group">
+            <label class="checkbox-label">
+              <input type="checkbox" name="energy" value="Calm" checked>
+              <span>Calm</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="energy" value="Active" checked>
+              <span>Active</span>
+            </label>
+          </div>
+        </div>
+
+        <button id="generate" aria-label="Generate activity ideas">Generate</button>
+      </div>
+    </section>
   </header>
 
   <main>
-    <section id="filters">
-      <h2>Filters</h2>
-
-      <div class="filter-group">
-        <h3>Location:</h3>
-        <div class="checkbox-group">
-          <label class="checkbox-label">
-            <input type="checkbox" name="location" value="Inside" checked>
-            <span>Inside</span>
-          </label>
-          <label class="checkbox-label">
-            <input type="checkbox" name="location" value="Outside" checked>
-            <span>Outside</span>
-          </label>
-          <label class="checkbox-label">
-            <input type="checkbox" name="location" value="Garden" checked>
-            <span>Garden</span>
-          </label>
-          <label class="checkbox-label">
-            <input type="checkbox" name="location" value="Snow" checked>
-            <span>Snow</span>
-          </label>
-          <label class="checkbox-label">
-            <input type="checkbox" name="location" value="Car" checked>
-            <span>Car</span>
-          </label>
-        </div>
-      </div>
-
-      <div class="filter-group">
-        <h3>Energy Level:</h3>
-        <div class="checkbox-group">
-          <label class="checkbox-label">
-            <input type="checkbox" name="energy" value="Calm" checked>
-            <span>Calm</span>
-          </label>
-          <label class="checkbox-label">
-            <input type="checkbox" name="energy" value="Active" checked>
-            <span>Active</span>
-          </label>
-        </div>
-      </div>
-
-      <button id="generate">Generate Ideas</button>
-    </section>
-
-    <section id="results">
-      <h2>Ideas</h2>
+    <section id="results" aria-labelledby="results-heading">
+      <h2 id="results-heading" class="visually-hidden">Ideas</h2>
       <div id="ideas">
-        <p>Select filters and click "Generate Ideas."</p>
+        <p class="placeholder">Choose your filters above and hit <strong>Generate</strong> to find ideas!</p>
       </div>
     </section>
   </main>
 
-  <footer>
-    <p>Made with ❤️ for busy parents</p>
-  </footer>
   
   <script src="script.js"></script>
 </body>
