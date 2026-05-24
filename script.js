@@ -35,7 +35,6 @@ function setupDropdown(triggerId, panelId) {
     if (!isOpen) openDropdown(trigger, panel);
   });
 
-  // Clicks inside the panel never bubble out to close it
   panel.addEventListener('click', (e) => e.stopPropagation());
   panel.addEventListener('mousedown', (e) => e.stopPropagation());
 }
@@ -43,10 +42,8 @@ function setupDropdown(triggerId, panelId) {
 setupDropdown('location-trigger', 'location-panel');
 setupDropdown('energy-trigger', 'energy-panel');
 
-// Close when clicking outside
 document.addEventListener('click', closeAllDropdowns);
 
-// Escape key closes all open dropdowns and returns focus to its trigger
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') {
     const openTrigger = document.querySelector('.dropdown-trigger[aria-expanded="true"]');
@@ -83,7 +80,6 @@ function updateTriggerLabel(labelElId, group) {
   const total = getAllValues(group).length;
   const groupName = group === 'location' ? 'Location' : 'Energy';
 
-  // Empty or all selected → both mean "no filter active" → show plain group name.
   if (selected.length === 0 || selected.length === total) {
     labelEl.textContent = groupName;
   } else if (selected.length <= 2) {
@@ -96,7 +92,6 @@ function updateTriggerLabel(labelElId, group) {
 function updateAllLabels() {
   updateTriggerLabel('location-label-text', 'location');
   updateTriggerLabel('energy-label-text', 'energy');
-  // Show the "Clear" affordance only when there's something to clear.
   document.querySelectorAll('.dropdown-actions').forEach(div => {
     const group = div.dataset.group;
     div.hidden = getSelected(group).length === 0;
@@ -112,7 +107,7 @@ document.querySelectorAll('.dropdown-action').forEach(btn => {
       setItemState(item, false);
     });
     updateAllLabels();
-    pinnedActivity = null; // user changed filter — unpin any surprise
+    pinnedActivity = null;
     document.getElementById('show-all-button').hidden = true;
     applyFilters();
   });
@@ -120,10 +115,9 @@ document.querySelectorAll('.dropdown-action').forEach(btn => {
 
 // ── Drag-to-select on items ──────────────────────────────────────────
 let dragActive = false;
-let dragMode = null; // 'select' or 'deselect'
+let dragMode = null;
 
 document.querySelectorAll('.dropdown-item').forEach(item => {
-  // Mouse drag start
   item.addEventListener('mousedown', (e) => {
     e.preventDefault();
     e.stopPropagation();
@@ -133,12 +127,10 @@ document.querySelectorAll('.dropdown-item').forEach(item => {
     setItemState(item, dragMode === 'select');
   });
 
-  // Drag-over while button is held
   item.addEventListener('mouseenter', () => {
     if (dragActive) setItemState(item, dragMode === 'select');
   });
 
-  // Touch start (drag-to-select on mobile)
   item.addEventListener('touchstart', (e) => {
     e.preventDefault();
     e.stopPropagation();
@@ -148,7 +140,6 @@ document.querySelectorAll('.dropdown-item').forEach(item => {
     setItemState(item, dragMode === 'select');
   }, { passive: false });
 
-  // Keyboard support
   item.addEventListener('keydown', (e) => {
     if (e.key === ' ' || e.key === 'Enter') {
       e.preventDefault();
@@ -203,10 +194,7 @@ function getFiltered(data) {
   const totalLocs = getAllValues('location').length;
   const totalEnergies = getAllValues('energy').length;
 
-  // A group "filters" only when it's a partial selection.
-  //   - empty selection  → treated as "no filter" (forgiving)
-  //   - all selected     → treated as "no filter"
-  //   - partial selection → filter to the selected values
+  // empty selection OR all selected = "no filter active" for that group
   const locActive = locs.length > 0 && locs.length < totalLocs;
   const enActive = energies.length > 0 && energies.length < totalEnergies;
 
@@ -264,6 +252,9 @@ function strong(text) {
 function buildBadge(text, kind) {
   const span = document.createElement('span');
   span.className = 'badge badge-' + kind;
+  if (kind === 'location') {
+    span.classList.add('loc-' + text.toLowerCase());
+  }
   span.textContent = text;
   return span;
 }
@@ -281,28 +272,36 @@ function buildMetaItem(label, value) {
 function buildCard(activity, index) {
   const card = document.createElement('article');
   card.className = 'idea-card';
+  if (activity.location) {
+    card.classList.add('loc-' + activity.location.toLowerCase());
+  }
   card.style.animationDelay = Math.min(index, 12) * 0.025 + 's';
 
-  const head = document.createElement('div');
-  head.className = 'card-head';
+  // Coloured accent strip at the top
+  const accent = document.createElement('div');
+  accent.className = 'accent';
+  accent.setAttribute('aria-hidden', 'true');
+  card.appendChild(accent);
 
+  // Title
   const h3 = document.createElement('h3');
   h3.textContent = activity.title;
-  head.appendChild(h3);
+  card.appendChild(h3);
 
+  // Badges row
   const badges = document.createElement('div');
   badges.className = 'badges';
   if (activity.location) badges.appendChild(buildBadge(activity.location, 'location'));
   if (activity.energy) badges.appendChild(buildBadge(activity.energy, 'energy'));
-  head.appendChild(badges);
+  card.appendChild(badges);
 
-  card.appendChild(head);
-
+  // Description
   const desc = document.createElement('p');
   desc.className = 'card-desc';
   desc.textContent = activity.description || 'No description available.';
   card.appendChild(desc);
 
+  // Meta footer (no divider above per design)
   const meta = document.createElement('footer');
   meta.className = 'card-meta';
   meta.appendChild(buildMetaItem('Best for', activity.age || 'All ages'));
@@ -333,7 +332,7 @@ function displayIdeas(activities) {
 document.getElementById('surprise-button').addEventListener('click', () => {
   getActivities().then(data => {
     const filtered = getFiltered(data);
-    if (filtered.length === 0) return; // nothing to pick from
+    if (filtered.length === 0) return;
     pinnedActivity = filtered[Math.floor(Math.random() * filtered.length)];
     document.getElementById('show-all-button').hidden = filtered.length <= 1;
     updateMatchCount(filtered.length);
