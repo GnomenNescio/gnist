@@ -4,37 +4,55 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gnist: Activity Finder</title>
+
+  <!-- Google Fonts (Fraunces for display). Remove these three lines if you'd rather stay system-only. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header id="top-bar">
-    <h1>Gnist</h1>
+    <div class="brand">
+      <span class="brand-spark" aria-hidden="true">✦</span>
+      <h1>Gnist</h1>
+      <span class="brand-subtitle">Activity Finder</span>
+    </div>
 
     <nav id="filters" aria-label="Filters">
       <div class="filters-bar">
 
         <div class="dropdown" id="location-dropdown">
-          <button class="dropdown-trigger" id="location-trigger" aria-haspopup="true" aria-expanded="false" aria-controls="location-panel">
+          <button class="dropdown-trigger" id="location-trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="location-panel">
             <span class="dropdown-label" id="location-label-text">Location</span>
             <span class="dropdown-chevron" aria-hidden="true">▾</span>
           </button>
           <div class="dropdown-panel" id="location-panel" role="group" aria-labelledby="location-trigger" hidden>
-            <div class="dropdown-item selected" role="checkbox" aria-checked="true" tabindex="0" data-group="location" data-value="Inside">Inside</div>
-            <div class="dropdown-item selected" role="checkbox" aria-checked="true" tabindex="0" data-group="location" data-value="Outside">Outside</div>
-            <div class="dropdown-item selected" role="checkbox" aria-checked="true" tabindex="0" data-group="location" data-value="Garden">Garden</div>
-            <div class="dropdown-item selected" role="checkbox" aria-checked="true" tabindex="0" data-group="location" data-value="Snow">Snow</div>
-            <div class="dropdown-item selected" role="checkbox" aria-checked="true" tabindex="0" data-group="location" data-value="Car">Car</div>
+            <div class="dropdown-actions">
+              <button type="button" class="dropdown-action" data-action="all" data-group="location">Select all</button>
+              <button type="button" class="dropdown-action" data-action="none" data-group="location">Clear</button>
+            </div>
+            <div class="dropdown-item selected" role="checkbox" aria-checked="true" tabindex="0" data-group="location" data-value="Inside"><span class="check" aria-hidden="true"></span><span class="item-label">Inside</span></div>
+            <div class="dropdown-item selected" role="checkbox" aria-checked="true" tabindex="0" data-group="location" data-value="Outside"><span class="check" aria-hidden="true"></span><span class="item-label">Outside</span></div>
+            <div class="dropdown-item selected" role="checkbox" aria-checked="true" tabindex="0" data-group="location" data-value="Garden"><span class="check" aria-hidden="true"></span><span class="item-label">Garden</span></div>
+            <div class="dropdown-item selected" role="checkbox" aria-checked="true" tabindex="0" data-group="location" data-value="Snow"><span class="check" aria-hidden="true"></span><span class="item-label">Snow</span></div>
+            <div class="dropdown-item selected" role="checkbox" aria-checked="true" tabindex="0" data-group="location" data-value="Car"><span class="check" aria-hidden="true"></span><span class="item-label">Car</span></div>
           </div>
         </div>
 
         <div class="dropdown" id="energy-dropdown">
-          <button class="dropdown-trigger" id="energy-trigger" aria-haspopup="true" aria-expanded="false" aria-controls="energy-panel">
+          <button class="dropdown-trigger" id="energy-trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="energy-panel">
             <span class="dropdown-label" id="energy-label-text">Energy</span>
             <span class="dropdown-chevron" aria-hidden="true">▾</span>
           </button>
           <div class="dropdown-panel" id="energy-panel" role="group" aria-labelledby="energy-trigger" hidden>
-            <div class="dropdown-item selected" role="checkbox" aria-checked="true" tabindex="0" data-group="energy" data-value="Calm">Calm</div>
-            <div class="dropdown-item selected" role="checkbox" aria-checked="true" tabindex="0" data-group="energy" data-value="Active">Active</div>
+            <div class="dropdown-actions">
+              <button type="button" class="dropdown-action" data-action="all" data-group="energy">Select all</button>
+              <button type="button" class="dropdown-action" data-action="none" data-group="energy">Clear</button>
+            </div>
+            <div class="dropdown-item selected" role="checkbox" aria-checked="true" tabindex="0" data-group="energy" data-value="Calm"><span class="check" aria-hidden="true"></span><span class="item-label">Calm</span></div>
+            <div class="dropdown-item selected" role="checkbox" aria-checked="true" tabindex="0" data-group="energy" data-value="Active"><span class="check" aria-hidden="true"></span><span class="item-label">Active</span></div>
           </div>
         </div>
 
@@ -43,15 +61,22 @@
   </header>
 
   <main>
+    <div id="results-meta">
+      <p id="match-count" aria-live="polite">…</p>
+      <div class="meta-actions">
+        <button id="show-all-button" type="button" class="meta-button" hidden>Show all matches</button>
+        <button id="surprise-button" type="button" class="meta-button primary">Surprise me <span aria-hidden="true">🎲</span></button>
+      </div>
+    </div>
+
     <section id="results" aria-labelledby="results-heading">
       <h2 id="results-heading" class="visually-hidden">Ideas</h2>
       <div id="ideas">
-        <p class="placeholder">Use the filters above to find activity ideas!</p>
+        <p class="placeholder">Loading activities…</p>
       </div>
     </section>
   </main>
 
-  
   <script src="script.js"></script>
 </body>
 </html>
