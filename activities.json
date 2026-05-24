@@ -302,5 +302,173 @@
     "age": "3+",
     "toys": "Yoga mat or towel",
     "description": "Follow along to a kids' yoga video outdoors. Try poses like the tree, the cat, or the downward dog in the fresh air."
+  },
+  {
+    "title": "Indoor Obstacle Course",
+    "location": "Inside",
+    "energy": "Active",
+    "age": "4+",
+    "toys": "Cushions, masking tape, chairs",
+    "description": "Tape arrows or 'lava zones' on the floor, wind under chairs, jump over cushions. Time each lap and try to beat your record."
+  },
+  {
+    "title": "Living Room Dance Party",
+    "location": "Inside",
+    "energy": "Active",
+    "age": "3+",
+    "toys": "Speaker, scarves",
+    "description": "Cue up an upbeat playlist, dim the lights, hand out scarves or wooden spoons as 'microphones'. Freeze when the music stops!"
+  },
+  {
+    "title": "Balloon Volleyball",
+    "location": "Inside",
+    "energy": "Active",
+    "age": "4+",
+    "toys": "Balloon, string or sofa as net",
+    "description": "Stretch a string across the room or use the sofa as a net. Keep a balloon airborne — feet on the floor only!"
+  },
+  {
+    "title": "Sock Basketball",
+    "location": "Inside",
+    "energy": "Active",
+    "age": "4+",
+    "toys": "Laundry basket, rolled-up socks",
+    "description": "Rolled-up socks, a laundry basket, three rounds of free throws. Move the basket further back each round."
+  },
+  {
+    "title": "Animal Walk Races",
+    "location": "Inside",
+    "energy": "Active",
+    "age": "3+",
+    "toys": "None",
+    "description": "Bear crawl, crab walk, frog hop, snake slither. Pick an animal and race across the room. Loser picks the next animal."
+  },
+  {
+    "title": "Indoor Camping",
+    "location": "Inside",
+    "energy": "Calm",
+    "age": "4+",
+    "toys": "Tent or sheets, sleeping bag, torch",
+    "description": "Pitch a real or sheet-and-chair tent in the living room. Pack a 'campsite bag' and tell ghost (or silly) stories by torchlight."
+  },
+  {
+    "title": "Story Stones",
+    "location": "Inside",
+    "energy": "Calm",
+    "age": "4+",
+    "toys": "Smooth stones, paint pens",
+    "description": "Paint simple pictures on smooth stones — sun, cat, key, house. Take turns drawing one and adding to a shared story."
+  },
+  {
+    "title": "Origami Hour",
+    "location": "Inside",
+    "energy": "Calm",
+    "age": "5+",
+    "toys": "Paper, optional folding book",
+    "description": "Fold a paper boat, crane, or jumping frog. Make a small fleet or zoo and play with them afterwards."
+  },
+  {
+    "title": "Puppet Show",
+    "location": "Inside",
+    "energy": "Calm",
+    "age": "4+",
+    "toys": "Socks, paper bags, markers",
+    "description": "Make puppets from old socks or paper bags. Hang a blanket over a doorway as the stage and put on a show for the family."
+  },
+  {
+    "title": "Fairy House Building",
+    "location": "Outside",
+    "energy": "Calm",
+    "age": "4+",
+    "toys": "Sticks, leaves, moss, stones",
+    "description": "Find a tree base or quiet corner and build a tiny house from sticks, leaves, moss, and stones. Leave it for the fairies to find."
+  },
+  {
+    "title": "Leaf Rubbing Art",
+    "location": "Outside",
+    "energy": "Calm",
+    "age": "3+",
+    "toys": "Paper, crayons, leaves",
+    "description": "Place a leaf under a sheet of paper and rub the side of a crayon over it. Collect a few different shapes for a leaf gallery."
+  },
+  {
+    "title": "Listening Map",
+    "location": "Outside",
+    "energy": "Calm",
+    "age": "5+",
+    "toys": "Paper, pencil",
+    "description": "Sit still for two minutes. Mark every sound on a small map — bird right, car behind, wind above. Compare what each person heard."
+  },
+  {
+    "title": "Frozen Tag",
+    "location": "Garden",
+    "energy": "Active",
+    "age": "4+",
+    "toys": "None",
+    "description": "Standard tag, but when you're tagged you freeze in place. Others can unfreeze you by crawling between your legs."
+  },
+  {
+    "title": "Bubble Chase",
+    "location": "Garden",
+    "energy": "Active",
+    "age": "3+",
+    "toys": "Bubble wand and solution",
+    "description": "One person blows bubbles, the others race to pop as many as they can before they hit the ground. One point per pop."
+  },
+  {
+    "title": "Sprinkler Dash",
+    "location": "Garden",
+    "energy": "Active",
+    "age": "3+",
+    "toys": "Sprinkler, swimsuits, towels",
+    "description": "Set up the sprinkler. See who can run through it without getting their hair wet. Spoiler: nobody."
+  },
+  {
+    "title": "Seed Planting",
+    "location": "Garden",
+    "energy": "Calm",
+    "age": "3+",
+    "toys": "Seeds, pots, soil, labels",
+    "description": "Plant fast-growing seeds like cress or radish in small pots. Mark them, water daily, and watch what happens over the week."
+  },
+  {
+    "title": "Sledding Race",
+    "location": "Snow",
+    "energy": "Active",
+    "age": "4+",
+    "toys": "Sleds",
+    "description": "Mark a finish line and race down a gentle hill. Best of three. Take turns dragging the sled back up."
+  },
+  {
+    "title": "Snow Fort Building",
+    "location": "Snow",
+    "energy": "Active",
+    "age": "5+",
+    "toys": "Snow, shovels, buckets",
+    "description": "Pack snow into bricks using buckets. Build a wall, then turn it into a proper fort with seats and lookouts."
+  },
+  {
+    "title": "Winter Picnic",
+    "location": "Snow",
+    "energy": "Calm",
+    "age": "3+",
+    "toys": "Thermos, waterproof blanket, snacks",
+    "description": "Bundle up, find a quiet snowy spot, lay out a waterproof blanket and have hot cocoa and biscuits in the snow."
+  },
+  {
+    "title": "Number Plate Words",
+    "location": "Car",
+    "energy": "Calm",
+    "age": "6+",
+    "toys": "None",
+    "description": "Try to make a word using the letters on each number plate you spot — three letters in order. Silliest word wins the round."
+  },
+  {
+    "title": "Map Tracker",
+    "location": "Car",
+    "energy": "Calm",
+    "age": "5+",
+    "toys": "Printed map or atlas",
+    "description": "Give each kid a printed map of the route. They track where you are with a finger or pencil — extra points for spotting landmarks."
   }
 ]
