@@ -5,19 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gnist: Activity Finder</title>
 
-  <!-- Google Fonts (Fraunces for display). Remove these three lines if you'd rather stay system-only. -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header id="top-bar">
     <div class="brand">
-      <span class="brand-spark" aria-hidden="true">✦</span>
-      <h1>Gnist</h1>
-      <span class="brand-subtitle">Activity Finder</span>
+      <div class="brand-shapes" aria-hidden="true">
+        <span class="brand-shape brand-shape-circle"></span>
+        <span class="brand-shape brand-shape-square"></span>
+        <span class="brand-shape brand-shape-triangle"></span>
+      </div>
+      <h1>GNIST</h1>
+      <span class="brand-subtitle">Activity finder</span>
     </div>
 
     <nav id="filters" aria-label="Filters">
@@ -63,7 +66,7 @@
       <p id="match-count" aria-live="polite">…</p>
       <div class="meta-actions">
         <button id="show-all-button" type="button" class="meta-button" hidden>Show all matches</button>
-        <button id="surprise-button" type="button" class="meta-button primary">Surprise me <span aria-hidden="true">🎲</span></button>
+        <button id="surprise-button" type="button" class="meta-button primary">Surprise me</button>
       </div>
     </div>
 
