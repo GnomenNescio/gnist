@@ -1,4 +1,12 @@
-// ── Dropdown toggle logic ──────────────────────────────────────────────
+// ─────────────────────────────────────────────────────────────────────
+// Gnist: Activity Finder
+// ─────────────────────────────────────────────────────────────────────
+
+// ── State ────────────────────────────────────────────────────────────
+let activitiesCache = null;
+let pinnedActivity = null; // when "Surprise me" picks one, we pin it here
+
+// ── Dropdown open/close ──────────────────────────────────────────────
 function openDropdown(trigger, panel) {
   panel.hidden = false;
   trigger.setAttribute('aria-expanded', 'true');
@@ -9,101 +17,47 @@ function closeDropdown(trigger, panel) {
   trigger.setAttribute('aria-expanded', 'false');
 }
 
-function setupDropdown(triggerId, panelId) {
-  const trigger = document.getElementById(triggerId);
-  const panel = document.getElementById(panelId);
-
-  trigger.addEventListener('click', function (e) {
-    e.stopPropagation();
-    const isOpen = !panel.hidden;
-    // Close all dropdowns first
-    closeAllDropdowns();
-    if (!isOpen) openDropdown(trigger, panel);
-  });
-
-  // Prevent clicks inside the panel from closing the dropdown
-  panel.addEventListener('click', function (e) {
-    e.stopPropagation();
-  });
-}
-
 function closeAllDropdowns() {
   document.querySelectorAll('.dropdown-trigger').forEach(trigger => {
-    const panelId = trigger.getAttribute('aria-controls');
-    const panel = document.getElementById(panelId);
+    const panel = document.getElementById(trigger.getAttribute('aria-controls'));
     if (panel) closeDropdown(trigger, panel);
   });
 }
 
-// Close dropdowns when clicking outside
-document.addEventListener('click', function () {
-  closeAllDropdowns();
-});
+function setupDropdown(triggerId, panelId) {
+  const trigger = document.getElementById(triggerId);
+  const panel = document.getElementById(panelId);
+
+  trigger.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const isOpen = !panel.hidden;
+    closeAllDropdowns();
+    if (!isOpen) openDropdown(trigger, panel);
+  });
+
+  // Clicks inside the panel never bubble out to close it
+  panel.addEventListener('click', (e) => e.stopPropagation());
+  panel.addEventListener('mousedown', (e) => e.stopPropagation());
+}
 
 setupDropdown('location-trigger', 'location-panel');
 setupDropdown('energy-trigger', 'energy-panel');
 
-// Stop propagation on panels so clicks/mousedowns inside don't trigger closeAllDropdowns()
-document.querySelectorAll('.dropdown-panel').forEach(panel => {
-  panel.addEventListener('mousedown', function (e) {
-    e.stopPropagation();
-  });
-  panel.addEventListener('click', function (e) {
-    e.stopPropagation();
-  });
+// Close when clicking outside
+document.addEventListener('click', closeAllDropdowns);
+
+// Escape key closes all open dropdowns and returns focus to its trigger
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    const openTrigger = document.querySelector('.dropdown-trigger[aria-expanded="true"]');
+    closeAllDropdowns();
+    if (openTrigger) openTrigger.focus();
+  }
 });
 
-// ── Label summary helpers ──────────────────────────────────────────────
-function updateTriggerLabel(labelElId, group) {
-  const selected = Array.from(document.querySelectorAll(`.dropdown-item[data-group="${group}"].selected`))
-    .map(el => el.dataset.value);
-  const labelEl = document.getElementById(labelElId);
-  const all = document.querySelectorAll(`.dropdown-item[data-group="${group}"]`).length;
-  if (selected.length === 0) {
-    labelEl.textContent = group === 'location' ? 'Location' : 'Energy';
-  } else if (selected.length === all) {
-    labelEl.textContent = group === 'location' ? 'Location' : 'Energy';
-  } else if (selected.length <= 2) {
-    labelEl.textContent = selected.join(', ');
-  } else {
-    labelEl.textContent = `${selected.length} selected`;
-  }
-}
-
-// ── Activities cache ───────────────────────────────────────────────────
-let activitiesCache = null;
-
-function getActivities() {
-  if (activitiesCache) return Promise.resolve(activitiesCache);
-  return fetch('activities.json')
-    .then(response => response.json())
-    .then(data => { activitiesCache = data; return data; });
-}
-
-function applyFilters() {
-  const selectedLocations = Array.from(document.querySelectorAll('.dropdown-item[data-group="location"].selected')).map(el => el.dataset.value);
-  const selectedEnergies = Array.from(document.querySelectorAll('.dropdown-item[data-group="energy"].selected')).map(el => el.dataset.value);
-
-  getActivities()
-    .then(data => {
-      const filtered = data.filter(activity => {
-        const matchesLocation = selectedLocations.length === 0 ? false : selectedLocations.includes(activity.location);
-        const matchesEnergy = selectedEnergies.length === 0 ? false : selectedEnergies.includes(activity.energy);
-        return matchesLocation && matchesEnergy;
-      });
-      displayIdeas(filtered);
-    })
-    .catch(error => {
-      console.error('Error fetching activities:', error);
-    });
-}
-
-// ── Drag-to-select logic ───────────────────────────────────────────────
-let dragActive = false;
-let dragMode = null; // 'select' or 'deselect'
-
-function toggleItem(item, mode) {
-  if (mode === 'select') {
+// ── Selection helpers ────────────────────────────────────────────────
+function setItemState(item, selected) {
+  if (selected) {
     item.classList.add('selected');
     item.setAttribute('aria-checked', 'true');
   } else {
@@ -112,94 +66,285 @@ function toggleItem(item, mode) {
   }
 }
 
+function getSelected(group) {
+  return Array.from(document.querySelectorAll(`.dropdown-item[data-group="${group}"].selected`))
+    .map(el => el.dataset.value);
+}
+
+function getAllValues(group) {
+  return Array.from(document.querySelectorAll(`.dropdown-item[data-group="${group}"]`))
+    .map(el => el.dataset.value);
+}
+
+// ── Trigger label ────────────────────────────────────────────────────
+function updateTriggerLabel(labelElId, group) {
+  const labelEl = document.getElementById(labelElId);
+  const selected = getSelected(group);
+  const total = getAllValues(group).length;
+  const groupName = group === 'location' ? 'Location' : 'Energy';
+
+  if (selected.length === 0) {
+    labelEl.textContent = `${groupName}: none`;
+  } else if (selected.length === total) {
+    labelEl.textContent = groupName;
+  } else if (selected.length <= 2) {
+    labelEl.textContent = selected.join(', ');
+  } else {
+    labelEl.textContent = `${selected.length} selected`;
+  }
+}
+
+function updateAllLabels() {
+  updateTriggerLabel('location-label-text', 'location');
+  updateTriggerLabel('energy-label-text', 'energy');
+}
+
+// ── Select all / Clear actions ───────────────────────────────────────
+document.querySelectorAll('.dropdown-action').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const group = btn.dataset.group;
+    const action = btn.dataset.action; // 'all' or 'none'
+    const select = action === 'all';
+    document.querySelectorAll(`.dropdown-item[data-group="${group}"]`).forEach(item => {
+      setItemState(item, select);
+    });
+    updateAllLabels();
+    pinnedActivity = null; // user changed filter — unpin any surprise
+    document.getElementById('show-all-button').hidden = true;
+    applyFilters();
+  });
+});
+
+// ── Drag-to-select on items ──────────────────────────────────────────
+let dragActive = false;
+let dragMode = null; // 'select' or 'deselect'
+
 document.querySelectorAll('.dropdown-item').forEach(item => {
-  item.addEventListener('mousedown', function (e) {
-    e.preventDefault(); // prevent text selection
-    e.stopPropagation(); // prevent document click from closing the panel
-    document.body.style.userSelect = 'none';
-    dragActive = true;
-    dragMode = item.classList.contains('selected') ? 'deselect' : 'select';
-    toggleItem(item, dragMode);
-  });
-
-  item.addEventListener('mouseenter', function () {
-    if (dragActive) {
-      toggleItem(item, dragMode);
-    }
-  });
-
-  item.addEventListener('touchstart', function (e) {
-    e.preventDefault(); // prevent scrolling during swipe-to-select
+  // Mouse drag start
+  item.addEventListener('mousedown', (e) => {
+    e.preventDefault();
     e.stopPropagation();
     document.body.style.userSelect = 'none';
     dragActive = true;
     dragMode = item.classList.contains('selected') ? 'deselect' : 'select';
-    toggleItem(item, dragMode);
+    setItemState(item, dragMode === 'select');
+  });
+
+  // Drag-over while button is held
+  item.addEventListener('mouseenter', () => {
+    if (dragActive) setItemState(item, dragMode === 'select');
+  });
+
+  // Touch start (drag-to-select on mobile)
+  item.addEventListener('touchstart', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    document.body.style.userSelect = 'none';
+    dragActive = true;
+    dragMode = item.classList.contains('selected') ? 'deselect' : 'select';
+    setItemState(item, dragMode === 'select');
   }, { passive: false });
 
-  item.addEventListener('keydown', function (e) {
+  // Keyboard support
+  item.addEventListener('keydown', (e) => {
     if (e.key === ' ' || e.key === 'Enter') {
       e.preventDefault();
-      const mode = item.classList.contains('selected') ? 'deselect' : 'select';
-      toggleItem(item, mode);
-      updateTriggerLabel('location-label-text', 'location');
-      updateTriggerLabel('energy-label-text', 'energy');
+      const nowSelected = !item.classList.contains('selected');
+      setItemState(item, nowSelected);
+      updateAllLabels();
+      pinnedActivity = null;
+      document.getElementById('show-all-button').hidden = true;
       applyFilters();
     }
   });
 });
 
-document.addEventListener('mouseup', function () {
-  if (dragActive) {
-    dragActive = false;
-    dragMode = null;
-    document.body.style.userSelect = '';
-    updateTriggerLabel('location-label-text', 'location');
-    updateTriggerLabel('energy-label-text', 'energy');
-    applyFilters();
-  }
-});
+function finishDrag() {
+  if (!dragActive) return;
+  dragActive = false;
+  dragMode = null;
+  document.body.style.userSelect = '';
+  updateAllLabels();
+  pinnedActivity = null;
+  document.getElementById('show-all-button').hidden = true;
+  applyFilters();
+}
 
-document.addEventListener('touchmove', function (e) {
+document.addEventListener('mouseup', finishDrag);
+document.addEventListener('touchend', finishDrag);
+
+document.addEventListener('touchmove', (e) => {
   if (!dragActive) return;
   const touch = e.touches[0];
   const target = document.elementFromPoint(touch.clientX, touch.clientY);
   if (target && target.classList.contains('dropdown-item')) {
-    toggleItem(target, dragMode);
+    setItemState(target, dragMode === 'select');
   }
 }, { passive: false });
 
-document.addEventListener('touchend', function () {
-  if (dragActive) {
-    dragActive = false;
-    dragMode = null;
-    document.body.style.userSelect = '';
-    updateTriggerLabel('location-label-text', 'location');
-    updateTriggerLabel('energy-label-text', 'energy');
-    applyFilters();
-  }
-});
+// ── Data loading ─────────────────────────────────────────────────────
+function getActivities() {
+  if (activitiesCache) return Promise.resolve(activitiesCache);
+  return fetch('activities.json')
+    .then(r => {
+      if (!r.ok) throw new Error('Could not load activities.json (' + r.status + ')');
+      return r.json();
+    })
+    .then(data => { activitiesCache = data; return data; });
+}
 
-// ── Display ideas ──────────────────────────────────────────────────────
-function displayIdeas(activities) {
-  const ideasDiv = document.getElementById('ideas');
-  ideasDiv.innerHTML = '';
+// ── Filter & display ─────────────────────────────────────────────────
+function getFiltered(data) {
+  const locs = getSelected('location');
+  const energies = getSelected('energy');
+  const totalLocs = getAllValues('location').length;
+  const totalEnergies = getAllValues('energy').length;
 
-  if (activities.length === 0) {
-    ideasDiv.innerHTML = '<p>No ideas match your filters. Try adjusting them!</p>';
-  } else {
-    activities.forEach(activity => {
-      const ideaCard = document.createElement('div');
-      ideaCard.className = 'idea-card';
-      ideaCard.innerHTML = `<h3>${activity.title}</h3>
-                            <p>${activity.description || 'No description available'}</p>
-                            <p><strong>Best for:</strong> ${activity.age || 'All ages'}</p>
-                            <p><strong>Toys:</strong> ${activity.toys || 'None'}</p>`;
-      ideasDiv.appendChild(ideaCard);
+  // A group "filters" only when it's a partial selection.
+  //   - empty selection  → treated as "no filter" (forgiving)
+  //   - all selected     → treated as "no filter"
+  //   - partial selection → filter to the selected values
+  const locActive = locs.length > 0 && locs.length < totalLocs;
+  const enActive = energies.length > 0 && energies.length < totalEnergies;
+
+  return data.filter(activity => {
+    const matchesLoc = locActive ? locs.includes(activity.location) : true;
+    const matchesEn = enActive ? energies.includes(activity.energy) : true;
+    return matchesLoc && matchesEn;
+  });
+}
+
+function applyFilters() {
+  getActivities()
+    .then(data => {
+      const filtered = getFiltered(data);
+      updateMatchCount(filtered.length);
+
+      if (pinnedActivity && filtered.some(a => a.title === pinnedActivity.title)) {
+        displayIdeas([pinnedActivity]);
+      } else {
+        pinnedActivity = null;
+        document.getElementById('show-all-button').hidden = true;
+        displayIdeas(filtered);
+      }
+    })
+    .catch(err => {
+      console.error('Error loading activities:', err);
+      const ideasDiv = document.getElementById('ideas');
+      ideasDiv.textContent = '';
+      const p = document.createElement('p');
+      p.className = 'placeholder';
+      p.textContent = 'Could not load activities. Please refresh the page.';
+      ideasDiv.appendChild(p);
     });
+}
+
+function updateMatchCount(count) {
+  const el = document.getElementById('match-count');
+  el.textContent = '';
+  if (pinnedActivity) {
+    el.append('Showing 1 of ', strong(String(count)), ' matching idea' + (count === 1 ? '' : 's'));
+  } else if (count === 0) {
+    el.textContent = 'No matches with the current filters';
+  } else {
+    el.append(strong(String(count)), ' idea' + (count === 1 ? '' : 's') + ' found');
   }
 }
 
-// ── Run initial filter on page load ───────────────────────────────────
-applyFilters();
+function strong(text) {
+  const s = document.createElement('strong');
+  s.textContent = text;
+  return s;
+}
 
+// ── DOM construction (safe — no innerHTML with data) ─────────────────
+function buildBadge(text, kind) {
+  const span = document.createElement('span');
+  span.className = 'badge badge-' + kind;
+  span.textContent = text;
+  return span;
+}
+
+function buildMetaItem(label, value) {
+  const span = document.createElement('span');
+  const labelEl = document.createElement('span');
+  labelEl.className = 'meta-label';
+  labelEl.textContent = label + ':';
+  span.appendChild(labelEl);
+  span.append(' ' + value);
+  return span;
+}
+
+function buildCard(activity, index) {
+  const card = document.createElement('article');
+  card.className = 'idea-card';
+  card.style.animationDelay = Math.min(index, 12) * 0.025 + 's';
+
+  const head = document.createElement('div');
+  head.className = 'card-head';
+
+  const h3 = document.createElement('h3');
+  h3.textContent = activity.title;
+  head.appendChild(h3);
+
+  const badges = document.createElement('div');
+  badges.className = 'badges';
+  if (activity.location) badges.appendChild(buildBadge(activity.location, 'location'));
+  if (activity.energy) badges.appendChild(buildBadge(activity.energy, 'energy'));
+  head.appendChild(badges);
+
+  card.appendChild(head);
+
+  const desc = document.createElement('p');
+  desc.className = 'card-desc';
+  desc.textContent = activity.description || 'No description available.';
+  card.appendChild(desc);
+
+  const meta = document.createElement('footer');
+  meta.className = 'card-meta';
+  meta.appendChild(buildMetaItem('Best for', activity.age || 'All ages'));
+  meta.appendChild(buildMetaItem('Toys', activity.toys || 'None'));
+  card.appendChild(meta);
+
+  return card;
+}
+
+function displayIdeas(activities) {
+  const ideasDiv = document.getElementById('ideas');
+  ideasDiv.textContent = '';
+
+  if (activities.length === 0) {
+    const p = document.createElement('p');
+    p.className = 'placeholder';
+    p.textContent = 'No ideas match your filters. Try adjusting them!';
+    ideasDiv.appendChild(p);
+    return;
+  }
+
+  activities.forEach((activity, i) => {
+    ideasDiv.appendChild(buildCard(activity, i));
+  });
+}
+
+// ── Surprise me / Show all ───────────────────────────────────────────
+document.getElementById('surprise-button').addEventListener('click', () => {
+  getActivities().then(data => {
+    const filtered = getFiltered(data);
+    if (filtered.length === 0) return; // nothing to pick from
+    pinnedActivity = filtered[Math.floor(Math.random() * filtered.length)];
+    document.getElementById('show-all-button').hidden = filtered.length <= 1;
+    updateMatchCount(filtered.length);
+    displayIdeas([pinnedActivity]);
+  });
+});
+
+document.getElementById('show-all-button').addEventListener('click', () => {
+  pinnedActivity = null;
+  document.getElementById('show-all-button').hidden = true;
+  applyFilters();
+});
+
+// ── Initial render ───────────────────────────────────────────────────
+updateAllLabels();
+applyFilters();
