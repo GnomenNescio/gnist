@@ -83,9 +83,8 @@ function updateTriggerLabel(labelElId, group) {
   const total = getAllValues(group).length;
   const groupName = group === 'location' ? 'Location' : 'Energy';
 
-  if (selected.length === 0) {
-    labelEl.textContent = `${groupName}: none`;
-  } else if (selected.length === total) {
+  // Empty or all selected → both mean "no filter active" → show plain group name.
+  if (selected.length === 0 || selected.length === total) {
     labelEl.textContent = groupName;
   } else if (selected.length <= 2) {
     labelEl.textContent = selected.join(', ');
@@ -97,17 +96,20 @@ function updateTriggerLabel(labelElId, group) {
 function updateAllLabels() {
   updateTriggerLabel('location-label-text', 'location');
   updateTriggerLabel('energy-label-text', 'energy');
+  // Show the "Clear" affordance only when there's something to clear.
+  document.querySelectorAll('.dropdown-actions').forEach(div => {
+    const group = div.dataset.group;
+    div.hidden = getSelected(group).length === 0;
+  });
 }
 
-// ── Select all / Clear actions ───────────────────────────────────────
+// ── Clear action ─────────────────────────────────────────────────────
 document.querySelectorAll('.dropdown-action').forEach(btn => {
   btn.addEventListener('click', (e) => {
     e.stopPropagation();
     const group = btn.dataset.group;
-    const action = btn.dataset.action; // 'all' or 'none'
-    const select = action === 'all';
     document.querySelectorAll(`.dropdown-item[data-group="${group}"]`).forEach(item => {
-      setItemState(item, select);
+      setItemState(item, false);
     });
     updateAllLabels();
     pinnedActivity = null; // user changed filter — unpin any surprise
