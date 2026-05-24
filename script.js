@@ -304,7 +304,6 @@ function buildCard(activity, index) {
   // Meta footer (no divider above per design)
   const meta = document.createElement('footer');
   meta.className = 'card-meta';
-  meta.appendChild(buildMetaItem('Best for', activity.age || 'All ages'));
   meta.appendChild(buildMetaItem('Toys', activity.toys || 'None'));
   card.appendChild(meta);
 
