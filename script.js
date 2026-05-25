@@ -41,7 +41,7 @@ function setupDropdown(triggerId, panelId) {
 
 setupDropdown('location-trigger', 'location-panel');
 setupDropdown('energy-trigger',   'energy-panel');
-setupDropdown('season-trigger',   'season-panel');
+setupDropdown('conditions-trigger',   'conditions-panel');
 
 document.addEventListener('click', closeAllDropdowns);
 
@@ -75,7 +75,7 @@ function getAllValues(group) {
 }
 
 // ── Trigger labels ───────────────────────────────────────────────────
-const GROUP_NAMES = { location: 'Location', energy: 'Energy', season: 'Season' };
+const GROUP_NAMES = { location: 'Location', energy: 'Energy', conditions: 'Conditions' };
 
 function updateTriggerLabel(labelElId, group) {
   const labelEl   = document.getElementById(labelElId);
@@ -95,7 +95,7 @@ function updateTriggerLabel(labelElId, group) {
 function updateAllLabels() {
   updateTriggerLabel('location-label-text', 'location');
   updateTriggerLabel('energy-label-text',   'energy');
-  updateTriggerLabel('season-label-text',   'season');
+  updateTriggerLabel('conditions-label-text',   'conditions');
   document.querySelectorAll('.dropdown-actions').forEach(div => {
     div.hidden = getSelected(div.dataset.group).length === 0;
   });
@@ -188,29 +188,29 @@ function getActivities() {
     .then(data => { activitiesCache = data; return data; });
 }
 
-// ── Filter logic (handles array location and season fields) ──────────
+// ── Filter logic (handles array location and conditions fields) ──────────
 function getFiltered(data) {
   const locs    = getSelected('location');
   const energies = getSelected('energy');
-  const seasons  = getSelected('season');
+  const conditionss  = getSelected('conditions');
 
   const totalLocs    = getAllValues('location').length;
   const totalEnergies = getAllValues('energy').length;
-  const totalSeasons  = getAllValues('season').length;
+  const totalSeasons  = getAllValues('conditions').length;
 
   // A group is "active" only on partial selection
   const locActive    = locs.length > 0 && locs.length < totalLocs;
   const enActive     = energies.length > 0 && energies.length < totalEnergies;
-  const seasonActive = seasons.length > 0 && seasons.length < totalSeasons;
+  const conditionsActive = conditionss.length > 0 && conditionss.length < totalSeasons;
 
   return data.filter(activity => {
-    // Normalise location and season to arrays
+    // Normalise location and conditions to arrays
     const actLocs    = Array.isArray(activity.location) ? activity.location : [activity.location];
-    const actSeasons = Array.isArray(activity.season)   ? activity.season   : [activity.season];
+    const actSeasons = Array.isArray(activity.conditions)   ? activity.conditions   : [activity.conditions];
 
     const matchesLoc    = locActive    ? actLocs.some(l => locs.includes(l))       : true;
     const matchesEn     = enActive     ? energies.includes(activity.energy)         : true;
-    const matchesSeason = seasonActive ? actSeasons.some(s => seasons.includes(s)) : true;
+    const matchesSeason = conditionsActive ? actSeasons.some(s => conditionss.includes(s)) : true;
 
     return matchesLoc && matchesEn && matchesSeason;
   });
@@ -377,7 +377,7 @@ function syncBottomLabel(group) {
 }
 
 function syncAllBottomLabels() {
-  ['energy', 'location', 'season'].forEach(syncBottomLabel);
+  ['energy', 'location', 'conditions'].forEach(syncBottomLabel);
 }
 
 function closeAllBottomSheets() {
@@ -474,7 +474,7 @@ function initBottomBar() {
   // Show bar only on mobile (CSS also handles this, JS ensures initial state)
   if (isMobile()) bar.style.display = 'flex';
 
-  ['energy', 'location', 'season'].forEach(group => buildBottomSheet(group));
+  ['energy', 'location', 'conditions'].forEach(group => buildBottomSheet(group));
 
   document.querySelectorAll('.bottom-trigger').forEach(trigger => {
     trigger.addEventListener('click', (e) => {
