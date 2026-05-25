@@ -1,125 +1,596 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gnist: Activity Finder</title>
+/* ── Design tokens ─────────────────────────────────────────────────── */
+:root {
+  --color-bg:        #ffffff;
+  --color-surface:   #ffffff;
+  --color-text:      #0a0a0a;
+  --color-text-mute: #6a6a6a;
+  --color-border:    #0a0a0a;
+  --color-hover:     #f3eee2;
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+  /* Location accent colours */
+  --loc-inside:       #FFC23C;   /* yellow */
+  --loc-at-the-table: #C8844A;   /* warm terracotta */
+  --loc-urban:        #5B8FBF;   /* slate blue */
+  --loc-garden:       #E63946;   /* red */
+  --loc-forest:       #2E8B57;   /* green */
+  --loc-car:          #F08020;   /* orange */
 
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <header id="top-bar">
-    <div class="brand">
-      <div class="brand-shapes" aria-hidden="true">
-        <span class="brand-shape brand-shape-circle"></span>
-        <span class="brand-shape brand-shape-square"></span>
-        <span class="brand-shape brand-shape-triangle"></span>
-        <span class="brand-shape brand-shape-diamond"></span>
-        <span class="brand-shape brand-shape-semicircle"></span>
-      </div>
-      <h1>GNIST</h1>
+  /* Filter underlines */
+  --filter-location: var(--loc-garden);
+  --filter-energy:   #1D4FA8;
+  --filter-conditions:   #C8960A;    /* amber */
 
-    </div>
+  --font-display: 'Archivo Black', sans-serif;
+  --font-body:    'Manrope', system-ui, sans-serif;
+}
 
-    <button id="lang-toggle" type="button" aria-label="Switch language">EN</button>
+/* ── Reset & base ──────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
 
-    <nav id="filters" aria-label="Filters">
-      <div class="filters-bar">
+body {
+  font-family: var(--font-body);
+  margin: 0;
+  padding: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-size: 15px;
+  line-height: 1.55;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  -webkit-font-smoothing: antialiased;
+}
 
-        <div class="dropdown" id="energy-dropdown">
-          <button class="dropdown-trigger" id="energy-trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="energy-panel">
-            <span class="dropdown-label" id="energy-label-text">Energy</span>
-            <span class="dropdown-chevron" aria-hidden="true">▾</span>
-          </button>
-          <div class="dropdown-panel" id="energy-panel" role="group" aria-labelledby="energy-trigger" hidden>
-            <div class="dropdown-actions" data-group="energy" hidden>
-              <button type="button" class="dropdown-action" data-group="energy">Clear</button>
-            </div>
-            <div class="dropdown-item" role="checkbox" aria-checked="false" tabindex="0" data-group="energy" data-value="Calm"><span class="check" aria-hidden="true"></span><span class="item-label">Calm</span></div>
-            <div class="dropdown-item" role="checkbox" aria-checked="false" tabindex="0" data-group="energy" data-value="Active"><span class="check" aria-hidden="true"></span><span class="item-label">Active</span></div>
-          </div>
-        </div>
+button { font-family: inherit; }
 
-        <div class="dropdown" id="location-dropdown">
-          <button class="dropdown-trigger" id="location-trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="location-panel">
-            <span class="dropdown-label" id="location-label-text">Location</span>
-            <span class="dropdown-chevron" aria-hidden="true">▾</span>
-          </button>
-          <div class="dropdown-panel" id="location-panel" role="group" aria-labelledby="location-trigger" hidden>
-            <div class="dropdown-actions" data-group="location" hidden>
-              <button type="button" class="dropdown-action" data-group="location">Clear</button>
-            </div>
-            <div class="dropdown-item" role="checkbox" aria-checked="false" tabindex="0" data-group="location" data-value="Inside"><span class="check" aria-hidden="true"></span><span class="item-label">Inside</span></div>
-            <div class="dropdown-item" role="checkbox" aria-checked="false" tabindex="0" data-group="location" data-value="At the table"><span class="check" aria-hidden="true"></span><span class="item-label">At the table</span></div>
-            <div class="dropdown-item" role="checkbox" aria-checked="false" tabindex="0" data-group="location" data-value="Urban"><span class="check" aria-hidden="true"></span><span class="item-label">Urban</span></div>
-            <div class="dropdown-item" role="checkbox" aria-checked="false" tabindex="0" data-group="location" data-value="Garden"><span class="check" aria-hidden="true"></span><span class="item-label">Garden</span></div>
-            <div class="dropdown-item" role="checkbox" aria-checked="false" tabindex="0" data-group="location" data-value="Forest"><span class="check" aria-hidden="true"></span><span class="item-label">Forest</span></div>
-            <div class="dropdown-item" role="checkbox" aria-checked="false" tabindex="0" data-group="location" data-value="Car"><span class="check" aria-hidden="true"></span><span class="item-label">Car</span></div>
-          </div>
-        </div>
+.visually-hidden {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
 
-        <div class="dropdown" id="conditions-dropdown">
-          <button class="dropdown-trigger" id="conditions-trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="conditions-panel">
-            <span class="dropdown-label" id="conditions-label-text">Conditions</span>
-            <span class="dropdown-chevron" aria-hidden="true">▾</span>
-          </button>
-          <div class="dropdown-panel" id="conditions-panel" role="group" aria-labelledby="conditions-trigger" hidden>
-            <div class="dropdown-actions" data-group="conditions" hidden>
-              <button type="button" class="dropdown-action" data-group="conditions">Clear</button>
-            </div>
-            <div class="dropdown-item" role="checkbox" aria-checked="false" tabindex="0" data-group="conditions" data-value="Sunny"><span class="check" aria-hidden="true"></span><span class="item-label">Sunny</span></div>
-            <div class="dropdown-item" role="checkbox" aria-checked="false" tabindex="0" data-group="conditions" data-value="Cloudy"><span class="check" aria-hidden="true"></span><span class="item-label">Cloudy</span></div>
-            <div class="dropdown-item" role="checkbox" aria-checked="false" tabindex="0" data-group="conditions" data-value="Rainy"><span class="check" aria-hidden="true"></span><span class="item-label">Rainy</span></div>
-            <div class="dropdown-item" role="checkbox" aria-checked="false" tabindex="0" data-group="conditions" data-value="Snowy"><span class="check" aria-hidden="true"></span><span class="item-label">Snowy</span></div>
-          </div>
-        </div>
+/* ── Top bar ───────────────────────────────────────────────────────── */
+#top-bar {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.1rem 2rem 0.9rem;
+  border-bottom: 2px solid var(--color-border);
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
 
-      </div>
-    </nav>
-  </header>
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
 
-  <main>
-    <div id="results-meta">
-      <p id="match-count" aria-live="polite">…</p>
-      <div class="meta-actions">
-        <button id="show-all-button" type="button" class="meta-button" hidden>Show all matches</button>
-        <button id="surprise-button" type="button" class="meta-button primary">Surprise me</button>
-      </div>
-    </div>
+.brand-shapes {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-right: 0.15rem;
+}
 
-    <section id="results" aria-labelledby="results-heading">
-      <h2 id="results-heading" class="visually-hidden">Ideas</h2>
-      <div id="ideas">
-        <p class="placeholder">Loading activities…</p>
-      </div>
-    </section>
-  </main>
+.brand-shape { display: block; }
+.brand-shape-circle {
+  width: 18px; height: 18px;
+  border-radius: 50%;
+  background: var(--loc-garden);
+}
+.brand-shape-square {
+  width: 18px; height: 18px;
+  background: var(--loc-inside);
+}
+.brand-shape-triangle {
+  width: 0; height: 0;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-bottom: 16px solid var(--loc-forest);
+}
+.brand-shape-diamond {
+  width: 13px; height: 13px;
+  background: var(--filter-energy);
+  transform: rotate(45deg);
+  flex-shrink: 0;
+  margin: 0 2px;
+}
+.brand-shape-semicircle {
+  width: 9px; height: 18px;
+  border-radius: 0 18px 18px 0;
+  background: var(--loc-car);
+}
 
-  <!-- Mobile bottom filter bar (hidden on desktop via CSS) -->
-  <div id="bottom-filter-bar" style="display:none">
-    <button class="bottom-trigger" type="button" data-group="energy" aria-expanded="false" aria-controls="bottom-sheet-energy">
-      <span class="bottom-label" id="bottom-energy-label">Energy</span>
-      <span aria-hidden="true">▾</span>
-    </button>
-    <button class="bottom-trigger" type="button" data-group="location" aria-expanded="false" aria-controls="bottom-sheet-location">
-      <span class="bottom-label" id="bottom-location-label">Location</span>
-      <span aria-hidden="true">▾</span>
-    </button>
-    <button class="bottom-trigger" type="button" data-group="conditions" aria-expanded="false" aria-controls="bottom-sheet-conditions">
-      <span class="bottom-label" id="bottom-conditions-label">Conditions</span>
-      <span aria-hidden="true">▾</span>
-    </button>
-  </div>
+#top-bar h1 {
+  font-family: var(--font-display);
+  font-size: 1.55rem;
+  margin: 0;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
 
-  <!-- Bottom sheets (mobile panels, share the same dropdown-item elements via JS sync) -->
-  <div class="bottom-sheet" id="bottom-sheet-energy" role="group" aria-label="Energy filter"></div>
-  <div class="bottom-sheet" id="bottom-sheet-location" role="group" aria-label="Location filter"></div>
-  <div class="bottom-sheet" id="bottom-sheet-conditions" role="group" aria-label="Conditions filter"></div>
+.brand-subtitle {
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-mute);
+}
 
-  <script src="script.js"></script>
-</body>
-</html>
+/* ── Language toggle ───────────────────────────────────────────────── */
+#lang-toggle {
+  background: transparent;
+  border: 2px solid var(--color-border);
+  font-family: var(--font-body);
+  font-weight: 800;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  padding: 0.3rem 0.6rem;
+  cursor: pointer;
+  color: var(--color-text);
+  transition: background 0.12s, color 0.12s;
+  flex-shrink: 0;
+}
+
+#lang-toggle:hover {
+  background: var(--color-text);
+  color: white;
+}
+
+#lang-toggle:focus-visible {
+  outline: 2px solid var(--filter-location);
+  outline-offset: 3px;
+}
+
+/* ── Filters ───────────────────────────────────────────────────────── */
+#filters { margin-left: auto; }
+
+.filters-bar {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.dropdown { position: relative; }
+
+.dropdown-trigger {
+  background: transparent;
+  border: none;
+  font-family: var(--font-body);
+  font-weight: 800;
+  font-size: 0.82rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text);
+  cursor: pointer;
+  padding: 0.3rem 0 0.55rem;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  white-space: nowrap;
+}
+
+.dropdown-trigger::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 100%; height: 4px;
+}
+#location-trigger::after { background: var(--filter-location); }
+#energy-trigger::after   { background: var(--filter-energy); }
+#conditions-trigger::after   { background: var(--filter-conditions); }
+
+.dropdown-trigger:focus-visible {
+  outline: 2px solid var(--color-text);
+  outline-offset: 4px;
+}
+
+.dropdown-chevron {
+  font-size: 0.7rem;
+  transition: transform 0.15s;
+}
+.dropdown-trigger[aria-expanded="true"] .dropdown-chevron {
+  transform: rotate(180deg);
+}
+
+/* ── Dropdown panel ────────────────────────────────────────────────── */
+.dropdown-panel {
+  position: absolute;
+  top: calc(100% + 4px);
+  right: 0;
+  min-width: 200px;
+  background: var(--color-surface);
+  border: 2px solid var(--color-border);
+  z-index: 100;
+  padding: 0;
+  animation: panel-in 0.12s ease-out;
+}
+
+@keyframes panel-in {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.dropdown-panel[hidden] { display: none; }
+
+.dropdown-actions {
+  display: flex;
+  border-bottom: 2px solid var(--color-border);
+}
+
+.dropdown-action {
+  background: transparent;
+  border: none;
+  font-family: var(--font-body);
+  font-weight: 800;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text);
+  padding: 0.5rem 0.85rem;
+  cursor: pointer;
+}
+
+.dropdown-action:hover {
+  background: var(--color-text);
+  color: white;
+}
+
+.dropdown-action:focus-visible {
+  outline: 2px solid var(--filter-location);
+  outline-offset: -2px;
+}
+
+/* ── Dropdown items ────────────────────────────────────────────────── */
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.55rem 0.85rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.1s;
+}
+
+.dropdown-item:hover { background: var(--color-hover); }
+
+.dropdown-item:focus-visible {
+  outline: 2px solid var(--color-text);
+  outline-offset: -2px;
+}
+
+.dropdown-item.selected { font-weight: 700; }
+
+.check {
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--color-text);
+  flex-shrink: 0;
+  background: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.1s;
+}
+
+.dropdown-item.selected .check { background: var(--color-text); }
+
+.dropdown-item.selected .check::after {
+  content: '';
+  width: 4px;
+  height: 8px;
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.item-label { flex: 1; }
+
+/* ── Main content area ─────────────────────────────────────────────── */
+main {
+  flex: 1;
+  padding: 1.75rem 2rem 4rem;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#results-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+  flex-wrap: wrap;
+}
+
+#match-count {
+  margin: 0;
+  color: var(--color-text-mute);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+#match-count strong {
+  color: var(--color-text);
+  font-weight: 800;
+}
+
+.meta-actions { display: flex; gap: 0.5rem; }
+
+.meta-button {
+  background: var(--color-surface);
+  border: 2px solid var(--color-text);
+  color: var(--color-text);
+  padding: 0.5rem 1rem;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 0;
+  cursor: pointer;
+  transition: background 0.12s, color 0.12s, transform 0.12s;
+}
+
+.meta-button:hover {
+  background: var(--color-text);
+  color: white;
+}
+
+.meta-button.primary {
+  background: var(--color-text);
+  color: white;
+}
+.meta-button.primary:hover {
+  background: var(--filter-location);
+  border-color: var(--filter-location);
+}
+
+.meta-button:focus-visible {
+  outline: 2px solid var(--filter-location);
+  outline-offset: 3px;
+}
+
+.meta-button:active { transform: translateY(1px); }
+
+/* ── Results grid ──────────────────────────────────────────────────── */
+#ideas {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.placeholder {
+  color: var(--color-text-mute);
+  font-size: 0.95rem;
+  margin: 1rem 0;
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 2.5rem 1rem;
+  border: 2px dashed var(--color-border);
+  font-weight: 500;
+}
+
+/* ── Card ──────────────────────────────────────────────────────────── */
+.idea-card {
+  background: var(--color-surface);
+  border: 2px solid var(--color-border);
+  padding: 1.6rem 1.4rem 1.2rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  animation: card-in 0.25s ease-out backwards;
+}
+
+.idea-card:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 6px 6px 0 var(--color-border);
+}
+
+@keyframes card-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Coloured cap — uses first location */
+.idea-card .accent {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 10px;
+}
+
+.idea-card.loc-inside        .accent { background: var(--loc-inside); }
+.idea-card.loc-at-the-table  .accent { background: var(--loc-at-the-table); }
+.idea-card.loc-urban         .accent { background: var(--loc-urban); }
+.idea-card.loc-garden        .accent { background: var(--loc-garden); }
+.idea-card.loc-forest        .accent { background: var(--loc-forest); }
+.idea-card.loc-car           .accent { background: var(--loc-car); }
+
+.idea-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.22rem;
+  line-height: 1.15;
+  margin: 0;
+  letter-spacing: -0.01em;
+  color: var(--color-text);
+}
+
+/* Badges */
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.badge {
+  font-family: var(--font-body);
+  font-weight: 800;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.55rem;
+  border: 2px solid var(--color-text);
+  background: white;
+  color: var(--color-text);
+  line-height: 1.4;
+}
+
+/* Location badge fills */
+.badge.loc-inside        { background: var(--loc-inside);       color: var(--color-text);   border-color: var(--color-text); }
+.badge.loc-at-the-table  { background: var(--loc-at-the-table); color: white;               border-color: var(--loc-at-the-table); }
+.badge.loc-urban         { background: var(--loc-urban);        color: white;               border-color: var(--loc-urban); }
+.badge.loc-garden        { background: var(--loc-garden);       color: white;               border-color: var(--loc-garden); }
+.badge.loc-forest        { background: var(--loc-forest);       color: white;               border-color: var(--loc-forest); }
+.badge.loc-car           { background: var(--loc-car);          color: white;               border-color: var(--loc-car); }
+
+.card-desc {
+  margin: 0.15rem 0 0;
+  font-size: 0.9rem;
+  color: var(--color-text);
+  line-height: 1.55;
+}
+
+.card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1rem;
+  font-size: 0.74rem;
+  color: var(--color-text-mute);
+  margin-top: 0.4rem;
+  letter-spacing: 0.04em;
+}
+
+.meta-label {
+  font-weight: 800;
+  color: var(--color-text);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.7rem;
+  margin-right: 0.2rem;
+}
+
+/* ── Mobile tweaks ─────────────────────────────────────────────────── */
+/* Bottom bar and sheets hidden by default (shown only on mobile) */
+#bottom-filter-bar { display: none; }
+.bottom-sheet { display: none; }
+
+@media (max-width: 640px) {
+  /* ── Top bar: brand only, no filters ─────────────────────── */
+  #top-bar {
+    padding: 0.9rem 1rem 0.75rem;
+    gap: 0.85rem;
+    border-bottom: 2px solid var(--color-border);
+  }
+  .brand { gap: 0.55rem; }
+  .brand-subtitle { display: none; }
+  #top-bar h1 { font-size: 1.35rem; }
+
+  /* Hide filters from the top bar on mobile */
+  #filters { display: none; }
+
+  /* ── Main content: leave room for bottom bar ──────────────── */
+  main { padding: 1.25rem 1rem 6rem; }
+  #ideas { grid-template-columns: 1fr; }
+
+  /* ── Fixed bottom filter bar ──────────────────────────────── */
+  #bottom-filter-bar {
+    display: flex;
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    background: var(--color-surface);
+    border-top: 2px solid var(--color-border);
+    z-index: 200;
+    height: 3.25rem;
+  }
+
+  #bottom-filter-bar .bottom-trigger {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+    background: transparent;
+    border: none;
+    border-right: 2px solid var(--color-border);
+    font-family: var(--font-body);
+    font-weight: 800;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-text);
+    cursor: pointer;
+    padding: 0 0.5rem;
+    position: relative;
+  }
+
+  #bottom-filter-bar .bottom-trigger:last-child {
+    border-right: none;
+  }
+
+  /* Coloured underline on each trigger */
+  #bottom-filter-bar .bottom-trigger::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 100%; height: 4px;
+  }
+  #bottom-filter-bar .bottom-trigger[data-group="energy"]::after   { background: var(--filter-energy); }
+  #bottom-filter-bar .bottom-trigger[data-group="location"]::after { background: var(--filter-location); }
+  #bottom-filter-bar .bottom-trigger[data-group="conditions"]::after   { background: var(--filter-conditions); }
+
+  #bottom-filter-bar .bottom-trigger[aria-expanded="true"] {
+    background: var(--color-hover);
+  }
+
+  /* ── Bottom sheet panels (rise from bottom bar) ───────────── */
+  .bottom-sheet {
+    display: none;
+    position: fixed;
+    left: 0; right: 0;
+    bottom: 3.25rem; /* sits just above the bar */
+    background: var(--color-surface);
+    border: 2px solid var(--color-border);
+    border-bottom: none;
+    z-index: 199;
+    animation: sheet-in 0.18s ease-out;
+  }
+
+  .bottom-sheet.open { display: block; }
+
+  @keyframes sheet-in {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .bottom-sheet .dropdown-actions {
+    display: flex;
+    border-bottom: 2px solid var(--color-border);
+  }
+
+  .bottom-sheet .dropdown-item {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
