@@ -80,32 +80,68 @@ button { font-family: inherit; }
 }
 
 .brand-shape { display: block; }
+@keyframes gnist-roll {
+  0%   { transform: translateX(-4px) rotate(-35deg); }
+  50%  { transform: translateX(4px) rotate(35deg); }
+  100% { transform: translateX(-4px) rotate(-35deg); }
+}
+@keyframes gnist-rock {
+  0%   { transform: rotate(-22deg); }
+  50%  { transform: rotate(22deg); }
+  100% { transform: rotate(-22deg); }
+}
+@keyframes gnist-spin {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+@keyframes gnist-slide {
+  0%   { transform: translateX(-4px); }
+  50%  { transform: translateX(4px); }
+  100% { transform: translateX(-4px); }
+}
+@keyframes gnist-tumble {
+  0%   { transform: rotate(45deg); }
+  30%  { transform: rotate(80deg); }
+  70%  { transform: rotate(10deg); }
+  100% { transform: rotate(45deg); }
+}
+
 .brand-shape-circle {
   width: 18px; height: 18px;
   border-radius: 50%;
   background: var(--loc-garden);
+  animation: gnist-roll 2.4s ease-in-out infinite;
+  animation-delay: 0.3s;
 }
 .brand-shape-square {
   width: 18px; height: 18px;
   background: var(--loc-inside);
+  animation: gnist-slide 1.9s ease-in-out infinite;
+  animation-delay: 1.1s;
 }
 .brand-shape-triangle {
   width: 0; height: 0;
   border-left: 9px solid transparent;
   border-right: 9px solid transparent;
   border-bottom: 16px solid var(--loc-forest);
+  transform-origin: 9px 11px;
+  animation: gnist-spin 3.2s linear infinite;
+  animation-delay: 0.7s;
 }
 .brand-shape-diamond {
   width: 13px; height: 13px;
   background: var(--filter-energy);
-  transform: rotate(45deg);
   flex-shrink: 0;
   margin: 0 2px;
+  animation: gnist-tumble 2.7s ease-in-out infinite;
+  animation-delay: 0.5s;
 }
 .brand-shape-semicircle {
   width: 9px; height: 18px;
   border-radius: 0 18px 18px 0;
   background: var(--loc-car);
+  animation: gnist-rock 2s ease-in-out infinite;
+  animation-delay: 0s;
 }
 
 #top-bar h1 {
