@@ -112,6 +112,31 @@ button { font-family: inherit; }
   color: var(--color-text-mute);
 }
 
+/* ── Language toggle ───────────────────────────────────────────────── */
+#lang-toggle {
+  background: transparent;
+  border: 2px solid var(--color-border);
+  font-family: var(--font-body);
+  font-weight: 800;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  padding: 0.3rem 0.6rem;
+  cursor: pointer;
+  color: var(--color-text);
+  transition: background 0.12s, color 0.12s;
+  flex-shrink: 0;
+}
+
+#lang-toggle:hover {
+  background: var(--color-text);
+  color: white;
+}
+
+#lang-toggle:focus-visible {
+  outline: 2px solid var(--filter-location);
+  outline-offset: 3px;
+}
+
 /* ── Filters ───────────────────────────────────────────────────────── */
 #filters { margin-left: auto; }
 
