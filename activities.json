@@ -137,7 +137,7 @@
     "location": "Snow",
     "energy": "Active",
     "toys": "Buckets, shovels",
-    "description": "Use buckets and shovels to build snow sculptures â animals, castles, or whatever your imagination conjures!"
+    "description": "Use buckets and shovels to build snow sculptures — animals, castles, or whatever your imagination conjures!"
   },
   {
     "title": "Snow Angel Contest",
@@ -207,7 +207,7 @@
     "location": "Outside",
     "energy": "Active",
     "toys": "Paper, pencil",
-    "description": "Make a list of natural things to find on your walk â a feather, a round stone, a yellow leaf, a snail shell. Tick them off as you go!"
+    "description": "Make a list of natural things to find on your walk — a feather, a round stone, a yellow leaf, a snail shell. Tick them off as you go!"
   },
   {
     "title": "Puddle Jumping",
@@ -249,7 +249,7 @@
     "location": "Outside",
     "energy": "Active",
     "toys": "Cones, rope, hula hoops",
-    "description": "Set up a fun obstacle run using whatever you have â cones to weave around, a rope to jump over, hoops to hop through. Time each other!"
+    "description": "Set up a fun obstacle run using whatever you have — cones to weave around, a rope to jump over, hoops to hop through. Time each other!"
   },
   {
     "title": "Kite Flying",
@@ -263,7 +263,7 @@
     "location": "Garden",
     "energy": "Calm",
     "toys": "Yoga mat or towel",
-    "description": "Take turns calling out yoga poses for each other to copy â tree, cat, downward dog, warrior, cobra. No instructions needed, just show and mirror. See who can hold each pose the longest."
+    "description": "Take turns calling out yoga poses for each other to copy — tree, cat, downward dog, warrior, cobra. No instructions needed, just show and mirror. See who can hold each pose the longest."
   },
   {
     "title": "Indoor Obstacle Course",
@@ -284,7 +284,7 @@
     "location": "Inside",
     "energy": "Active",
     "toys": "Balloon, string or sofa as net",
-    "description": "Stretch a string across the room or use the sofa as a net. Keep a balloon airborne â feet on the floor only!"
+    "description": "Stretch a string across the room or use the sofa as a net. Keep a balloon airborne — feet on the floor only!"
   },
   {
     "title": "Sock Basketball",
@@ -312,7 +312,7 @@
     "location": "Inside",
     "energy": "Calm",
     "toys": "Smooth stones, paint pens",
-    "description": "Paint simple pictures on smooth stones â sun, cat, key, house. Take turns drawing one and adding to a shared story."
+    "description": "Paint simple pictures on smooth stones — sun, cat, key, house. Take turns drawing one and adding to a shared story."
   },
   {
     "title": "Origami Hour",
@@ -347,7 +347,7 @@
     "location": "Outside",
     "energy": "Calm",
     "toys": "Paper, pencil",
-    "description": "Sit still for two minutes. Mark every sound on a small map â bird right, car behind, wind above. Compare what each person heard."
+    "description": "Sit still for two minutes. Mark every sound on a small map — bird right, car behind, wind above. Compare what each person heard."
   },
   {
     "title": "Frozen Tag",
@@ -396,14 +396,14 @@
     "location": "Car",
     "energy": "Calm",
     "toys": "None",
-    "description": "Try to make a word using the letters on each number plate you spot â three letters in order. Silliest word wins the round."
+    "description": "Try to make a word using the letters on each number plate you spot — three letters in order. Silliest word wins the round."
   },
   {
     "title": "Map Tracker",
     "location": "Car",
     "energy": "Calm",
     "toys": "Printed map or atlas",
-    "description": "Give each kid a printed map of the route. They track where you are with a finger or pencil â extra points for spotting landmarks."
+    "description": "Give each kid a printed map of the route. They track where you are with a finger or pencil — extra points for spotting landmarks."
   },
   {
     "title": "Leaf Boat Racing",
@@ -417,7 +417,7 @@
     "location": "Outside",
     "energy": "Active",
     "toys": "Stones, mud, sticks",
-    "description": "Find a small stream and build a dam using stones, mud, and sticks. Watch the water pool behind it â then let it burst. Natural engineering at its best."
+    "description": "Find a small stream and build a dam using stones, mud, and sticks. Watch the water pool behind it — then let it burst. Natural engineering at its best."
   },
   {
     "title": "Gutter Sailing",
@@ -480,21 +480,21 @@
     "location": "Outside",
     "energy": "Calm",
     "toys": "Marbles",
-    "description": "Draw a circle on the ground and place marbles inside. Players take turns flicking a shooter marble to knock others out of the ring. Keeper rules or return-all â decide before you start."
+    "description": "Draw a circle on the ground and place marbles inside. Players take turns flicking a shooter marble to knock others out of the ring. Keeper rules or return-all — decide before you start."
   },
   {
     "title": "Jigsaw Puzzle",
     "location": "Inside",
     "energy": "Calm",
     "toys": "Jigsaw puzzle",
-    "description": "Pick a puzzle that's a little challenging but not frustrating. Work on it together â edges first, then colours and patterns. Leave it out and return to it across the day."
+    "description": "Pick a puzzle that's a little challenging but not frustrating. Work on it together — edges first, then colours and patterns. Leave it out and return to it across the day."
   },
   {
     "title": "Collage Making",
     "location": "Inside",
     "energy": "Calm",
     "toys": "Old magazines, scissors, glue, paper",
-    "description": "Cut out pictures, colours, and textures from old magazines and glue them onto paper to make a collage. Give it a theme â animals, food, colours â or just free-form."
+    "description": "Cut out pictures, colours, and textures from old magazines and glue them onto paper to make a collage. Give it a theme — animals, food, colours — or just free-form."
   },
   {
     "title": "Paper Plane Workshop",
@@ -508,7 +508,7 @@
     "location": "Inside",
     "energy": "Calm",
     "toys": "Cardboard boxes, tape, scissors, markers",
-    "description": "Give kids a pile of cardboard boxes and tape and let them build whatever they want â a rocket, a castle, a shop, a robot. The construction is the game."
+    "description": "Give kids a pile of cardboard boxes and tape and let them build whatever they want — a rocket, a castle, a shop, a robot. The construction is the game."
   },
   {
     "title": "Nature Print Art",
@@ -550,14 +550,14 @@
     "location": "Inside",
     "energy": "Calm",
     "toys": "Baking soda, vinegar, food colouring",
-    "description": "The classic volcano: baking soda in a cup, pour in vinegar, watch it fizz. Add food colouring for drama. Try varying the amounts â more is always more."
+    "description": "The classic volcano: baking soda in a cup, pour in vinegar, watch it fizz. Add food colouring for drama. Try varying the amounts — more is always more."
   },
   {
     "title": "Charades",
     "location": "Inside",
     "energy": "Active",
     "toys": "None",
-    "description": "Act out an animal, object, or film title without speaking while the others guess. For young kids, stick to animals â no reading required. Whoever guesses correctly acts next."
+    "description": "Act out an animal, object, or film title without speaking while the others guess. For young kids, stick to animals — no reading required. Whoever guesses correctly acts next."
   },
   {
     "title": "Drawing Consequences",
@@ -571,21 +571,21 @@
     "location": "Inside",
     "energy": "Calm",
     "toys": "Grimm's rainbow",
-    "description": "Stack the arches into towers, nest them inside each other, or use them as tunnels and bridges for small figures. No rules â just see what shapes emerge."
+    "description": "Stack the arches into towers, nest them inside each other, or use them as tunnels and bridges for small figures. No rules — just see what shapes emerge."
   },
   {
     "title": "Rainbow Small World",
     "location": "Inside",
     "energy": "Calm",
     "toys": "Grimm's rainbow, Ostheimer animals or small figures",
-    "description": "Use the rainbow arches to build a landscape â caves, hills, pens, rivers â and populate it with wooden animals or figures. Let kids invent the story."
+    "description": "Use the rainbow arches to build a landscape — caves, hills, pens, rivers — and populate it with wooden animals or figures. Let kids invent the story."
   },
   {
     "title": "Play Silk Dress-Up",
     "location": "Inside",
     "energy": "Calm",
     "toys": "Play silks",
-    "description": "Play silks become capes, crowns, skirts, wings, or wizard robes. No cutting or tying needed â just drape, tuck, and imagine. Let kids lead the transformation."
+    "description": "Play silks become capes, crowns, skirts, wings, or wizard robes. No cutting or tying needed — just drape, tuck, and imagine. Let kids lead the transformation."
   },
   {
     "title": "Play Silk Landscapes",
@@ -627,7 +627,7 @@
     "location": "Garden",
     "energy": "Calm",
     "toys": "Aquaplay",
-    "description": "Focus on the locks â practise raising and lowering boats through each one. For older kids, time how fast they can get a boat through the full system without spilling."
+    "description": "Focus on the locks — practise raising and lowering boats through each one. For older kids, time how fast they can get a boat through the full system without spilling."
   },
   {
     "title": "Worm Hunting",
@@ -641,7 +641,7 @@
     "location": "Garden",
     "energy": "Calm",
     "toys": "Sticks, pine cones, bark, straw, a wooden box or milk carton",
-    "description": "Build a bug hotel by filling a box or milk carton with natural materials â pine cones, hollow stems, bark, straw. Place it in a shady corner and check back over days to see who moves in."
+    "description": "Build a bug hotel by filling a box or milk carton with natural materials — pine cones, hollow stems, bark, straw. Place it in a shady corner and check back over days to see who moves in."
   },
   {
     "title": "Snail Race",
@@ -655,7 +655,7 @@
     "location": "Garden",
     "energy": "Calm",
     "toys": "Magnifying glass",
-    "description": "Gently lift stones, logs, and bark around the garden. Look at what lives underneath â woodlice, beetles, centipedes, ants. Observe for a minute, then replace everything exactly as you found it."
+    "description": "Gently lift stones, logs, and bark around the garden. Look at what lives underneath — woodlice, beetles, centipedes, ants. Observe for a minute, then replace everything exactly as you found it."
   },
   {
     "title": "Butterfly and Bee Watch",
@@ -669,7 +669,7 @@
     "location": "Garden",
     "energy": "Calm",
     "toys": "None",
-    "description": "After heavy rain, worms come to the surface and can get stranded on paths and paving. Go on a rescue mission â carefully pick them up and return them to the soil."
+    "description": "After heavy rain, worms come to the surface and can get stranded on paths and paving. Go on a rescue mission — carefully pick them up and return them to the soil."
   },
   {
     "title": "Pouring Station",
@@ -683,7 +683,7 @@
     "location": "Garden",
     "energy": "Calm",
     "toys": "Sticks, stones, leaves",
-    "description": "Use sticks and stones to draw in the mud at the edge of a puddle, or drag wet mud onto dry paving to make patterns. Natural materials only â the garden is the canvas."
+    "description": "Use sticks and stones to draw in the mud at the edge of a puddle, or drag wet mud onto dry paving to make patterns. Natural materials only — the garden is the canvas."
   },
   {
     "title": "Waterfall Builder",
@@ -697,7 +697,7 @@
     "location": "Garden",
     "energy": "Calm",
     "toys": "Heavy books, paper",
-    "description": "Pick a few small flowers and leaves. Lay them flat between two sheets of paper inside a heavy book. Check back in a week â they will have dried flat and kept their colour."
+    "description": "Pick a few small flowers and leaves. Lay them flat between two sheets of paper inside a heavy book. Check back in a week — they will have dried flat and kept their colour."
   },
   {
     "title": "Petal Potions",
@@ -711,41 +711,48 @@
     "location": "Garden",
     "energy": "Active",
     "toys": "Paper, crayons or paint swatches",
-    "description": "Draw a colour grid on paper â red, yellow, orange, purple, green, white. Race to find something in the garden that matches each colour. Natural things only."
+    "description": "Draw a colour grid on paper — red, yellow, orange, purple, green, white. Race to find something in the garden that matches each colour. Natural things only."
   },
   {
     "title": "Sit Spot",
     "location": "Garden",
     "energy": "Calm",
     "toys": "None",
-    "description": "Each person picks a spot in the garden and sits completely still and quiet for five minutes. Afterwards share what you noticed â sounds, movements, smells, creatures. Do it regularly and the garden starts to feel familiar."
+    "description": "Each person picks a spot in the garden and sits completely still and quiet for five minutes. Afterwards share what you noticed — sounds, movements, smells, creatures. Do it regularly and the garden starts to feel familiar."
   },
   {
     "title": "Tree Climbing",
     "location": "Garden",
     "energy": "Active",
     "toys": "None",
-    "description": "Find the right tree â one with low sturdy branches â and let kids climb at their own pace. Resist the urge to direct. The point is working out how to move their own body through the tree."
+    "description": "Find the right tree — one with low sturdy branches — and let kids climb at their own pace. Resist the urge to direct. The point is working out how to move their own body through the tree."
   },
   {
     "title": "Bark and Leaf Rubbings",
     "location": "Garden",
     "energy": "Calm",
     "toys": "Paper, crayons",
-    "description": "Hold paper against tree bark and rub a crayon sideways to reveal the texture. Do the same with leaves on the ground. Compare different trees â every bark pattern is unique."
+    "description": "Hold paper against tree bark and rub a crayon sideways to reveal the texture. Do the same with leaves on the ground. Compare different trees — every bark pattern is unique."
   },
   {
     "title": "Weather Watching",
     "location": "Garden",
     "energy": "Calm",
     "toys": "Paper, pencil",
-    "description": "Step outside at the same time each day and record the weather â sun, clouds, wind direction, temperature feel, rain. After a week the pattern becomes visible. A simple habit that builds real observation skills."
+    "description": "Step outside at the same time each day and record the weather — sun, clouds, wind direction, temperature feel, rain. After a week the pattern becomes visible. A simple habit that builds real observation skills."
   },
   {
     "title": "Pillowcase Cinema",
     "location": "Inside",
     "energy": "Calm",
     "toys": "Duvet, snacks, a film",
-    "description": "Pull all the duvets and cushions into the living room, make a big nest, pick a film together, and make popcorn. Deliberate and slow â that is the point."
+    "description": "Pull all the duvets and cushions into the living room, make a big nest, pick a film together, and make popcorn. Deliberate and slow — that is the point."
+  },
+  {
+    "title": "Marble Racing",
+    "location": "Inside",
+    "energy": "Calm",
+    "toys": "Marbles, cardboard tubes or books",
+    "description": "Build a race track using cardboard tubes, rolled-up paper, or books propped at an angle. Race two marbles side by side and adjust the slope to change the speed. Try building a multi-stage course that winds across the floor."
   }
 ]
