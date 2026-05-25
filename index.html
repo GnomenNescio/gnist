@@ -58,19 +58,19 @@
           </div>
         </div>
 
-        <div class="dropdown" id="season-dropdown">
-          <button class="dropdown-trigger" id="season-trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="season-panel">
-            <span class="dropdown-label" id="season-label-text">Season</span>
+        <div class="dropdown" id="conditions-dropdown">
+          <button class="dropdown-trigger" id="conditions-trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="conditions-panel">
+            <span class="dropdown-label" id="conditions-label-text">Conditions</span>
             <span class="dropdown-chevron" aria-hidden="true">▾</span>
           </button>
-          <div class="dropdown-panel" id="season-panel" role="group" aria-labelledby="season-trigger" hidden>
-            <div class="dropdown-actions" data-group="season" hidden>
-              <button type="button" class="dropdown-action" data-group="season">Clear</button>
+          <div class="dropdown-panel" id="conditions-panel" role="group" aria-labelledby="conditions-trigger" hidden>
+            <div class="dropdown-actions" data-group="conditions" hidden>
+              <button type="button" class="dropdown-action" data-group="conditions">Clear</button>
             </div>
-            <div class="dropdown-item" role="checkbox" aria-checked="false" tabindex="0" data-group="season" data-value="Spring"><span class="check" aria-hidden="true"></span><span class="item-label">Spring</span></div>
-            <div class="dropdown-item" role="checkbox" aria-checked="false" tabindex="0" data-group="season" data-value="Summer"><span class="check" aria-hidden="true"></span><span class="item-label">Summer</span></div>
-            <div class="dropdown-item" role="checkbox" aria-checked="false" tabindex="0" data-group="season" data-value="Autumn"><span class="check" aria-hidden="true"></span><span class="item-label">Autumn</span></div>
-            <div class="dropdown-item" role="checkbox" aria-checked="false" tabindex="0" data-group="season" data-value="Winter"><span class="check" aria-hidden="true"></span><span class="item-label">Winter</span></div>
+            <div class="dropdown-item" role="checkbox" aria-checked="false" tabindex="0" data-group="conditions" data-value="Sunny"><span class="check" aria-hidden="true"></span><span class="item-label">Sunny</span></div>
+            <div class="dropdown-item" role="checkbox" aria-checked="false" tabindex="0" data-group="conditions" data-value="Cloudy"><span class="check" aria-hidden="true"></span><span class="item-label">Cloudy</span></div>
+            <div class="dropdown-item" role="checkbox" aria-checked="false" tabindex="0" data-group="conditions" data-value="Rainy"><span class="check" aria-hidden="true"></span><span class="item-label">Rainy</span></div>
+            <div class="dropdown-item" role="checkbox" aria-checked="false" tabindex="0" data-group="conditions" data-value="Snowy"><span class="check" aria-hidden="true"></span><span class="item-label">Snowy</span></div>
           </div>
         </div>
 
@@ -105,8 +105,8 @@
       <span class="bottom-label" id="bottom-location-label">Location</span>
       <span aria-hidden="true">▾</span>
     </button>
-    <button class="bottom-trigger" type="button" data-group="season" aria-expanded="false" aria-controls="bottom-sheet-season">
-      <span class="bottom-label" id="bottom-season-label">Season</span>
+    <button class="bottom-trigger" type="button" data-group="conditions" aria-expanded="false" aria-controls="bottom-sheet-conditions">
+      <span class="bottom-label" id="bottom-conditions-label">Conditions</span>
       <span aria-hidden="true">▾</span>
     </button>
   </div>
@@ -114,7 +114,7 @@
   <!-- Bottom sheets (mobile panels, share the same dropdown-item elements via JS sync) -->
   <div class="bottom-sheet" id="bottom-sheet-energy" role="group" aria-label="Energy filter"></div>
   <div class="bottom-sheet" id="bottom-sheet-location" role="group" aria-label="Location filter"></div>
-  <div class="bottom-sheet" id="bottom-sheet-season" role="group" aria-label="Season filter"></div>
+  <div class="bottom-sheet" id="bottom-sheet-conditions" role="group" aria-label="Conditions filter"></div>
 
   <script src="script.js"></script>
 </body>
