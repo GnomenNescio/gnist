@@ -448,6 +448,10 @@ main {
 }
 
 /* ── Mobile tweaks ─────────────────────────────────────────────────── */
+/* Bottom bar and sheets hidden by default (shown only on mobile) */
+#bottom-filter-bar { display: none; }
+.bottom-sheet { display: none; }
+
 @media (max-width: 640px) {
   /* ── Top bar: brand only, no filters ─────────────────────── */
   #top-bar {
