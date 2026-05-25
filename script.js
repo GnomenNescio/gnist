@@ -430,6 +430,11 @@ function applyLanguageToUI() {
     btn.textContent = t('clear');
   });
 
+  // Bottom sheet headers (if built)
+  document.querySelectorAll('.bottom-sheet-header').forEach(el => {
+    el.textContent = tg(el.dataset.group);
+  });
+
   // Bottom sheet clear buttons (if built)
   document.querySelectorAll('.bottom-sheet .dropdown-action').forEach(btn => {
     btn.textContent = t('clear');
@@ -468,13 +473,13 @@ function syncBottomLabel(group) {
   if (!labelEl) return;
   const selected  = getSelected(group);
   const total     = getAllValues(group).length;
-  const groupName = GROUP_NAMES[group] || group;
+  const groupName = tg(group);
   if (selected.length === 0 || selected.length === total) {
     labelEl.textContent = groupName;
   } else if (selected.length <= 2) {
-    labelEl.textContent = selected.join(', ');
+    labelEl.textContent = selected.map(tv).join(', ');
   } else {
-    labelEl.textContent = selected.length + ' selected';
+    labelEl.textContent = selected.length + ' ' + (currentLang === 'no' ? 'valgt' : 'selected');
   }
 }
 
@@ -490,6 +495,13 @@ function closeAllBottomSheets() {
 function buildBottomSheet(group) {
   const sheet = document.getElementById('bottom-sheet-' + group);
   if (!sheet || sheet.dataset.built) return;
+
+  // Header
+  const header = document.createElement('div');
+  header.className = 'bottom-sheet-header';
+  header.dataset.group = group;
+  header.textContent = tg(group);
+  sheet.appendChild(header);
 
   // Clear action
   const actionsDiv = document.createElement('div');
