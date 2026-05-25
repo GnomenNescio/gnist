@@ -2,9 +2,68 @@
 // Gnist: Activity Finder
 // ─────────────────────────────────────────────────────────────────────
 
+// ── Language ─────────────────────────────────────────────────────────
+let currentLang = 'no'; // default Norwegian
+
+const TRANSLATIONS = {
+  en: {
+    groups:       { energy: 'Energy', location: 'Location', conditions: 'Conditions' },
+    filterValues: {
+      Calm: 'Calm', Active: 'Active',
+      Inside: 'Inside', 'At the table': 'At the table', Urban: 'Urban',
+      Garden: 'Garden', Forest: 'Forest', Car: 'Car',
+      Sunny: 'Sunny', Cloudy: 'Cloudy', Rainy: 'Rainy', Snowy: 'Snowy',
+    },
+    surpriseMe:  'Surprise me',
+    showAll:     'Show all matches',
+    clear:       'Clear',
+    toys:        'Toys',
+    loading:     'Loading activities…',
+    loadError:   'Could not load activities. Please refresh the page.',
+    noMatches:   'No ideas match your filters. Try adjusting them!',
+    ideasFound:  (n) => `${n} idea${n === 1 ? '' : 's'} found`,
+    showing1of:  (n) => `Showing 1 of ${n} matching idea${n === 1 ? '' : 's'}`,
+    langToggle:  'NO',
+  },
+  no: {
+    groups:       { energy: 'Energi', location: 'Sted', conditions: 'Vær' },
+    filterValues: {
+      Calm: 'Rolig', Active: 'Aktiv',
+      Inside: 'Inne', 'At the table': 'Ved bordet', Urban: 'Ute',
+      Garden: 'Hage', Forest: 'Skog', Car: 'Bil',
+      Sunny: 'Sol', Cloudy: 'Overskyet', Rainy: 'Regn', Snowy: 'Snø',
+    },
+    surpriseMe:  'Overrask meg',
+    showAll:     'Vis alle treff',
+    clear:       'Tøm',
+    toys:        'Utstyr',
+    loading:     'Laster aktiviteter…',
+    loadError:   'Kunne ikke laste aktiviteter. Prøv å laste siden på nytt.',
+    noMatches:   'Ingen ideer passer til filtrene. Prøv å justere dem!',
+    ideasFound:  (n) => `${n} ide${n === 1 ? '' : 'er'} funnet`,
+    showing1of:  (n) => `Viser 1 av ${n} matchende ide${n === 1 ? '' : 'er'}`,
+    langToggle:  'EN',
+  },
+};
+
+function t(key, arg) {
+  const val = TRANSLATIONS[currentLang][key];
+  return typeof val === 'function' ? val(arg) : val;
+}
+
+function tv(value) {
+  return TRANSLATIONS[currentLang].filterValues[value] || value;
+}
+
+function tg(group) {
+  return TRANSLATIONS[currentLang].groups[group] || group;
+}
+
+
+
 // ── State ────────────────────────────────────────────────────────────
 let activitiesCache = null;
-let pinnedActivity = null;
+let pinnedActivity  = null;
 
 // ── Dropdown open/close ──────────────────────────────────────────────
 function openDropdown(trigger, panel) {
@@ -81,14 +140,14 @@ function updateTriggerLabel(labelElId, group) {
   const labelEl   = document.getElementById(labelElId);
   const selected  = getSelected(group);
   const total     = getAllValues(group).length;
-  const groupName = GROUP_NAMES[group] || group;
+  const groupName = tg(group);
 
   if (selected.length === 0 || selected.length === total) {
     labelEl.textContent = groupName;
   } else if (selected.length <= 2) {
-    labelEl.textContent = selected.join(', ');
+    labelEl.textContent = selected.map(tv).join(', ');
   } else {
-    labelEl.textContent = `${selected.length} selected`;
+    labelEl.textContent = selected.length + ' ' + (currentLang === 'no' ? 'valgt' : 'selected');
   }
 }
 
@@ -245,11 +304,11 @@ function updateMatchCount(count) {
   const el = document.getElementById('match-count');
   el.textContent = '';
   if (pinnedActivity) {
-    el.append('Showing 1 of ', strong(String(count)), ' matching idea' + (count === 1 ? '' : 's'));
+    el.append(t('showing1of', count));
   } else if (count === 0) {
-    el.textContent = 'No matches with the current filters';
+    el.textContent = t('noMatches');
   } else {
-    el.append(strong(String(count)), ' idea' + (count === 1 ? '' : 's') + ' found');
+    el.append(t('ideasFound', count));
   }
 }
 
@@ -283,38 +342,36 @@ function buildMetaItem(label, value) {
 }
 
 function buildCard(activity, index) {
-  const locs = Array.isArray(activity.location) ? activity.location : [activity.location];
+  const locs  = Array.isArray(activity.location) ? activity.location : [activity.location];
+  const title = currentLang === 'no' && activity.title_no       ? activity.title_no       : activity.title;
+  const desc  = currentLang === 'no' && activity.description_no ? activity.description_no : activity.description;
+  const toys  = currentLang === 'no' && activity.toys_no        ? activity.toys_no        : activity.toys;
 
   const card = document.createElement('article');
   card.className = 'idea-card';
-  // Accent colour driven by first location
   card.classList.add(locClass(locs[0]));
   card.style.animationDelay = Math.min(index, 12) * 0.025 + 's';
 
-  // Coloured accent strip
   const accent = document.createElement('div');
   accent.className = 'accent';
   accent.setAttribute('aria-hidden', 'true');
   card.appendChild(accent);
 
-  // Title
   const h3 = document.createElement('h3');
-  h3.textContent = activity.title;
+  h3.textContent = title;
   card.appendChild(h3);
 
+  const descEl = document.createElement('p');
+  descEl.className   = 'card-desc';
+  descEl.textContent = desc || '';
+  card.appendChild(descEl);
 
-
-  // Description
-  const desc = document.createElement('p');
-  desc.className   = 'card-desc';
-  desc.textContent = activity.description || 'No description available.';
-  card.appendChild(desc);
-
-  // Meta footer
-  const meta = document.createElement('footer');
-  meta.className = 'card-meta';
-  if (activity.toys) meta.appendChild(buildMetaItem('Toys', activity.toys));
-  card.appendChild(meta);
+  if (toys) {
+    const meta = document.createElement('footer');
+    meta.className = 'card-meta';
+    meta.appendChild(buildMetaItem(t('toys'), toys));
+    card.appendChild(meta);
+  }
 
   return card;
 }
@@ -352,7 +409,52 @@ document.getElementById('show-all-button').addEventListener('click', () => {
   applyFilters();
 });
 
-// ── Mobile bottom bar ────────────────────────────────────────────────
+// ── Language toggle ───────────────────────────────────────────────────
+function applyLanguageToUI() {
+  // Toggle button label
+  document.getElementById('lang-toggle').textContent = t('langToggle');
+
+  // Surprise me / Show all buttons
+  document.getElementById('surprise-button').textContent = t('surpriseMe');
+  const showAllBtn = document.getElementById('show-all-button');
+  showAllBtn.textContent = t('showAll');
+
+  // Desktop dropdown item labels
+  document.querySelectorAll('.dropdown-item').forEach(item => {
+    const labelEl = item.querySelector('.item-label');
+    if (labelEl) labelEl.textContent = tv(item.dataset.value);
+  });
+
+  // Desktop clear buttons
+  document.querySelectorAll('.dropdown-panel .dropdown-action').forEach(btn => {
+    btn.textContent = t('clear');
+  });
+
+  // Bottom sheet clear buttons (if built)
+  document.querySelectorAll('.bottom-sheet .dropdown-action').forEach(btn => {
+    btn.textContent = t('clear');
+  });
+
+  // Bottom sheet item labels (if built)
+  document.querySelectorAll('.bottom-item').forEach(item => {
+    const labelEl = item.querySelector('.item-label');
+    if (labelEl) labelEl.textContent = tv(item.dataset.value);
+  });
+
+  // Trigger labels
+  updateAllLabels();
+  syncAllBottomLabels();
+
+  // Re-render cards in new language
+  applyFilters();
+}
+
+document.getElementById('lang-toggle').addEventListener('click', () => {
+  currentLang = currentLang === 'no' ? 'en' : 'no';
+  applyLanguageToUI();
+});
+
+// ── Initial render ───────────────────────────────────────────────────
 // On mobile, the desktop #filters nav is hidden via CSS and replaced by
 // a fixed bottom bar. The bottom sheets mirror the desktop dropdown items
 // so selecting in either place updates the same underlying state.
@@ -398,7 +500,7 @@ function buildBottomSheet(group) {
   clearBtn.type = 'button';
   clearBtn.className = 'dropdown-action';
   clearBtn.dataset.group = group;
-  clearBtn.textContent = 'Clear';
+  clearBtn.textContent = t('clear');
   clearBtn.addEventListener('click', (e) => {
     e.stopPropagation();
     document.querySelectorAll(`.dropdown-item[data-group="${group}"]`).forEach(item => {
@@ -503,5 +605,6 @@ syncAllBottomLabels();
 initBottomBar();
 
 // ── Initial render ───────────────────────────────────────────────────
+applyLanguageToUI();
 updateAllLabels();
 applyFilters();
