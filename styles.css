@@ -8,15 +8,17 @@
   --color-hover:     #f3eee2;
 
   /* Location accent colours */
-  --loc-inside:  #FFC23C;
-  --loc-outside: #2E8B57;
-  --loc-garden:  #E63946;
-  --loc-snow:    #1D4FA8;
-  --loc-car:     #F08020;
+  --loc-inside:       #FFC23C;   /* yellow */
+  --loc-at-the-table: #C8844A;   /* warm terracotta */
+  --loc-urban:        #5B8FBF;   /* slate blue */
+  --loc-garden:       #E63946;   /* red */
+  --loc-forest:       #2E8B57;   /* green */
+  --loc-car:          #F08020;   /* orange */
 
   /* Filter underlines */
   --filter-location: var(--loc-garden);
-  --filter-energy:   var(--loc-snow);
+  --filter-energy:   #1D4FA8;
+  --filter-season:   #C8960A;    /* amber */
 
   --font-display: 'Archivo Black', sans-serif;
   --font-body:    'Manrope', system-ui, sans-serif;
@@ -91,7 +93,7 @@ button { font-family: inherit; }
   width: 0; height: 0;
   border-left: 9px solid transparent;
   border-right: 9px solid transparent;
-  border-bottom: 16px solid var(--loc-snow);
+  border-bottom: 16px solid var(--loc-forest);
 }
 
 #top-bar h1 {
@@ -147,6 +149,7 @@ button { font-family: inherit; }
 }
 #location-trigger::after { background: var(--filter-location); }
 #energy-trigger::after   { background: var(--filter-energy); }
+#season-trigger::after   { background: var(--filter-season); }
 
 .dropdown-trigger:focus-visible {
   outline: 2px solid var(--color-text);
@@ -240,7 +243,6 @@ button { font-family: inherit; }
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 0;
   transition: background 0.1s;
 }
 
@@ -354,7 +356,6 @@ main {
   display: flex;
   flex-direction: column;
   gap: 0.55rem;
-  border-radius: 0;
   transition: transform 0.15s ease, box-shadow 0.15s ease;
   animation: card-in 0.25s ease-out backwards;
 }
@@ -369,18 +370,19 @@ main {
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* Coloured cap on top of card */
+/* Coloured cap — uses first location */
 .idea-card .accent {
   position: absolute;
   top: 0; left: 0; right: 0;
   height: 10px;
 }
 
-.idea-card.loc-inside  .accent { background: var(--loc-inside); }
-.idea-card.loc-outside .accent { background: var(--loc-outside); }
-.idea-card.loc-garden  .accent { background: var(--loc-garden); }
-.idea-card.loc-snow    .accent { background: var(--loc-snow); }
-.idea-card.loc-car     .accent { background: var(--loc-car); }
+.idea-card.loc-inside        .accent { background: var(--loc-inside); }
+.idea-card.loc-at-the-table  .accent { background: var(--loc-at-the-table); }
+.idea-card.loc-urban         .accent { background: var(--loc-urban); }
+.idea-card.loc-garden        .accent { background: var(--loc-garden); }
+.idea-card.loc-forest        .accent { background: var(--loc-forest); }
+.idea-card.loc-car           .accent { background: var(--loc-car); }
 
 .idea-card h3 {
   font-family: var(--font-display);
@@ -391,7 +393,7 @@ main {
   color: var(--color-text);
 }
 
-/* Badges row */
+/* Badges */
 .badges {
   display: flex;
   flex-wrap: wrap;
@@ -408,15 +410,16 @@ main {
   border: 2px solid var(--color-text);
   background: white;
   color: var(--color-text);
-  border-radius: 0;
   line-height: 1.4;
 }
 
-.badge.loc-inside  { background: var(--loc-inside); color: var(--color-text); border-color: var(--color-text); }
-.badge.loc-outside { background: var(--loc-outside); color: white; border-color: var(--loc-outside); }
-.badge.loc-garden  { background: var(--loc-garden); color: white; border-color: var(--loc-garden); }
-.badge.loc-snow    { background: var(--loc-snow); color: white; border-color: var(--loc-snow); }
-.badge.loc-car     { background: var(--loc-car); color: white; border-color: var(--loc-car); }
+/* Location badge fills */
+.badge.loc-inside        { background: var(--loc-inside);       color: var(--color-text);   border-color: var(--color-text); }
+.badge.loc-at-the-table  { background: var(--loc-at-the-table); color: white;               border-color: var(--loc-at-the-table); }
+.badge.loc-urban         { background: var(--loc-urban);        color: white;               border-color: var(--loc-urban); }
+.badge.loc-garden        { background: var(--loc-garden);       color: white;               border-color: var(--loc-garden); }
+.badge.loc-forest        { background: var(--loc-forest);       color: white;               border-color: var(--loc-forest); }
+.badge.loc-car           { background: var(--loc-car);          color: white;               border-color: var(--loc-car); }
 
 .card-desc {
   margin: 0.15rem 0 0;
@@ -425,7 +428,6 @@ main {
   line-height: 1.55;
 }
 
-/* Meta footer — no border-top per request */
 .card-meta {
   display: flex;
   flex-wrap: wrap;
@@ -450,7 +452,6 @@ main {
   #top-bar {
     padding: 0.9rem 1rem 0.75rem;
     gap: 0.85rem;
-    flex-wrap: wrap;
   }
   .brand { gap: 0.55rem; }
   .brand-subtitle { display: none; }
@@ -459,7 +460,7 @@ main {
   #ideas { grid-template-columns: 1fr; }
   .dropdown-panel { right: 0; left: auto; }
   #filters { width: 100%; }
-  .filters-bar { justify-content: flex-start; gap: 1.25rem; }
+  .filters-bar { gap: 1rem; flex-wrap: wrap; }
 }
 
 @media (prefers-reduced-motion: reduce) {
