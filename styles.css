@@ -18,7 +18,7 @@
   /* Filter underlines */
   --filter-location: var(--loc-garden);
   --filter-energy:   #1D4FA8;
-  --filter-season:   #C8960A;    /* amber */
+  --filter-conditions:   #C8960A;    /* amber */
 
   --font-display: 'Archivo Black', sans-serif;
   --font-body:    'Manrope', system-ui, sans-serif;
@@ -149,7 +149,7 @@ button { font-family: inherit; }
 }
 #location-trigger::after { background: var(--filter-location); }
 #energy-trigger::after   { background: var(--filter-energy); }
-#season-trigger::after   { background: var(--filter-season); }
+#conditions-trigger::after   { background: var(--filter-conditions); }
 
 .dropdown-trigger:focus-visible {
   outline: 2px solid var(--color-text);
@@ -510,7 +510,7 @@ main {
   }
   #bottom-filter-bar .bottom-trigger[data-group="energy"]::after   { background: var(--filter-energy); }
   #bottom-filter-bar .bottom-trigger[data-group="location"]::after { background: var(--filter-location); }
-  #bottom-filter-bar .bottom-trigger[data-group="season"]::after   { background: var(--filter-season); }
+  #bottom-filter-bar .bottom-trigger[data-group="conditions"]::after   { background: var(--filter-conditions); }
 
   #bottom-filter-bar .bottom-trigger[aria-expanded="true"] {
     background: var(--color-hover);
