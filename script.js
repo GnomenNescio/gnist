@@ -352,6 +352,156 @@ document.getElementById('show-all-button').addEventListener('click', () => {
   applyFilters();
 });
 
+// ── Mobile bottom bar ────────────────────────────────────────────────
+// On mobile, the desktop #filters nav is hidden via CSS and replaced by
+// a fixed bottom bar. The bottom sheets mirror the desktop dropdown items
+// so selecting in either place updates the same underlying state.
+
+function isMobile() {
+  return window.matchMedia('(max-width: 640px)').matches;
+}
+
+function syncBottomLabel(group) {
+  const labelEl = document.getElementById('bottom-' + group + '-label');
+  if (!labelEl) return;
+  const selected  = getSelected(group);
+  const total     = getAllValues(group).length;
+  const groupName = GROUP_NAMES[group] || group;
+  if (selected.length === 0 || selected.length === total) {
+    labelEl.textContent = groupName;
+  } else if (selected.length <= 2) {
+    labelEl.textContent = selected.join(', ');
+  } else {
+    labelEl.textContent = selected.length + ' selected';
+  }
+}
+
+function syncAllBottomLabels() {
+  ['energy', 'location', 'season'].forEach(syncBottomLabel);
+}
+
+function closeAllBottomSheets() {
+  document.querySelectorAll('.bottom-sheet').forEach(s => s.classList.remove('open'));
+  document.querySelectorAll('.bottom-trigger').forEach(t => t.setAttribute('aria-expanded', 'false'));
+}
+
+function buildBottomSheet(group) {
+  const sheet = document.getElementById('bottom-sheet-' + group);
+  if (!sheet || sheet.dataset.built) return;
+
+  // Clear action
+  const actionsDiv = document.createElement('div');
+  actionsDiv.className = 'dropdown-actions';
+  actionsDiv.dataset.group = group;
+  actionsDiv.hidden = true;
+  const clearBtn = document.createElement('button');
+  clearBtn.type = 'button';
+  clearBtn.className = 'dropdown-action';
+  clearBtn.dataset.group = group;
+  clearBtn.textContent = 'Clear';
+  clearBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    document.querySelectorAll(`.dropdown-item[data-group="${group}"]`).forEach(item => {
+      setItemState(item, false);
+    });
+    // Sync cloned items
+    sheet.querySelectorAll('.bottom-item').forEach(item => {
+      item.classList.remove('selected');
+      item.setAttribute('aria-checked', 'false');
+      item.querySelector('.check').classList.remove('selected-check');
+    });
+    actionsDiv.hidden = true;
+    updateAllLabels();
+    syncAllBottomLabels();
+    pinnedActivity = null;
+    document.getElementById('show-all-button').hidden = true;
+    applyFilters();
+  });
+  actionsDiv.appendChild(clearBtn);
+  sheet.appendChild(actionsDiv);
+
+  // Clone items from the desktop panel
+  const desktopItems = document.querySelectorAll(`.dropdown-item[data-group="${group}"]`);
+  desktopItems.forEach(original => {
+    const clone = document.createElement('div');
+    clone.className = 'dropdown-item bottom-item' + (original.classList.contains('selected') ? ' selected' : '');
+    clone.setAttribute('role', 'checkbox');
+    clone.setAttribute('aria-checked', original.getAttribute('aria-checked'));
+    clone.setAttribute('tabindex', '0');
+    clone.dataset.group = group;
+    clone.dataset.value = original.dataset.value;
+
+    const check = document.createElement('span');
+    check.className = 'check';
+    check.setAttribute('aria-hidden', 'true');
+    const label = document.createElement('span');
+    label.className = 'item-label';
+    label.textContent = original.querySelector('.item-label').textContent;
+    clone.appendChild(check);
+    clone.appendChild(label);
+
+    clone.addEventListener('click', () => {
+      const nowSelected = !clone.classList.contains('selected');
+      // Update desktop item
+      setItemState(original, nowSelected);
+      // Update clone
+      if (nowSelected) {
+        clone.classList.add('selected');
+        clone.setAttribute('aria-checked', 'true');
+      } else {
+        clone.classList.remove('selected');
+        clone.setAttribute('aria-checked', 'false');
+      }
+      const anySelected = getSelected(group).length > 0;
+      actionsDiv.hidden = !anySelected;
+      updateAllLabels();
+      syncAllBottomLabels();
+      pinnedActivity = null;
+      document.getElementById('show-all-button').hidden = true;
+      applyFilters();
+    });
+
+    sheet.appendChild(clone);
+  });
+
+  sheet.dataset.built = 'true';
+}
+
+function initBottomBar() {
+  const bar = document.getElementById('bottom-filter-bar');
+  if (!bar) return;
+
+  // Show bar only on mobile (CSS also handles this, JS ensures initial state)
+  if (isMobile()) bar.style.display = 'flex';
+
+  ['energy', 'location', 'season'].forEach(group => buildBottomSheet(group));
+
+  document.querySelectorAll('.bottom-trigger').forEach(trigger => {
+    trigger.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const group   = trigger.dataset.group;
+      const sheet   = document.getElementById('bottom-sheet-' + group);
+      const isOpen  = sheet.classList.contains('open');
+      closeAllBottomSheets();
+      if (!isOpen) {
+        sheet.classList.add('open');
+        trigger.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
+  // Close sheets on outside tap
+  document.addEventListener('click', closeAllBottomSheets);
+
+  window.matchMedia('(max-width: 640px)').addEventListener('change', (e) => {
+    bar.style.display = e.matches ? 'flex' : 'none';
+    if (!e.matches) closeAllBottomSheets();
+  });
+}
+
+syncAllBottomLabels();
+initBottomBar();
+
 // ── Initial render ───────────────────────────────────────────────────
 updateAllLabels();
 applyFilters();
