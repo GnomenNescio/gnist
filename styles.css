@@ -124,8 +124,7 @@ button { font-family: inherit; }
   border-left: 9px solid transparent;
   border-right: 9px solid transparent;
   border-bottom: 16px solid var(--loc-forest);
-  transform-origin: 9px 11px;
-  animation: gnist-spin 3.2s linear infinite;
+  animation: gnist-slide 2.2s ease-in-out infinite;
   animation-delay: 0.7s;
 }
 .brand-shape-diamond {
