@@ -95,6 +95,17 @@ button { font-family: inherit; }
   border-right: 9px solid transparent;
   border-bottom: 16px solid var(--loc-forest);
 }
+.brand-shape-diamond {
+  width: 13px; height: 13px;
+  background: var(--filter-energy);
+  transform: rotate(45deg);
+  flex-shrink: 0;
+}
+.brand-shape-semicircle {
+  width: 18px; height: 9px;
+  border-radius: 18px 18px 0 0;
+  background: var(--loc-car);
+}
 
 #top-bar h1 {
   font-family: var(--font-display);
