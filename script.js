@@ -302,12 +302,7 @@ function buildCard(activity, index) {
   h3.textContent = activity.title;
   card.appendChild(h3);
 
-  // Badges — all locations + energy
-  const badges = document.createElement('div');
-  badges.className = 'badges';
-  locs.forEach(loc => badges.appendChild(buildBadge(loc, 'location')));
-  if (activity.energy) badges.appendChild(buildBadge(activity.energy, 'energy'));
-  card.appendChild(badges);
+
 
   // Description
   const desc = document.createElement('p');
