@@ -504,7 +504,7 @@ main {
   #filters { display: none; }
 
   /* ── Main content: leave room for bottom bar ──────────────── */
-  main { padding: 1.25rem 1rem 6rem; }
+  main { padding: 1.25rem 1rem 5.5rem; }
   #ideas { grid-template-columns: 1fr; }
 
   /* ── Fixed bottom filter bar ──────────────────────────────── */
@@ -515,54 +515,55 @@ main {
     background: var(--color-surface);
     border-top: 2px solid var(--color-border);
     z-index: 200;
-    height: 3.25rem;
+    height: 4rem;
   }
 
   #bottom-filter-bar .bottom-trigger {
     flex: 1;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 0.3rem;
+    gap: 0.25rem;
     background: transparent;
     border: none;
     border-right: 2px solid var(--color-border);
     font-family: var(--font-body);
     font-weight: 800;
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: var(--color-text);
     cursor: pointer;
     padding: 0 0.5rem;
     position: relative;
+    line-height: 1.2;
   }
 
   #bottom-filter-bar .bottom-trigger:last-child {
     border-right: none;
   }
 
-  /* Coloured underline on each trigger */
   #bottom-filter-bar .bottom-trigger::after {
     content: '';
     position: absolute;
     bottom: 0; left: 0;
     width: 100%; height: 4px;
   }
-  #bottom-filter-bar .bottom-trigger[data-group="energy"]::after   { background: var(--filter-energy); }
-  #bottom-filter-bar .bottom-trigger[data-group="location"]::after { background: var(--filter-location); }
-  #bottom-filter-bar .bottom-trigger[data-group="conditions"]::after   { background: var(--filter-conditions); }
+  #bottom-filter-bar .bottom-trigger[data-group="energy"]::after     { background: var(--filter-energy); }
+  #bottom-filter-bar .bottom-trigger[data-group="location"]::after   { background: var(--filter-location); }
+  #bottom-filter-bar .bottom-trigger[data-group="conditions"]::after { background: var(--filter-conditions); }
 
   #bottom-filter-bar .bottom-trigger[aria-expanded="true"] {
     background: var(--color-hover);
   }
 
-  /* ── Bottom sheet panels (rise from bottom bar) ───────────── */
+  /* ── Bottom sheet panels ──────────────────────────────────── */
   .bottom-sheet {
     display: none;
     position: fixed;
     left: 0; right: 0;
-    bottom: 3.25rem; /* sits just above the bar */
+    bottom: 4rem;
     background: var(--color-surface);
     border: 2px solid var(--color-border);
     border-bottom: none;
@@ -577,14 +578,25 @@ main {
     to   { opacity: 1; transform: translateY(0); }
   }
 
+  .bottom-sheet-header {
+    font-family: var(--font-display);
+    font-size: 0.9rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.85rem 1.25rem 0.6rem;
+    border-bottom: 2px solid var(--color-border);
+    color: var(--color-text-mute);
+  }
+
   .bottom-sheet .dropdown-actions {
     display: flex;
     border-bottom: 2px solid var(--color-border);
   }
 
-  .bottom-sheet .dropdown-item {
-    padding: 0.75rem 1.25rem;
-    font-size: 0.95rem;
+  .bottom-sheet .dropdown-item,
+  .bottom-sheet .bottom-item {
+    padding: 0.9rem 1.25rem;
+    font-size: 1rem;
   }
 }
 
