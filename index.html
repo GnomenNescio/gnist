@@ -95,6 +95,27 @@
     </section>
   </main>
 
+  <!-- Mobile bottom filter bar (hidden on desktop via CSS) -->
+  <div id="bottom-filter-bar" style="display:none">
+    <button class="bottom-trigger" type="button" data-group="energy" aria-expanded="false" aria-controls="bottom-sheet-energy">
+      <span class="bottom-label" id="bottom-energy-label">Energy</span>
+      <span aria-hidden="true">▾</span>
+    </button>
+    <button class="bottom-trigger" type="button" data-group="location" aria-expanded="false" aria-controls="bottom-sheet-location">
+      <span class="bottom-label" id="bottom-location-label">Location</span>
+      <span aria-hidden="true">▾</span>
+    </button>
+    <button class="bottom-trigger" type="button" data-group="season" aria-expanded="false" aria-controls="bottom-sheet-season">
+      <span class="bottom-label" id="bottom-season-label">Season</span>
+      <span aria-hidden="true">▾</span>
+    </button>
+  </div>
+
+  <!-- Bottom sheets (mobile panels, share the same dropdown-item elements via JS sync) -->
+  <div class="bottom-sheet" id="bottom-sheet-energy" role="group" aria-label="Energy filter"></div>
+  <div class="bottom-sheet" id="bottom-sheet-location" role="group" aria-label="Location filter"></div>
+  <div class="bottom-sheet" id="bottom-sheet-season" role="group" aria-label="Season filter"></div>
+
   <script src="script.js"></script>
 </body>
 </html>
