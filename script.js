@@ -4,7 +4,7 @@
 
 // ── State ────────────────────────────────────────────────────────────
 let activitiesCache = null;
-let pinnedActivity = null; // when "Surprise me" picks one, we pin it here
+let pinnedActivity = null;
 
 // ── Dropdown open/close ──────────────────────────────────────────────
 function openDropdown(trigger, panel) {
@@ -26,7 +26,7 @@ function closeAllDropdowns() {
 
 function setupDropdown(triggerId, panelId) {
   const trigger = document.getElementById(triggerId);
-  const panel = document.getElementById(panelId);
+  const panel   = document.getElementById(panelId);
 
   trigger.addEventListener('click', (e) => {
     e.stopPropagation();
@@ -35,12 +35,13 @@ function setupDropdown(triggerId, panelId) {
     if (!isOpen) openDropdown(trigger, panel);
   });
 
-  panel.addEventListener('click', (e) => e.stopPropagation());
+  panel.addEventListener('click',     (e) => e.stopPropagation());
   panel.addEventListener('mousedown', (e) => e.stopPropagation());
 }
 
 setupDropdown('location-trigger', 'location-panel');
-setupDropdown('energy-trigger', 'energy-panel');
+setupDropdown('energy-trigger',   'energy-panel');
+setupDropdown('season-trigger',   'season-panel');
 
 document.addEventListener('click', closeAllDropdowns);
 
@@ -73,12 +74,14 @@ function getAllValues(group) {
     .map(el => el.dataset.value);
 }
 
-// ── Trigger label ────────────────────────────────────────────────────
+// ── Trigger labels ───────────────────────────────────────────────────
+const GROUP_NAMES = { location: 'Location', energy: 'Energy', season: 'Season' };
+
 function updateTriggerLabel(labelElId, group) {
-  const labelEl = document.getElementById(labelElId);
-  const selected = getSelected(group);
-  const total = getAllValues(group).length;
-  const groupName = group === 'location' ? 'Location' : 'Energy';
+  const labelEl   = document.getElementById(labelElId);
+  const selected  = getSelected(group);
+  const total     = getAllValues(group).length;
+  const groupName = GROUP_NAMES[group] || group;
 
   if (selected.length === 0 || selected.length === total) {
     labelEl.textContent = groupName;
@@ -91,10 +94,10 @@ function updateTriggerLabel(labelElId, group) {
 
 function updateAllLabels() {
   updateTriggerLabel('location-label-text', 'location');
-  updateTriggerLabel('energy-label-text', 'energy');
+  updateTriggerLabel('energy-label-text',   'energy');
+  updateTriggerLabel('season-label-text',   'season');
   document.querySelectorAll('.dropdown-actions').forEach(div => {
-    const group = div.dataset.group;
-    div.hidden = getSelected(group).length === 0;
+    div.hidden = getSelected(div.dataset.group).length === 0;
   });
 }
 
@@ -102,8 +105,7 @@ function updateAllLabels() {
 document.querySelectorAll('.dropdown-action').forEach(btn => {
   btn.addEventListener('click', (e) => {
     e.stopPropagation();
-    const group = btn.dataset.group;
-    document.querySelectorAll(`.dropdown-item[data-group="${group}"]`).forEach(item => {
+    document.querySelectorAll(`.dropdown-item[data-group="${btn.dataset.group}"]`).forEach(item => {
       setItemState(item, false);
     });
     updateAllLabels();
@@ -113,9 +115,9 @@ document.querySelectorAll('.dropdown-action').forEach(btn => {
   });
 });
 
-// ── Drag-to-select on items ──────────────────────────────────────────
+// ── Drag-to-select ───────────────────────────────────────────────────
 let dragActive = false;
-let dragMode = null;
+let dragMode   = null;
 
 document.querySelectorAll('.dropdown-item').forEach(item => {
   item.addEventListener('mousedown', (e) => {
@@ -123,7 +125,7 @@ document.querySelectorAll('.dropdown-item').forEach(item => {
     e.stopPropagation();
     document.body.style.userSelect = 'none';
     dragActive = true;
-    dragMode = item.classList.contains('selected') ? 'deselect' : 'select';
+    dragMode   = item.classList.contains('selected') ? 'deselect' : 'select';
     setItemState(item, dragMode === 'select');
   });
 
@@ -136,15 +138,14 @@ document.querySelectorAll('.dropdown-item').forEach(item => {
     e.stopPropagation();
     document.body.style.userSelect = 'none';
     dragActive = true;
-    dragMode = item.classList.contains('selected') ? 'deselect' : 'select';
+    dragMode   = item.classList.contains('selected') ? 'deselect' : 'select';
     setItemState(item, dragMode === 'select');
   }, { passive: false });
 
   item.addEventListener('keydown', (e) => {
     if (e.key === ' ' || e.key === 'Enter') {
       e.preventDefault();
-      const nowSelected = !item.classList.contains('selected');
-      setItemState(item, nowSelected);
+      setItemState(item, !item.classList.contains('selected'));
       updateAllLabels();
       pinnedActivity = null;
       document.getElementById('show-all-button').hidden = true;
@@ -156,7 +157,7 @@ document.querySelectorAll('.dropdown-item').forEach(item => {
 function finishDrag() {
   if (!dragActive) return;
   dragActive = false;
-  dragMode = null;
+  dragMode   = null;
   document.body.style.userSelect = '';
   updateAllLabels();
   pinnedActivity = null;
@@ -164,12 +165,12 @@ function finishDrag() {
   applyFilters();
 }
 
-document.addEventListener('mouseup', finishDrag);
+document.addEventListener('mouseup',  finishDrag);
 document.addEventListener('touchend', finishDrag);
 
 document.addEventListener('touchmove', (e) => {
   if (!dragActive) return;
-  const touch = e.touches[0];
+  const touch  = e.touches[0];
   const target = document.elementFromPoint(touch.clientX, touch.clientY);
   if (target && target.classList.contains('dropdown-item')) {
     setItemState(target, dragMode === 'select');
@@ -187,21 +188,31 @@ function getActivities() {
     .then(data => { activitiesCache = data; return data; });
 }
 
-// ── Filter & display ─────────────────────────────────────────────────
+// ── Filter logic (handles array location and season fields) ──────────
 function getFiltered(data) {
-  const locs = getSelected('location');
+  const locs    = getSelected('location');
   const energies = getSelected('energy');
-  const totalLocs = getAllValues('location').length;
-  const totalEnergies = getAllValues('energy').length;
+  const seasons  = getSelected('season');
 
-  // empty selection OR all selected = "no filter active" for that group
-  const locActive = locs.length > 0 && locs.length < totalLocs;
-  const enActive = energies.length > 0 && energies.length < totalEnergies;
+  const totalLocs    = getAllValues('location').length;
+  const totalEnergies = getAllValues('energy').length;
+  const totalSeasons  = getAllValues('season').length;
+
+  // A group is "active" only on partial selection
+  const locActive    = locs.length > 0 && locs.length < totalLocs;
+  const enActive     = energies.length > 0 && energies.length < totalEnergies;
+  const seasonActive = seasons.length > 0 && seasons.length < totalSeasons;
 
   return data.filter(activity => {
-    const matchesLoc = locActive ? locs.includes(activity.location) : true;
-    const matchesEn = enActive ? energies.includes(activity.energy) : true;
-    return matchesLoc && matchesEn;
+    // Normalise location and season to arrays
+    const actLocs    = Array.isArray(activity.location) ? activity.location : [activity.location];
+    const actSeasons = Array.isArray(activity.season)   ? activity.season   : [activity.season];
+
+    const matchesLoc    = locActive    ? actLocs.some(l => locs.includes(l))       : true;
+    const matchesEn     = enActive     ? energies.includes(activity.energy)         : true;
+    const matchesSeason = seasonActive ? actSeasons.some(s => seasons.includes(s)) : true;
+
+    return matchesLoc && matchesEn && matchesSeason;
   });
 }
 
@@ -248,21 +259,23 @@ function strong(text) {
   return s;
 }
 
-// ── DOM construction (safe — no innerHTML with data) ─────────────────
+// ── DOM construction ─────────────────────────────────────────────────
+function locClass(loc) {
+  return 'loc-' + loc.toLowerCase().replace(/\s+/g, '-');
+}
+
 function buildBadge(text, kind) {
   const span = document.createElement('span');
   span.className = 'badge badge-' + kind;
-  if (kind === 'location') {
-    span.classList.add('loc-' + text.toLowerCase());
-  }
+  if (kind === 'location') span.classList.add(locClass(text));
   span.textContent = text;
   return span;
 }
 
 function buildMetaItem(label, value) {
-  const span = document.createElement('span');
+  const span    = document.createElement('span');
   const labelEl = document.createElement('span');
-  labelEl.className = 'meta-label';
+  labelEl.className   = 'meta-label';
   labelEl.textContent = label + ':';
   span.appendChild(labelEl);
   span.append(' ' + value);
@@ -270,14 +283,15 @@ function buildMetaItem(label, value) {
 }
 
 function buildCard(activity, index) {
+  const locs = Array.isArray(activity.location) ? activity.location : [activity.location];
+
   const card = document.createElement('article');
   card.className = 'idea-card';
-  if (activity.location) {
-    card.classList.add('loc-' + activity.location.toLowerCase());
-  }
+  // Accent colour driven by first location
+  card.classList.add(locClass(locs[0]));
   card.style.animationDelay = Math.min(index, 12) * 0.025 + 's';
 
-  // Coloured accent strip at the top
+  // Coloured accent strip
   const accent = document.createElement('div');
   accent.className = 'accent';
   accent.setAttribute('aria-hidden', 'true');
@@ -288,23 +302,23 @@ function buildCard(activity, index) {
   h3.textContent = activity.title;
   card.appendChild(h3);
 
-  // Badges row
+  // Badges — all locations + energy
   const badges = document.createElement('div');
   badges.className = 'badges';
-  if (activity.location) badges.appendChild(buildBadge(activity.location, 'location'));
+  locs.forEach(loc => badges.appendChild(buildBadge(loc, 'location')));
   if (activity.energy) badges.appendChild(buildBadge(activity.energy, 'energy'));
   card.appendChild(badges);
 
   // Description
   const desc = document.createElement('p');
-  desc.className = 'card-desc';
+  desc.className   = 'card-desc';
   desc.textContent = activity.description || 'No description available.';
   card.appendChild(desc);
 
-  // Meta footer (no divider above per design)
+  // Meta footer
   const meta = document.createElement('footer');
   meta.className = 'card-meta';
-  meta.appendChild(buildMetaItem('Toys', activity.toys || 'None'));
+  if (activity.toys) meta.appendChild(buildMetaItem('Toys', activity.toys));
   card.appendChild(meta);
 
   return card;
@@ -316,15 +330,13 @@ function displayIdeas(activities) {
 
   if (activities.length === 0) {
     const p = document.createElement('p');
-    p.className = 'placeholder';
+    p.className   = 'placeholder';
     p.textContent = 'No ideas match your filters. Try adjusting them!';
     ideasDiv.appendChild(p);
     return;
   }
 
-  activities.forEach((activity, i) => {
-    ideasDiv.appendChild(buildCard(activity, i));
-  });
+  activities.forEach((activity, i) => ideasDiv.appendChild(buildCard(activity, i)));
 }
 
 // ── Surprise me / Show all ───────────────────────────────────────────
