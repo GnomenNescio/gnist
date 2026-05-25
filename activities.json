@@ -26,12 +26,12 @@
     ],
     "energy": "Active",
     "toys": "plastic bottles, snowballs",
-    "description": "Use snowballs to knock down plastic bottles as bowling pins!",
+    "description": "Use snowballs to knock down plastic bottles as bowling pins.",
     "conditions": [
       "Snowy"
     ],
     "title_no": "Snøballbowling",
-    "description_no": "Bruk snøballer til å velte plastflasker som kegler!",
+    "description_no": "Bruk snøballer til å velte plastflasker som kegler.",
     "toys_no": "plastflasker, snøballer"
   },
   {
@@ -41,7 +41,7 @@
     ],
     "energy": "Calm",
     "toys": "baking supplies",
-    "description": "Bake cookies together! Easy and fun. Bonus: you get to eat them!",
+    "description": "Bake cookies together. Easy and fun. Bonus: you get to eat them.",
     "conditions": [
       "Sunny",
       "Cloudy",
@@ -49,7 +49,7 @@
       "Snowy"
     ],
     "title_no": "Bake kjeks",
-    "description_no": "Bak kjeks sammen! Enkelt og morsomt. Bonus: dere får spise dem!",
+    "description_no": "Bak kjeks sammen. Enkelt og morsomt. Bonus: dere får spise dem.",
     "toys_no": "bakerekvisita"
   },
   {
@@ -59,7 +59,7 @@
     ],
     "energy": "Calm",
     "toys": "LEGO bricks",
-    "description": "Create a maze with LEGO bricks and use a marble or a small ball to navigate through it!",
+    "description": "Create a maze with LEGO bricks and use a marble or a small ball to navigate through it.",
     "conditions": [
       "Sunny",
       "Cloudy",
@@ -67,7 +67,7 @@
       "Snowy"
     ],
     "title_no": "Bygg en LEGO-labyrint",
-    "description_no": "Lag en labyrint av LEGO-klosser og bruk en kule eller liten ball for å navigere gjennom den!",
+    "description_no": "Lag en labyrint av LEGO-klosser og bruk en kule eller liten ball for å navigere gjennom den.",
     "toys_no": "LEGO-klosser"
   },
   {
@@ -77,7 +77,7 @@
     ],
     "energy": "Calm",
     "toys": "Kapla blocks",
-    "description": "Challenge each other to build the tallest tower you can using only Kapla blocks before it tumbles down!",
+    "description": "Challenge each other to build the tallest tower you can using only Kapla blocks before it tumbles down.",
     "conditions": [
       "Sunny",
       "Cloudy",
@@ -95,7 +95,7 @@
     ],
     "energy": "Calm",
     "toys": "MagnaTiles",
-    "description": "Build a whole city with magnetic tiles! Add tiny figures or use Brio train toys to enhance the setup.",
+    "description": "Build a whole city with magnetic tiles. Add tiny figures or use Brio train toys to enhance the setup.",
     "conditions": [
       "Sunny",
       "Cloudy",
@@ -103,7 +103,7 @@
       "Snowy"
     ],
     "title_no": "Magnetflisbygning",
-    "description_no": "Bygg en hel by med magnetbrikker! Legg til små figurer eller Brio-tog for å gjøre det enda morsommere.",
+    "description_no": "Bygg en hel by med magnetbrikker. Legg til små figurer eller Brio-tog for å gjøre det enda morsommere.",
     "toys_no": "MagnaTiles"
   },
   {
@@ -113,7 +113,7 @@
     ],
     "energy": "Calm",
     "toys": "Brio train set",
-    "description": "Set up your wooden train track in a creative new shape and imagine the story of the train's journey. Kids can draw the scenery on paper!",
+    "description": "Set up your wooden train track in a creative new shape and imagine the story of the train's journey. Kids can draw the scenery on paper.",
     "conditions": [
       "Sunny",
       "Cloudy",
@@ -121,7 +121,7 @@
       "Snowy"
     ],
     "title_no": "Togeventyr",
-    "description_no": "Legg ut togskinnene i en ny og kreativ form og fortell historien om togets reise. Barna kan tegne omgivelsene på papir!",
+    "description_no": "Legg ut togskinnene i en ny og kreativ form og fortell historien om togets reise. Barna kan tegne omgivelsene på papir.",
     "toys_no": "Brio-togsett"
   },
   {
@@ -131,13 +131,13 @@
     ],
     "energy": "Active",
     "toys": "Chalk",
-    "description": "Draw a course on the pavement with chalk. Include activities like 'jump three times,' 'spin in a circle,' and 'hop like a frog!'",
+    "description": "Draw a course on the pavement with chalk. Include activities like 'jump three times,' 'spin in a circle,' and 'hop like a frog.'",
     "conditions": [
       "Sunny",
       "Cloudy"
     ],
     "title_no": "Hinderløype med kritt",
-    "description_no": "Tegn en løype på asfalten med kritt. Inkluder aktiviteter som 'hopp tre ganger', 'snurr rundt' og 'hopp som en frosk!'",
+    "description_no": "Tegn en løype på asfalten med kritt. Inkluder aktiviteter som 'hopp tre ganger', 'snurr rundt' og 'hopp som en frosk.'",
     "toys_no": "kritt"
   },
   {
@@ -180,13 +180,13 @@
     ],
     "energy": "Calm",
     "toys": "Water, sponge or paintbrushes",
-    "description": "Give your kids a bucket of water and a paintbrush or sponge, and let them 'paint' the fence, pavement, or garden stones. No mess, all fun!",
+    "description": "Give your kids a bucket of water and a paintbrush or sponge, and let them 'paint' the fence, pavement, or garden stones. No mess, all fun.",
     "conditions": [
       "Sunny",
       "Cloudy"
     ],
     "title_no": "Vannmaling",
-    "description_no": "Gi barna en bøtte vann og en pensel eller svamp, og la dem 'male' gjerdet, asfalten eller hagesteinene. Ingen søl, bare moro!",
+    "description_no": "Gi barna en bøtte vann og en pensel eller svamp, og la dem 'male' gjerdet, asfalten eller hagesteinene. Ingen søl, bare moro.",
     "toys_no": "vann, svamp eller pensler"
   },
   {
@@ -196,7 +196,7 @@
     ],
     "energy": "Calm",
     "toys": "Kitchen tools",
-    "description": "Let them help choose and prepare simple recipes, like cookies, sandwiches, or fruit kabobs!",
+    "description": "Let them help choose and prepare simple recipes, like cookies, sandwiches, or fruit kabobs.",
     "conditions": [
       "Sunny",
       "Cloudy",
@@ -204,7 +204,7 @@
       "Snowy"
     ],
     "title_no": "Lage mat i miniatyr",
-    "description_no": "La dem hjelpe til med å velge og lage enkle oppskrifter, som kjeks, smørbrød eller fruktspyd!",
+    "description_no": "La dem hjelpe til med å velge og lage enkle oppskrifter, som kjeks, smørbrød eller fruktspyd.",
     "toys_no": "kjøkkenrekvisita"
   },
   {
@@ -214,13 +214,13 @@
     ],
     "energy": "Calm",
     "toys": "Water, mud, leaves, small bowls",
-    "description": "Set up a 'mud kitchen' to make leafy soup, dirt pies, or grass sandwiches! Let imaginations run wild.",
+    "description": "Set up a 'mud kitchen' to make leafy soup, dirt pies, or grass sandwiches. Let imaginations run wild.",
     "conditions": [
       "Cloudy",
       "Rainy"
     ],
     "title_no": "Mudderkjøkken",
-    "description_no": "Sett opp et 'mudderkjøkken' og lag bladsuppe, jordbai eller gressmørkbrød! La fantasien løpe løpsk.",
+    "description_no": "Sett opp et 'mudderkjøkken' og lag bladsuppe, jordbai eller gressmørkbrød. La fantasien løpe løpsk.",
     "toys_no": "vann, mudder, blader, små boller"
   },
   {
@@ -230,13 +230,13 @@
     ],
     "energy": "Calm",
     "toys": "Chalk, water spray bottle",
-    "description": "Draw with chalk on the pavement, then spray it with water to watch the colors change and blend. Great mini science experiment!",
+    "description": "Draw with chalk on the pavement, then spray it with water to watch the colors change and blend. Great mini science experiment.",
     "conditions": [
       "Sunny",
       "Cloudy"
     ],
     "title_no": "Kritt og vann-eksperiment",
-    "description_no": "Tegn med kritt på asfalten, og spray deretter vann for å se fargene endre og blande seg. Et lite mini-vitenskapseksperiment!",
+    "description_no": "Tegn med kritt på asfalten, og spray deretter vann for å se fargene endre og blande seg. Et lite mini-vitenskapseksperiment.",
     "toys_no": "kritt, vannsprayflaske"
   },
   {
@@ -262,7 +262,7 @@
     ],
     "energy": "Calm",
     "toys": "LEGO bricks",
-    "description": "Create a pretend kitchen out of LEGO bricks - cook a pretend LEGO pizza or LEGO burger and serve it to each other!",
+    "description": "Create a pretend kitchen out of LEGO bricks - cook a pretend LEGO pizza or LEGO burger and serve it to each other.",
     "conditions": [
       "Sunny",
       "Cloudy",
@@ -270,7 +270,7 @@
       "Snowy"
     ],
     "title_no": "LEGO-kokkekamp",
-    "description_no": "Lag et lekekjøkken av LEGO-klosser – lag en LEGO-pizza eller LEGO-burger og server den til hverandre!",
+    "description_no": "Lag et lekekjøkken av LEGO-klosser – lag en LEGO-pizza eller LEGO-burger og server den til hverandre.",
     "toys_no": "LEGO-klosser"
   },
   {
@@ -331,12 +331,12 @@
     ],
     "energy": "Active",
     "toys": "Buckets, shovels",
-    "description": "Use buckets and shovels to build snow sculptures — animals, castles, or whatever your imagination conjures!",
+    "description": "Use buckets and shovels to build snow sculptures — animals, castles, or whatever your imagination conjures.",
     "conditions": [
       "Snowy"
     ],
     "title_no": "Snøskulpturer",
-    "description_no": "Bruk bøtter og spader til å bygge snøskulpturer – dyr, slott eller hva fantasien måtte finne på!",
+    "description_no": "Bruk bøtter og spader til å bygge snøskulpturer – dyr, slott eller hva fantasien måtte finne på.",
     "toys_no": "bøtter, spader"
   },
   {
@@ -348,12 +348,12 @@
     ],
     "energy": "Active",
     "toys": "None",
-    "description": "See who can make the biggest or most creative snow angel. Compare them from above for a fun bird's-eye view!",
+    "description": "See who can make the biggest or most creative snow angel. Compare them from above for a fun bird's-eye view.",
     "conditions": [
       "Snowy"
     ],
     "title_no": "Snøengelkonkurranse",
-    "description_no": "Hvem kan lage den største eller mest kreative snøengelen? Sammenlign dem ovenfra for et morsomt fugleperspektiv!",
+    "description_no": "Hvem kan lage den største eller mest kreative snøengelen? Sammenlign dem ovenfra for et morsomt fugleperspektiv.",
     "toys_no": "ingen"
   },
   {
@@ -364,12 +364,12 @@
     ],
     "energy": "Active",
     "toys": "Small toys or objects",
-    "description": "Hide small objects in the snow and give your kids clues to dig them up. Great for developing problem-solving skills in the cold!",
+    "description": "Hide small objects in the snow and give your kids clues to dig them up. Great for developing problem-solving skills in the cold.",
     "conditions": [
       "Snowy"
     ],
     "title_no": "Snøskattejakt",
-    "description_no": "Gjem små gjenstander i snøen og gi barna ledetråder til å grave dem frem. Flott for problemløsing i kulden!",
+    "description_no": "Gjem små gjenstander i snøen og gi barna ledetråder til å grave dem frem. Flott for problemløsing i kulden.",
     "toys_no": "små leker eller gjenstander"
   },
   {
@@ -414,7 +414,7 @@
     ],
     "energy": "Calm",
     "toys": "Printed bingo cards or paper",
-    "description": "Create bingo cards with things to spot out the window (red car, church, cow, etc.). First to shout 'Bingo!' wins!",
+    "description": "Create bingo cards with things to spot out the window (red car, church, cow, etc.). First to shout 'Bingo.' wins.",
     "conditions": [
       "Sunny",
       "Cloudy",
@@ -422,7 +422,7 @@
       "Snowy"
     ],
     "title_no": "Bil-bingo",
-    "description_no": "Lag bingoark med ting å se ut av vinduet – rød bil, kirke, ku osv. Første til å rope 'Bingo!' vinner!",
+    "description_no": "Lag bingoark med ting å se ut av vinduet – rød bil, kirke, ku osv. Første til å rope 'Bingo.' vinner.",
     "toys_no": "trykte bingoark eller papir"
   },
   {
@@ -450,7 +450,7 @@
     ],
     "energy": "Active",
     "toys": "Phone or music player",
-    "description": "Queue up your kids favourite songs and have a sing-along karaoke session. Silly voices encouraged!",
+    "description": "Queue up your kids favourite songs and have a sing-along karaoke session. Silly voices encouraged.",
     "conditions": [
       "Sunny",
       "Cloudy",
@@ -458,7 +458,7 @@
       "Snowy"
     ],
     "title_no": "Bil-karaoke",
-    "description_no": "Sett på barnas favorittsanger og ha en synge-karaoke-sesjon. Morsomme stemmer er oppfordret!",
+    "description_no": "Sett på barnas favorittsanger og ha en synge-karaoke-sesjon. Morsomme stemmer er oppfordret.",
     "toys_no": "telefon eller musikkspiller"
   },
   {
@@ -486,7 +486,7 @@
     ],
     "energy": "Calm",
     "toys": "None",
-    "description": "One person starts a story with a sentence, the next person adds a sentence, and so on. See where the story ends up!",
+    "description": "One person starts a story with a sentence, the next person adds a sentence, and so on. See where the story ends up.",
     "conditions": [
       "Sunny",
       "Cloudy",
@@ -494,7 +494,7 @@
       "Snowy"
     ],
     "title_no": "Historiekjede",
-    "description_no": "En person starter en historie med en setning, den neste legger til en setning, og så videre. Se hvor historien ender!",
+    "description_no": "En person starter en historie med en setning, den neste legger til en setning, og så videre. Se hvor historien ender.",
     "toys_no": "ingen"
   },
   {
@@ -505,14 +505,14 @@
     ],
     "energy": "Active",
     "toys": "Paper, pencil",
-    "description": "Make a list of natural things to find on your walk — a feather, a round stone, a yellow leaf, a snail shell. Tick them off as you go!",
+    "description": "Make a list of natural things to find on your walk — a feather, a round stone, a yellow leaf, a snail shell. Tick them off as you go.",
     "conditions": [
       "Sunny",
       "Cloudy",
       "Rainy"
     ],
     "title_no": "Naturskattejakt",
-    "description_no": "Lag en liste over naturting å finne – en fjær, en rund stein, et gult blad, et sneglehus. Kryss av etter hvert!",
+    "description_no": "Lag en liste over naturting å finne – en fjær, en rund stein, et gult blad, et sneglehus. Kryss av etter hvert.",
     "toys_no": "papir, blyant"
   },
   {
@@ -577,14 +577,14 @@
     ],
     "energy": "Calm",
     "toys": "Magnifying glass, jar",
-    "description": "Go on a bug safari in the park or garden. Look under logs and leaves for beetles, woodlice, and worms. Observe and release!",
+    "description": "Go on a bug safari in the park or garden. Look under logs and leaves for beetles, woodlice, and worms. Observe and release.",
     "conditions": [
       "Sunny",
       "Cloudy",
       "Rainy"
     ],
     "title_no": "Insektsafari",
-    "description_no": "Gå på insektsafari i parken eller hagen. Se under stokker og blader etter biller, kjellerbiller og meitemark. Observer og slipp dem fri!",
+    "description_no": "Gå på insektsafari i parken eller hagen. Se under stokker og blader etter biller, kjellerbiller og meitemark. Observer og slipp dem fri.",
     "toys_no": "forstørrelsesglass, krukke"
   },
   {
@@ -611,14 +611,14 @@
     ],
     "energy": "Active",
     "toys": "Cones, rope, hula hoops",
-    "description": "Set up a fun obstacle run using whatever you have — cones to weave around, a rope to jump over, hoops to hop through. Time each other!",
+    "description": "Set up a fun obstacle run using whatever you have — cones to weave around, a rope to jump over, hoops to hop through. Time each other.",
     "conditions": [
       "Sunny",
       "Cloudy",
       "Rainy"
     ],
     "title_no": "Hjemmelaget hinderløype",
-    "description_no": "Sett opp en morsom hinderløype med det dere har – kjegler å slalomkjøre rundt, et tau å hoppe over, ringer å hoppe gjennom. Ta tid på hverandre!",
+    "description_no": "Sett opp en morsom hinderløype med det dere har – kjegler å slalomkjøre rundt, et tau å hoppe over, ringer å hoppe gjennom. Ta tid på hverandre.",
     "toys_no": "kjegler, tau, hulahopringer"
   },
   {
@@ -678,7 +678,7 @@
     ],
     "energy": "Active",
     "toys": "Speaker, scarves",
-    "description": "Cue up an upbeat playlist, dim the lights, hand out scarves or wooden spoons as microphones. Freeze when the music stops!",
+    "description": "Cue up an upbeat playlist, dim the lights, hand out scarves or wooden spoons as microphones. Freeze when the music stops.",
     "conditions": [
       "Sunny",
       "Cloudy",
@@ -686,7 +686,7 @@
       "Snowy"
     ],
     "title_no": "Stuedragerparty",
-    "description_no": "Sett på en livlig spilleliste, dimm lysene og del ut sjal eller tresleier som 'mikrofoner'. Frys når musikken stopper!",
+    "description_no": "Sett på en livlig spilleliste, dimm lysene og del ut sjal eller tresleier som 'mikrofoner'. Frys når musikken stopper.",
     "toys_no": "høyttaler, sjal"
   },
   {
@@ -696,7 +696,7 @@
     ],
     "energy": "Active",
     "toys": "Balloon, string or sofa as net",
-    "description": "Stretch a string across the room or use the sofa as a net. Keep a balloon airborne — feet on the floor only!",
+    "description": "Stretch a string across the room or use the sofa as a net. Keep a balloon airborne — feet on the floor only.",
     "conditions": [
       "Sunny",
       "Cloudy",
@@ -704,7 +704,7 @@
       "Snowy"
     ],
     "title_no": "Ballongvolleyball",
-    "description_no": "Strekk en snor over rommet eller bruk sofaen som nett. Hold ballongen i luften – bare føttene på gulvet!",
+    "description_no": "Strekk en snor over rommet eller bruk sofaen som nett. Hold ballongen i luften – bare føttene på gulvet.",
     "toys_no": "ballong, snor eller sofa som nett"
   },
   {
