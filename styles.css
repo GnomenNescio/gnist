@@ -102,8 +102,8 @@ button { font-family: inherit; }
   flex-shrink: 0;
 }
 .brand-shape-semicircle {
-  width: 18px; height: 9px;
-  border-radius: 18px 18px 0 0;
+  width: 9px; height: 18px;
+  border-radius: 18px 0 0 18px;
   background: var(--loc-car);
 }
 
