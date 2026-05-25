@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gnist</title>
+  <title>Gnist: Activity Finder</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,6 +20,7 @@
         <span class="brand-shape brand-shape-triangle"></span>
       </div>
       <h1>GNIST</h1>
+      <span class="brand-subtitle">Activity finder</span>
     </div>
 
     <nav id="filters" aria-label="Filters">
@@ -35,9 +36,10 @@
               <button type="button" class="dropdown-action" data-group="location">Clear</button>
             </div>
             <div class="dropdown-item" role="checkbox" aria-checked="false" tabindex="0" data-group="location" data-value="Inside"><span class="check" aria-hidden="true"></span><span class="item-label">Inside</span></div>
-            <div class="dropdown-item" role="checkbox" aria-checked="false" tabindex="0" data-group="location" data-value="Outside"><span class="check" aria-hidden="true"></span><span class="item-label">Outside</span></div>
+            <div class="dropdown-item" role="checkbox" aria-checked="false" tabindex="0" data-group="location" data-value="At the table"><span class="check" aria-hidden="true"></span><span class="item-label">At the table</span></div>
+            <div class="dropdown-item" role="checkbox" aria-checked="false" tabindex="0" data-group="location" data-value="Urban"><span class="check" aria-hidden="true"></span><span class="item-label">Urban</span></div>
             <div class="dropdown-item" role="checkbox" aria-checked="false" tabindex="0" data-group="location" data-value="Garden"><span class="check" aria-hidden="true"></span><span class="item-label">Garden</span></div>
-            <div class="dropdown-item" role="checkbox" aria-checked="false" tabindex="0" data-group="location" data-value="Snow"><span class="check" aria-hidden="true"></span><span class="item-label">Snow</span></div>
+            <div class="dropdown-item" role="checkbox" aria-checked="false" tabindex="0" data-group="location" data-value="Forest"><span class="check" aria-hidden="true"></span><span class="item-label">Forest</span></div>
             <div class="dropdown-item" role="checkbox" aria-checked="false" tabindex="0" data-group="location" data-value="Car"><span class="check" aria-hidden="true"></span><span class="item-label">Car</span></div>
           </div>
         </div>
@@ -53,6 +55,22 @@
             </div>
             <div class="dropdown-item" role="checkbox" aria-checked="false" tabindex="0" data-group="energy" data-value="Calm"><span class="check" aria-hidden="true"></span><span class="item-label">Calm</span></div>
             <div class="dropdown-item" role="checkbox" aria-checked="false" tabindex="0" data-group="energy" data-value="Active"><span class="check" aria-hidden="true"></span><span class="item-label">Active</span></div>
+          </div>
+        </div>
+
+        <div class="dropdown" id="season-dropdown">
+          <button class="dropdown-trigger" id="season-trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="season-panel">
+            <span class="dropdown-label" id="season-label-text">Season</span>
+            <span class="dropdown-chevron" aria-hidden="true">▾</span>
+          </button>
+          <div class="dropdown-panel" id="season-panel" role="group" aria-labelledby="season-trigger" hidden>
+            <div class="dropdown-actions" data-group="season" hidden>
+              <button type="button" class="dropdown-action" data-group="season">Clear</button>
+            </div>
+            <div class="dropdown-item" role="checkbox" aria-checked="false" tabindex="0" data-group="season" data-value="Spring"><span class="check" aria-hidden="true"></span><span class="item-label">Spring</span></div>
+            <div class="dropdown-item" role="checkbox" aria-checked="false" tabindex="0" data-group="season" data-value="Summer"><span class="check" aria-hidden="true"></span><span class="item-label">Summer</span></div>
+            <div class="dropdown-item" role="checkbox" aria-checked="false" tabindex="0" data-group="season" data-value="Autumn"><span class="check" aria-hidden="true"></span><span class="item-label">Autumn</span></div>
+            <div class="dropdown-item" role="checkbox" aria-checked="false" tabindex="0" data-group="season" data-value="Winter"><span class="check" aria-hidden="true"></span><span class="item-label">Winter</span></div>
           </div>
         </div>
 
