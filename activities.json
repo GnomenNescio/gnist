@@ -599,7 +599,7 @@
     "conditions": [
       "Sunny"
     ],
-    "title_no": "Skyggjetegning",
+    "title_no": "Skyggetegning",
     "description_no": "Tegn konturene av hverandres skygger på asfalten med kritt. Kom tilbake senere og se hvordan de har flyttet seg.",
     "toys_no": "kritt"
   },
@@ -633,7 +633,7 @@
       "Sunny",
       "Cloudy"
     ],
-    "title_no": "Drakeflyging",
+    "title_no": "Drageflyging",
     "description_no": "Dra til et åpent felt eller en bakketopp på en blåsende dag og fly drage. Ungene kan ta turer med å holde snoren.",
     "toys_no": "drage"
   },
@@ -1082,8 +1082,8 @@
       "Cloudy",
       "Rainy"
     ],
-    "title_no": "Steinkasting",
-    "description_no": "Finn flate steiner ved vannkanten og øv på å kaste dem over overflaten. Tell hoppene.",
+    "title_no": "Fiskesprett",
+    "description_no": "Finn flate steiner ved vannkanten og øv på å la dem sprette over overflaten. Tell hoppene.",
     "toys_no": "flate steiner, innsjø eller elv"
   },
   {
