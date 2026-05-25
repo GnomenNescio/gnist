@@ -36,7 +36,7 @@ const TRANSLATIONS = {
     surpriseMe:  'Overrask meg',
     showAll:     'Vis alle treff',
     clear:       'Tøm',
-    toys:        'Utstyr',
+    toys:        'Trengs',
     loading:     'Laster aktiviteter…',
     loadError:   'Kunne ikke laste aktiviteter. Prøv å laste siden på nytt.',
     noMatches:   'Ingen ideer passer til filtrene. Prøv å justere dem!',
