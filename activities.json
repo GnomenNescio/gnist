@@ -12,7 +12,10 @@
       "Cloudy",
       "Rainy",
       "Snowy"
-    ]
+    ],
+    "title_no": "Bygg en lekehule",
+    "description_no": "Lag en koselig lekehule med tepper og puter. Ta med lommelykt for ekstra moro.",
+    "toys_no": "tepper, puter"
   },
   {
     "title": "Snowball Bowling",
@@ -26,7 +29,10 @@
     "description": "Use snowballs to knock down plastic bottles as bowling pins!",
     "conditions": [
       "Snowy"
-    ]
+    ],
+    "title_no": "Snøballbowling",
+    "description_no": "Bruk snøballer til å velte plastflasker som kegler!",
+    "toys_no": "plastflasker, snøballer"
   },
   {
     "title": "Baking cookies",
@@ -41,7 +47,10 @@
       "Cloudy",
       "Rainy",
       "Snowy"
-    ]
+    ],
+    "title_no": "Bake kjeks",
+    "description_no": "Bak kjeks sammen! Enkelt og morsomt. Bonus: dere får spise dem!",
+    "toys_no": "bakerekvisita"
   },
   {
     "title": "Build a LEGO Maze",
@@ -56,7 +65,10 @@
       "Cloudy",
       "Rainy",
       "Snowy"
-    ]
+    ],
+    "title_no": "Bygg en LEGO-labyrint",
+    "description_no": "Lag en labyrint av LEGO-klosser og bruk en kule eller liten ball for å navigere gjennom den!",
+    "toys_no": "LEGO-klosser"
   },
   {
     "title": "Kapla Tower Challenge",
@@ -71,7 +83,10 @@
       "Cloudy",
       "Rainy",
       "Snowy"
-    ]
+    ],
+    "title_no": "Kapla-tårnutfordring",
+    "description_no": "Hvem kan bygge det høyeste tårnet med Kapla-klosser før det faller?",
+    "toys_no": "Kapla-klosser"
   },
   {
     "title": "Magnetic Tile City",
@@ -86,7 +101,10 @@
       "Cloudy",
       "Rainy",
       "Snowy"
-    ]
+    ],
+    "title_no": "Magnetflisbygning",
+    "description_no": "Bygg en hel by med magnetbrikker! Legg til små figurer eller Brio-tog for å gjøre det enda morsommere.",
+    "toys_no": "MagnaTiles"
   },
   {
     "title": "Train Adventure",
@@ -101,7 +119,10 @@
       "Cloudy",
       "Rainy",
       "Snowy"
-    ]
+    ],
+    "title_no": "Togeventyr",
+    "description_no": "Legg ut togskinnene i en ny og kreativ form og fortell historien om togets reise. Barna kan tegne omgivelsene på papir!",
+    "toys_no": "Brio-togsett"
   },
   {
     "title": "Chalk Obstacle Course",
@@ -114,7 +135,10 @@
     "conditions": [
       "Sunny",
       "Cloudy"
-    ]
+    ],
+    "title_no": "Hinderløype med kritt",
+    "description_no": "Tegn en løype på asfalten med kritt. Inkluder aktiviteter som 'hopp tre ganger', 'snurr rundt' og 'hopp som en frosk!'",
+    "toys_no": "kritt"
   },
   {
     "title": "Football Trick Shots",
@@ -128,7 +152,10 @@
     "conditions": [
       "Sunny",
       "Cloudy"
-    ]
+    ],
+    "title_no": "Fotballtricks",
+    "description_no": "Prøv å treffe spesifikke mål med fotballen – velt kjegler, land ballen i en bøtte.",
+    "toys_no": "fotball"
   },
   {
     "title": "Backyard Water Fun",
@@ -141,7 +168,10 @@
     "conditions": [
       "Sunny",
       "Cloudy"
-    ]
+    ],
+    "title_no": "Vannlek i hagen",
+    "description_no": "Sett opp en vannlekeplass med hageslange, bøtter og kopper. La barna eksperimentere med å fylle, søle og sprute.",
+    "toys_no": "hageslange, bøtter, kopper"
   },
   {
     "title": "DIY Water Painting",
@@ -154,7 +184,10 @@
     "conditions": [
       "Sunny",
       "Cloudy"
-    ]
+    ],
+    "title_no": "Vannmaling",
+    "description_no": "Gi barna en bøtte vann og en pensel eller svamp, og la dem 'male' gjerdet, asfalten eller hagesteinene. Ingen søl, bare moro!",
+    "toys_no": "vann, svamp eller pensler"
   },
   {
     "title": "Miniature Cooking Day",
@@ -169,7 +202,10 @@
       "Cloudy",
       "Rainy",
       "Snowy"
-    ]
+    ],
+    "title_no": "Lage mat i miniatyr",
+    "description_no": "La dem hjelpe til med å velge og lage enkle oppskrifter, som kjeks, smørbrød eller fruktspyd!",
+    "toys_no": "kjøkkenrekvisita"
   },
   {
     "title": "Mud Kitchen Recipes",
@@ -182,7 +218,10 @@
     "conditions": [
       "Cloudy",
       "Rainy"
-    ]
+    ],
+    "title_no": "Mudderkjøkken",
+    "description_no": "Sett opp et 'mudderkjøkken' og lag bladsuppe, jordbai eller gressmørkbrød! La fantasien løpe løpsk.",
+    "toys_no": "vann, mudder, blader, små boller"
   },
   {
     "title": "Chalk & Water Science",
@@ -195,7 +234,10 @@
     "conditions": [
       "Sunny",
       "Cloudy"
-    ]
+    ],
+    "title_no": "Kritt og vann-eksperiment",
+    "description_no": "Tegn med kritt på asfalten, og spray deretter vann for å se fargene endre og blande seg. Et lite mini-vitenskapseksperiment!",
+    "toys_no": "kritt, vannsprayflaske"
   },
   {
     "title": "Bicycle Obstacle Course",
@@ -208,7 +250,10 @@
     "conditions": [
       "Sunny",
       "Cloudy"
-    ]
+    ],
+    "title_no": "Sykkelhinderløype",
+    "description_no": "Bruk kritt til å lage en sykkelhinderløype på asfalten, med svinger, sirkler og steder å stoppe og vinke.",
+    "toys_no": "sykkel, kritt"
   },
   {
     "title": "LEGO Cooking Show",
@@ -223,7 +268,10 @@
       "Cloudy",
       "Rainy",
       "Snowy"
-    ]
+    ],
+    "title_no": "LEGO-kokkekamp",
+    "description_no": "Lag et lekekjøkken av LEGO-klosser – lag en LEGO-pizza eller LEGO-burger og server den til hverandre!",
+    "toys_no": "LEGO-klosser"
   },
   {
     "title": "Magnatile Garden Habitat",
@@ -236,7 +284,10 @@
     "conditions": [
       "Sunny",
       "Cloudy"
-    ]
+    ],
+    "title_no": "Magnetflishabitat",
+    "description_no": "Bygg et hus eller 'habitat' med magnetbrikker og naturmaterialer som blader, pinner og småsteiner.",
+    "toys_no": "MagnaTiles, naturmaterialer"
   },
   {
     "title": "Art from Nature",
@@ -249,7 +300,10 @@
     "conditions": [
       "Sunny",
       "Cloudy"
-    ]
+    ],
+    "title_no": "Kunst fra naturen",
+    "description_no": "Samle blader, blomster eller pinner og lag naturinspirerte collager med lim på papir.",
+    "toys_no": "kunstrekvisita"
   },
   {
     "title": "Snow Painting",
@@ -263,7 +317,10 @@
     "description": "Fill spray bottles with water and a few drops of food coloring, then spray colorful patterns onto freshly fallen snow.",
     "conditions": [
       "Snowy"
-    ]
+    ],
+    "title_no": "Snømaling",
+    "description_no": "Fyll sprayflasker med vann og noen dråper matfarge, og spray fargerike mønstre på nyfallen snø.",
+    "toys_no": "sprayflasker, matfarge"
   },
   {
     "title": "Snow Sculptures",
@@ -277,7 +334,10 @@
     "description": "Use buckets and shovels to build snow sculptures — animals, castles, or whatever your imagination conjures!",
     "conditions": [
       "Snowy"
-    ]
+    ],
+    "title_no": "Snøskulpturer",
+    "description_no": "Bruk bøtter og spader til å bygge snøskulpturer – dyr, slott eller hva fantasien måtte finne på!",
+    "toys_no": "bøtter, spader"
   },
   {
     "title": "Snow Angel Contest",
@@ -291,7 +351,10 @@
     "description": "See who can make the biggest or most creative snow angel. Compare them from above for a fun bird's-eye view!",
     "conditions": [
       "Snowy"
-    ]
+    ],
+    "title_no": "Snøengelkonkurranse",
+    "description_no": "Hvem kan lage den største eller mest kreative snøengelen? Sammenlign dem ovenfra for et morsomt fugleperspektiv!",
+    "toys_no": "ingen"
   },
   {
     "title": "Snowy Treasure Hunt",
@@ -304,7 +367,10 @@
     "description": "Hide small objects in the snow and give your kids clues to dig them up. Great for developing problem-solving skills in the cold!",
     "conditions": [
       "Snowy"
-    ]
+    ],
+    "title_no": "Snøskattejakt",
+    "description_no": "Gjem små gjenstander i snøen og gi barna ledetråder til å grave dem frem. Flott for problemløsing i kulden!",
+    "toys_no": "små leker eller gjenstander"
   },
   {
     "title": "Snowflake Science",
@@ -318,7 +384,10 @@
     "description": "Catch snowflakes on dark paper or fabric and use a magnifying glass to look at their unique crystal shapes.",
     "conditions": [
       "Snowy"
-    ]
+    ],
+    "title_no": "Snøfnuggforskning",
+    "description_no": "Fang snøfnugg på mørkt papir eller stoff og bruk et forstørrelsesglass for å studere de unike krystallformene.",
+    "toys_no": "mørkt papir eller stoff"
   },
   {
     "title": "Audiobook Road Trip",
@@ -333,7 +402,10 @@
       "Cloudy",
       "Rainy",
       "Snowy"
-    ]
+    ],
+    "title_no": "Lydbok på tur",
+    "description_no": "Sett på en passende lydbok eller podkast for barn under kjøreturen. Snakk om historien når dere kommer frem.",
+    "toys_no": "ingen"
   },
   {
     "title": "Car Bingo",
@@ -348,7 +420,10 @@
       "Cloudy",
       "Rainy",
       "Snowy"
-    ]
+    ],
+    "title_no": "Bil-bingo",
+    "description_no": "Lag bingoark med ting å se ut av vinduet – rød bil, kirke, ku osv. Første til å rope 'Bingo!' vinner!",
+    "toys_no": "trykte bingoark eller papir"
   },
   {
     "title": "20 Questions",
@@ -363,7 +438,10 @@
       "Cloudy",
       "Rainy",
       "Snowy"
-    ]
+    ],
+    "title_no": "20 spørsmål",
+    "description_no": "En person tenker på et dyr, en gjenstand eller en person. De andre stiller ja/nei-spørsmål for å gjette innen 20 forsøk.",
+    "toys_no": "ingen"
   },
   {
     "title": "Car Karaoke",
@@ -378,7 +456,10 @@
       "Cloudy",
       "Rainy",
       "Snowy"
-    ]
+    ],
+    "title_no": "Bil-karaoke",
+    "description_no": "Sett på barnas favorittsanger og ha en synge-karaoke-sesjon. Morsomme stemmer er oppfordret!",
+    "toys_no": "telefon eller musikkspiller"
   },
   {
     "title": "Alphabet Game",
@@ -393,7 +474,10 @@
       "Cloudy",
       "Rainy",
       "Snowy"
-    ]
+    ],
+    "title_no": "Alfabetleken",
+    "description_no": "Finn ord utenfor bilen – skilt, butikker, skiltplater – som begynner på hver bokstav i alfabetet i rekkefølge.",
+    "toys_no": "ingen"
   },
   {
     "title": "Storytelling Chain",
@@ -408,7 +492,10 @@
       "Cloudy",
       "Rainy",
       "Snowy"
-    ]
+    ],
+    "title_no": "Historiekjede",
+    "description_no": "En person starter en historie med en setning, den neste legger til en setning, og så videre. Se hvor historien ender!",
+    "toys_no": "ingen"
   },
   {
     "title": "Nature Scavenger Hunt",
@@ -423,7 +510,10 @@
       "Sunny",
       "Cloudy",
       "Rainy"
-    ]
+    ],
+    "title_no": "Naturskattejakt",
+    "description_no": "Lag en liste over naturting å finne – en fjær, en rund stein, et gult blad, et sneglehus. Kryss av etter hvert!",
+    "toys_no": "papir, blyant"
   },
   {
     "title": "Puddle Jumping",
@@ -437,7 +527,10 @@
     "description": "Pull on the wellies and go find the biggest puddles to jump in. Classic, messy, and endlessly entertaining.",
     "conditions": [
       "Rainy"
-    ]
+    ],
+    "title_no": "Pytthopping",
+    "description_no": "Ta på gummistøvlene og gå ut for å finne de største pytter å hoppe i. Klassisk, rotete og tidløst morsomt.",
+    "toys_no": "gummistøvler"
   },
   {
     "title": "Stick Sword Fight",
@@ -452,7 +545,10 @@
       "Sunny",
       "Cloudy",
       "Rainy"
-    ]
+    ],
+    "title_no": "Pinnekampsport",
+    "description_no": "Finn to like store pinner og ha en trygg, forsiktig sverdkamp. Sett regler for rettferdig lek og ta turer med å vinne.",
+    "toys_no": "pinner"
   },
   {
     "title": "Cloud Watching",
@@ -468,7 +564,10 @@
       "Sunny",
       "Cloudy",
       "Rainy"
-    ]
+    ],
+    "title_no": "Skyobservasjon",
+    "description_no": "Legg dere på et teppe og se opp på skyene. Hvilke former og dyr kan dere se? Ta turer med å peke ut hva dere ser.",
+    "toys_no": "teppe"
   },
   {
     "title": "Bug Safari",
@@ -483,7 +582,10 @@
       "Sunny",
       "Cloudy",
       "Rainy"
-    ]
+    ],
+    "title_no": "Insektsafari",
+    "description_no": "Gå på insektsafari i parken eller hagen. Se under stokker og blader etter biller, kjellerbiller og meitemark. Observer og slipp dem fri!",
+    "toys_no": "forstørrelsesglass, krukke"
   },
   {
     "title": "Shadow Drawing",
@@ -496,7 +598,10 @@
     "description": "On a sunny day, trace each other's shadows on the pavement with chalk. Come back later to see how the shadows have moved.",
     "conditions": [
       "Sunny"
-    ]
+    ],
+    "title_no": "Skyggjetegning",
+    "description_no": "På en solrik dag, tegn konturene av hverandres skygger på asfalten med kritt. Kom tilbake senere og se hvordan skyggene har flyttet seg.",
+    "toys_no": "kritt"
   },
   {
     "title": "DIY Obstacle Run",
@@ -511,7 +616,10 @@
       "Sunny",
       "Cloudy",
       "Rainy"
-    ]
+    ],
+    "title_no": "Hjemmelaget hinderløype",
+    "description_no": "Sett opp en morsom hinderløype med det dere har – kjegler å slalomkjøre rundt, et tau å hoppe over, ringer å hoppe gjennom. Ta tid på hverandre!",
+    "toys_no": "kjegler, tau, hulahopringer"
   },
   {
     "title": "Kite Flying",
@@ -524,7 +632,10 @@
     "conditions": [
       "Sunny",
       "Cloudy"
-    ]
+    ],
+    "title_no": "Drakeflyging",
+    "description_no": "Dra til et åpent felt eller en bakketopp på en blåsende dag og fly drage sammen. Barna kan ta turer med å holde snoren.",
+    "toys_no": "drage"
   },
   {
     "title": "Garden Yoga",
@@ -537,7 +648,10 @@
     "conditions": [
       "Sunny",
       "Cloudy"
-    ]
+    ],
+    "title_no": "Hageyoga",
+    "description_no": "Ta turer med å rope ut yogastillinger som de andre skal kopiere – tre, katt, nedovervendt hund, kriger, kobra. Hvem kan holde stillinger lengst?",
+    "toys_no": "yogamatte eller håndkle"
   },
   {
     "title": "Indoor Obstacle Course",
@@ -552,7 +666,10 @@
       "Cloudy",
       "Rainy",
       "Snowy"
-    ]
+    ],
+    "title_no": "Innendørs hinderløype",
+    "description_no": "Tape piler eller 'lavasoner' på gulvet, kryp under stoler, hopp over puter. Ta tid på hvert runde og prøv å slå rekorden.",
+    "toys_no": "puter, maskeringstape, stoler"
   },
   {
     "title": "Living Room Dance Party",
@@ -567,7 +684,10 @@
       "Cloudy",
       "Rainy",
       "Snowy"
-    ]
+    ],
+    "title_no": "Stuedragerparty",
+    "description_no": "Sett på en livlig spilleliste, dimm lysene og del ut sjal eller tresleier som 'mikrofoner'. Frys når musikken stopper!",
+    "toys_no": "høyttaler, sjal"
   },
   {
     "title": "Balloon Volleyball",
@@ -582,7 +702,10 @@
       "Cloudy",
       "Rainy",
       "Snowy"
-    ]
+    ],
+    "title_no": "Ballongvolleyball",
+    "description_no": "Strekk en snor over rommet eller bruk sofaen som nett. Hold ballongen i luften – bare føttene på gulvet!",
+    "toys_no": "ballong, snor eller sofa som nett"
   },
   {
     "title": "Sock Basketball",
@@ -597,7 +720,10 @@
       "Cloudy",
       "Rainy",
       "Snowy"
-    ]
+    ],
+    "title_no": "Sokkebasket",
+    "description_no": "Rullede sokker, en klesvaskekurv, tre runder med frikast. Flytt kurven lenger unna for hver runde.",
+    "toys_no": "klesvaskekurv, rullede sokker"
   },
   {
     "title": "Animal Walk Races",
@@ -612,7 +738,10 @@
       "Cloudy",
       "Rainy",
       "Snowy"
-    ]
+    ],
+    "title_no": "Dyrgangart-løp",
+    "description_no": "Bjørnekryp, krabbegange, frosskupp, slangeglidning. Velg et dyr og løp tvers over rommet. Taperen velger neste dyr.",
+    "toys_no": "ingen"
   },
   {
     "title": "Indoor Camping",
@@ -627,7 +756,10 @@
       "Cloudy",
       "Rainy",
       "Snowy"
-    ]
+    ],
+    "title_no": "Innendørs camping",
+    "description_no": "Slå opp et ekte eller laken-og-stol-telt i stuen. Pakk en 'campingbag' og fortell spøkelses- eller tullete historier i lommelyktskin.",
+    "toys_no": "telt eller laken, sovepose, lommelykt"
   },
   {
     "title": "Story Stones",
@@ -642,7 +774,10 @@
       "Cloudy",
       "Rainy",
       "Snowy"
-    ]
+    ],
+    "title_no": "Historiesteiner",
+    "description_no": "Mal enkle bilder på glatte steiner – sol, katt, nøkkel, hus. Ta turer med å trekke en og legge til i en felles historie.",
+    "toys_no": "glatte steiner, malingpenner"
   },
   {
     "title": "Origami Hour",
@@ -657,7 +792,10 @@
       "Cloudy",
       "Rainy",
       "Snowy"
-    ]
+    ],
+    "title_no": "Origami-time",
+    "description_no": "Brett en papirfugl, et skip eller en hoppende frosk. Lag en liten flåte eller dyrehage og lek med dem etterpå.",
+    "toys_no": "papir, valgfri brettbok"
   },
   {
     "title": "Puppet Show",
@@ -672,7 +810,10 @@
       "Cloudy",
       "Rainy",
       "Snowy"
-    ]
+    ],
+    "title_no": "Dukketeater",
+    "description_no": "Lag dukker av gamle sokker eller papirposer. Heng et teppe over en dørram som scene og sett opp et show for familien.",
+    "toys_no": "sokker, papirposer, tusjer"
   },
   {
     "title": "Fairy House Building",
@@ -687,7 +828,10 @@
       "Sunny",
       "Cloudy",
       "Rainy"
-    ]
+    ],
+    "title_no": "Alvehusbygning",
+    "description_no": "Finn et trestamme eller en stille krok og bygg et lite hus av pinner, blader, mose og steiner. La det stå for alvene å finne.",
+    "toys_no": "pinner, blader, mose, steiner"
   },
   {
     "title": "Leaf Rubbing Art",
@@ -702,7 +846,10 @@
       "Sunny",
       "Cloudy",
       "Rainy"
-    ]
+    ],
+    "title_no": "Bladavtrykk",
+    "description_no": "Legg et blad under et ark papir og gni siden av en fargestift over det. Samle ulike former for et bladgalleri.",
+    "toys_no": "papir, fargestifter, blader"
   },
   {
     "title": "Listening Map",
@@ -717,7 +864,10 @@
       "Sunny",
       "Cloudy",
       "Rainy"
-    ]
+    ],
+    "title_no": "Lyttekart",
+    "description_no": "Sitt stille i to minutter. Merk av hver lyd på et lite kart – fugl til høyre, bil bak, vind ovenfor. Sammenlign hva hver person hørte.",
+    "toys_no": "papir, blyant"
   },
   {
     "title": "Frozen Tag",
@@ -730,7 +880,10 @@
     "conditions": [
       "Sunny",
       "Cloudy"
-    ]
+    ],
+    "title_no": "Frys-sisten",
+    "description_no": "Vanlig sisten, men når du blir tatt fryser du på stedet. Andre kan fri deg ved å krype mellom beina dine.",
+    "toys_no": "ingen"
   },
   {
     "title": "Bubble Chase",
@@ -743,7 +896,10 @@
     "conditions": [
       "Sunny",
       "Cloudy"
-    ]
+    ],
+    "title_no": "Boblefange",
+    "description_no": "En person blåser bobler, de andre løper for å poppe så mange som mulig før de treffer bakken. Ett poeng per boble.",
+    "toys_no": "såpeboble-stav og -løsning"
   },
   {
     "title": "Sprinkler Dash",
@@ -755,7 +911,10 @@
     "description": "Set up the sprinkler. See who can run through it without getting their hair wet. Spoiler: nobody.",
     "conditions": [
       "Sunny"
-    ]
+    ],
+    "title_no": "Sprinklerløp",
+    "description_no": "Sett opp sprinkleren. Se hvem som kan løpe gjennom den uten å bli våt i håret. Spoiler: ingen.",
+    "toys_no": "sprinkler, badedrakter, håndklær"
   },
   {
     "title": "Sledding Race",
@@ -768,7 +927,10 @@
     "description": "Mark a finish line and race down a gentle hill. Best of three. Take turns dragging the sled back up.",
     "conditions": [
       "Snowy"
-    ]
+    ],
+    "title_no": "Akekappløp",
+    "description_no": "Merk en målstrek og ras ned en forsiktig bakke. Best av tre. Ta turer med å dra akebrettet opp igjen.",
+    "toys_no": "akebrett"
   },
   {
     "title": "Snow Fort Building",
@@ -782,7 +944,10 @@
     "description": "Pack snow into bricks using buckets. Build a wall, then turn it into a proper fort with seats and lookouts.",
     "conditions": [
       "Snowy"
-    ]
+    ],
+    "title_no": "Snøfortbygging",
+    "description_no": "Pakk snø til murstein med bøtter. Bygg en vegg, og gjør den om til et ordentlig fort med sitteplasser og utkikksposter.",
+    "toys_no": "snø, spader, bøtter"
   },
   {
     "title": "Winter Picnic",
@@ -796,7 +961,10 @@
     "description": "Bundle up, find a quiet snowy spot, lay out a waterproof blanket and have hot cocoa and biscuits in the snow.",
     "conditions": [
       "Snowy"
-    ]
+    ],
+    "title_no": "Vinterpiknik",
+    "description_no": "Kled dere godt, finn et rolig snødekt sted, legg ut et vanntett teppe og ha varm kakao og kjeks i snøen.",
+    "toys_no": "termos, vanntett teppe, snacks"
   },
   {
     "title": "Number Plate Words",
@@ -811,7 +979,10 @@
       "Cloudy",
       "Rainy",
       "Snowy"
-    ]
+    ],
+    "title_no": "Skiltplatebokstaver",
+    "description_no": "Prøv å lage et ord av bokstavene på hvert skiltplate dere ser – tre bokstaver i rekkefølge. Det tullete ordet vinner runden.",
+    "toys_no": "ingen"
   },
   {
     "title": "Map Tracker",
@@ -826,7 +997,10 @@
       "Cloudy",
       "Rainy",
       "Snowy"
-    ]
+    ],
+    "title_no": "Kartfølger",
+    "description_no": "Gi hvert barn et kart over ruten. De følger med på hvor dere er med fingeren eller en blyant – ekstrapoeng for å se landemerker.",
+    "toys_no": "trykt kart eller atlas"
   },
   {
     "title": "Leaf Boat Racing",
@@ -841,7 +1015,10 @@
       "Sunny",
       "Cloudy",
       "Rainy"
-    ]
+    ],
+    "title_no": "Bladbåtrace",
+    "description_no": "Brett eller finn blader og naturmaterialer til å lage små båter. Løp dem langs en bekk, en pytt eller en renne etter regn.",
+    "toys_no": "blader, pinner, bekk eller pytt"
   },
   {
     "title": "Dam Building",
@@ -855,7 +1032,10 @@
       "Sunny",
       "Cloudy",
       "Rainy"
-    ]
+    ],
+    "title_no": "Dammbygging",
+    "description_no": "Finn en liten bekk og bygg en demning av steiner, mudder og pinner. Se vannet samle seg – og ødelegg den etterpå. Naturlig ingeniørarbeid.",
+    "toys_no": "steiner, mudder, pinner"
   },
   {
     "title": "Gutter Sailing",
@@ -867,7 +1047,10 @@
     "description": "After rain, send small objects down a roadside gutter stream. Race sticks, leaves, and paper boats along the flow. A classic for a reason.",
     "conditions": [
       "Rainy"
-    ]
+    ],
+    "title_no": "Rennestensseilas",
+    "description_no": "Etter regn, send små gjenstander ned rennesteinsstrømmen. Løp pinner, blader og papirfartøy langs strømmen.",
+    "toys_no": "små pinner, blader, papirskrapper"
   },
   {
     "title": "Poohsticks",
@@ -881,7 +1064,10 @@
       "Sunny",
       "Cloudy",
       "Rainy"
-    ]
+    ],
+    "title_no": "Poohsticks",
+    "description_no": "Slipp pinner fra oppsiden av en bro, og løp deretter til den andre siden for å se hvem sin dukker opp først. Enkelt, tidløst og uendelig gjentakbart.",
+    "toys_no": "pinner, en bro"
   },
   {
     "title": "Stone Skimming",
@@ -895,7 +1081,10 @@
       "Sunny",
       "Cloudy",
       "Rainy"
-    ]
+    ],
+    "title_no": "Steinkasting",
+    "description_no": "Finn flate steiner ved vannkanten og øv på å kaste dem over overflaten. Tell hoppene. Teknikken bedres med øvelse.",
+    "toys_no": "flate steiner, innsjø eller elv"
   },
   {
     "title": "Hopscotch",
@@ -908,7 +1097,10 @@
     "conditions": [
       "Sunny",
       "Cloudy"
-    ]
+    ],
+    "title_no": "Paradis",
+    "description_no": "Tegn et klassisk paradisnett på asfalten med kritt. Ta turer med å kaste en liten stein og hoppe gjennom. Gjør nettet lengre for vanskeligere utfordring.",
+    "toys_no": "kritt, en liten stein"
   },
   {
     "title": "Hide and Seek",
@@ -924,7 +1116,10 @@
       "Sunny",
       "Cloudy",
       "Rainy"
-    ]
+    ],
+    "title_no": "Gjemsel",
+    "description_no": "En person teller til tjue ved basen mens de andre gjemmer seg. Klassiske regler, fungerer i hager, parker eller skoger.",
+    "toys_no": "ingen"
   },
   {
     "title": "Skipping Rope",
@@ -938,7 +1133,10 @@
     "conditions": [
       "Sunny",
       "Cloudy"
-    ]
+    ],
+    "title_no": "Hoppetau",
+    "description_no": "Ta turer med å hoppe alene, eller ha to som svinger tauet for en tredje. Tell hopp, prøv triks, eller si regler.",
+    "toys_no": "hoppetau"
   },
   {
     "title": "Conker Collecting",
@@ -952,7 +1150,10 @@
       "Sunny",
       "Cloudy",
       "Rainy"
-    ]
+    ],
+    "title_no": "Kastanjeplukking",
+    "description_no": "Om høsten, let etter falne kastanjer under hestekastanjetrær. Sorter dem etter størrelse, tre den beste, og spill den tradisjonelle kastanjekampen.",
+    "toys_no": "ingen (høst)"
   },
   {
     "title": "Den Building",
@@ -967,7 +1168,10 @@
       "Sunny",
       "Cloudy",
       "Rainy"
-    ]
+    ],
+    "title_no": "Hyttebygging",
+    "description_no": "Finn et sted i skogen eller hagen og bygg en hytte av falne grener, pinner og blader. Målet er en konstruksjon dere faktisk kan sitte inne i.",
+    "toys_no": "pinner, blader, grener"
   },
   {
     "title": "Marbles",
@@ -981,7 +1185,10 @@
     "conditions": [
       "Sunny",
       "Cloudy"
-    ]
+    ],
+    "title_no": "Glasskulespill",
+    "description_no": "Tegn en sirkel på bakken og plasser glasskular inne i den. Ta turer med å skyte en glasskule for å knalle andre ut av ringen.",
+    "toys_no": "glasskular"
   },
   {
     "title": "Jigsaw Puzzle",
@@ -996,7 +1203,10 @@
       "Cloudy",
       "Rainy",
       "Snowy"
-    ]
+    ],
+    "title_no": "Puslespill",
+    "description_no": "Velg et puslespill som er litt utfordrende, men ikke frustrerende. Jobb med det sammen – kantene først, deretter farger og mønstre. La det ligge og kom tilbake til det.",
+    "toys_no": "puslespill"
   },
   {
     "title": "Collage Making",
@@ -1011,7 +1221,10 @@
       "Cloudy",
       "Rainy",
       "Snowy"
-    ]
+    ],
+    "title_no": "Collage-laging",
+    "description_no": "Klipp ut bilder, farger og teksturer fra gamle blader og lim dem på papir. Gi det et tema – dyr, mat, farger – eller bare fri form.",
+    "toys_no": "gamle blader, saks, lim, papir"
   },
   {
     "title": "Paper Plane Workshop",
@@ -1026,7 +1239,10 @@
       "Cloudy",
       "Rainy",
       "Snowy"
-    ]
+    ],
+    "title_no": "Papirfly-verksted",
+    "description_no": "Finn to eller tre forskjellige papirflymønstre og bygg dem alle. Test hvilken flyr lengst, gjør den beste loopen og er mest presis.",
+    "toys_no": "papir"
   },
   {
     "title": "Cardboard Box Build",
@@ -1041,7 +1257,10 @@
       "Cloudy",
       "Rainy",
       "Snowy"
-    ]
+    ],
+    "title_no": "Pappeskekonstruksjon",
+    "description_no": "Gi barna en haug med pappesker og tape og la dem bygge hva de vil – en rakett, et slott, en butikk, en robot. Konstruksjonen er leken.",
+    "toys_no": "pappesker, tape, saks, tusjer"
   },
   {
     "title": "Nature Print Art",
@@ -1056,7 +1275,10 @@
       "Cloudy",
       "Rainy",
       "Snowy"
-    ]
+    ],
+    "title_no": "Naturavtrykkskunst",
+    "description_no": "Dekk blader, kongler eller andre naturgjenstander med maling og trykk dem på papir. Lag lag med forskjellige former og farger.",
+    "toys_no": "blader, maling, papir"
   },
   {
     "title": "Card Games",
@@ -1071,7 +1293,10 @@
       "Cloudy",
       "Rainy",
       "Snowy"
-    ]
+    ],
+    "title_no": "Kortspill",
+    "description_no": "Snap, Fisker og Gammel-Morten er lette å lære fra fire–fem år. Gale Åtte og Krig fungerer godt for eldre barn. Én kortstokk, uendelig mange muligheter.",
+    "toys_no": "en kortstokk"
   },
   {
     "title": "Dominoes",
@@ -1086,7 +1311,10 @@
       "Cloudy",
       "Rainy",
       "Snowy"
-    ]
+    ],
+    "title_no": "Dominobrikker",
+    "description_no": "Spill det klassiske matchingspillet, eller hopp over reglene og bruk dominobrikkene til å bygge lange veltekjeder over gulvet. Begge deler er tilfredsstillende.",
+    "toys_no": "dominobrikker"
   },
   {
     "title": "Board Game Afternoon",
@@ -1101,7 +1329,10 @@
       "Cloudy",
       "Rainy",
       "Snowy"
-    ]
+    ],
+    "title_no": "Brettspillettermiddag",
+    "description_no": "Velg et brettspill hele familien kan spille. Klassikere som Ludo, Stigespill eller Dobble fungerer på tvers av store aldersforskjeller. Bli enige om reglene før dere starter.",
+    "toys_no": "brettspill etter eget valg"
   },
   {
     "title": "Indoor Treasure Hunt",
@@ -1116,7 +1347,10 @@
       "Cloudy",
       "Rainy",
       "Snowy"
-    ]
+    ],
+    "title_no": "Innendørs skattejakt",
+    "description_no": "Skriv en serie ledetråder som fører fra ett gjemmested til det neste rundt i huset. Avslutt med en liten premie. Ti minutter å sette opp, en halvtime å løse.",
+    "toys_no": "papir, penn, liten premie"
   },
   {
     "title": "Kitchen Science",
@@ -1131,7 +1365,10 @@
       "Cloudy",
       "Rainy",
       "Snowy"
-    ]
+    ],
+    "title_no": "Kjøkkenforskning",
+    "description_no": "Den klassiske vulkanen: natron i et glass, hell i eddik og se det bruse. Legg til matfarge for dramatikk. Prøv ulike mengder – mer er alltid mer.",
+    "toys_no": "natron, eddik, matfarge"
   },
   {
     "title": "Charades",
@@ -1146,7 +1383,10 @@
       "Cloudy",
       "Rainy",
       "Snowy"
-    ]
+    ],
+    "title_no": "Gjetting",
+    "description_no": "Fremstill et dyr, en gjenstand eller en filmtittel uten å snakke mens de andre gjetter. For yngre barn, hold deg til dyr – ingen lesing nødvendig.",
+    "toys_no": "ingen"
   },
   {
     "title": "Drawing Consequences",
@@ -1161,7 +1401,10 @@
       "Cloudy",
       "Rainy",
       "Snowy"
-    ]
+    ],
+    "title_no": "Tegnekonsekvenser",
+    "description_no": "Alle tegner et hode øverst på en papirstrimmel, bretter det over slik at bare halsen synes, og gir det videre. Neste tegner kropp, bretter, gir videre. Brett ut til slutt.",
+    "toys_no": "papir, blyanter"
   },
   {
     "title": "Grimm's Rainbow Building",
@@ -1176,7 +1419,10 @@
       "Cloudy",
       "Rainy",
       "Snowy"
-    ]
+    ],
+    "title_no": "Grimm's regnbuebygging",
+    "description_no": "Stable buene til tårn, plasser dem inni hverandre, eller bruk dem som tunneler og broer for små figurer. Ingen regler – bare se hvilke former som oppstår.",
+    "toys_no": "Grimm's regnbue"
   },
   {
     "title": "Rainbow Small World",
@@ -1191,7 +1437,10 @@
       "Cloudy",
       "Rainy",
       "Snowy"
-    ]
+    ],
+    "title_no": "Regnbue-miniverden",
+    "description_no": "Bruk regnbuebuene til å bygge et landskap – huler, åser, innhegninger, elver – og fyll det med tredyr eller figurer. La barna finne på historien.",
+    "toys_no": "Grimm's regnbue, Ostheimer-dyr eller figurer"
   },
   {
     "title": "Play Silk Dress-Up",
@@ -1206,7 +1455,10 @@
       "Cloudy",
       "Rainy",
       "Snowy"
-    ]
+    ],
+    "title_no": "Lekeduk-utkleding",
+    "description_no": "Lekeduker blir kapper, kroner, skjørt, vinger eller trollmannskapper. Ingen klipping eller knyting nødvendig – bare drap, stikk inn og forestill deg. La barna lede.",
+    "toys_no": "lekeduker"
   },
   {
     "title": "Play Silk Landscapes",
@@ -1221,7 +1473,10 @@
       "Cloudy",
       "Rainy",
       "Snowy"
-    ]
+    ],
+    "title_no": "Lekeduk-landskap",
+    "description_no": "Legg duker flat som elver, enger eller hav i en miniverden. Blå for vann, grønn for åker, brun for jord. Legg til tredyr eller figurer for å gi det liv.",
+    "toys_no": "lekeduker, figurer eller dyr"
   },
   {
     "title": "Play Silk Parachute",
@@ -1236,7 +1491,10 @@
       "Cloudy",
       "Rainy",
       "Snowy"
-    ]
+    ],
+    "title_no": "Lekeduk-fallskjerm",
+    "description_no": "Hold en stor duk i hjørnene og bølg den opp og ned sammen. Legg en myk ball eller et kosedyr på toppen og prøv å holde det hoppende. Fungerer med to eller flere.",
+    "toys_no": "lekeduker"
   },
   {
     "title": "Peg Puzzle Race",
@@ -1251,7 +1509,10 @@
       "Cloudy",
       "Rainy",
       "Snowy"
-    ]
+    ],
+    "title_no": "Pluggpuslespill-race",
+    "description_no": "Ta alle bitene ut og bland dem. Løp for å fullføre puslespillet, eller for yngre barn, sorter bitene etter farge eller form før de legges på plass. Ta tid og prøv å slå rekorden.",
+    "toys_no": "pluggpuslespill av tre"
   },
   {
     "title": "Aquaplay Canal Build",
@@ -1264,7 +1525,10 @@
     "conditions": [
       "Sunny",
       "Cloudy"
-    ]
+    ],
+    "title_no": "Aquaplay-kanalbygging",
+    "description_no": "Sett opp Aquaplay-kanalsystemet og eksperimenter med sluser og pumper. Legg til båter og figurer og finn på en historie om hvor lasten er på vei.",
+    "toys_no": "Aquaplay"
   },
   {
     "title": "Aquaplay Boat Race",
@@ -1277,7 +1541,10 @@
     "conditions": [
       "Sunny",
       "Cloudy"
-    ]
+    ],
+    "title_no": "Aquaplay-båtrace",
+    "description_no": "Sett opp en lang rett kanal og løp båtene fra den ene enden til den andre med pumpen eller ved å blåse forsiktig. Første båt til enden vinner runden.",
+    "toys_no": "Aquaplay"
   },
   {
     "title": "Aquaplay Lock Challenge",
@@ -1290,7 +1557,10 @@
     "conditions": [
       "Sunny",
       "Cloudy"
-    ]
+    ],
+    "title_no": "Aquaplay-sluseutfordring",
+    "description_no": "Fokuser på slusene – øv på å heise og senke båter gjennom hver av dem. For eldre barn, ta tid på hvor raskt de kan kjøre en båt gjennom hele systemet.",
+    "toys_no": "Aquaplay"
   },
   {
     "title": "Worm Hunting",
@@ -1303,7 +1573,10 @@
     "conditions": [
       "Cloudy",
       "Rainy"
-    ]
+    ],
+    "title_no": "Meitemarkkjakt",
+    "description_no": "Etter regn er det beste tidspunktet. Grav forsiktig i myk jord eller løft flate steiner og stokker for å finne meitemark. Se hvordan de beveger seg, tell dem, og legg dem forsiktig tilbake.",
+    "toys_no": "liten spade eller pinne, krukke"
   },
   {
     "title": "Bug Hotel",
@@ -1318,7 +1591,10 @@
       "Cloudy",
       "Rainy",
       "Snowy"
-    ]
+    ],
+    "title_no": "Insekthotell",
+    "description_no": "Bygg et insekthotell ved å fylle en eske eller melkekartong med naturmaterialer – kongler, hule stengler, bark, strå. Plasser den i en skygge og sjekk tilbake over dagene for å se hvem som har sjekket inn.",
+    "toys_no": "pinner, kongler, bark, strå, trekasse eller melkekartong"
   },
   {
     "title": "Snail Race",
@@ -1332,7 +1608,10 @@
       "Sunny",
       "Cloudy",
       "Rainy"
-    ]
+    ],
+    "title_no": "Sneglekappløp",
+    "description_no": "Finn to eller tre snegler etter regn. Tegn en sirkel på platting, plasser dem i midten og se hvem som når kanten først. Ingen røring etter starten.",
+    "toys_no": "ingen"
   },
   {
     "title": "Under the Stone Safari",
@@ -1346,7 +1625,10 @@
       "Sunny",
       "Cloudy",
       "Rainy"
-    ]
+    ],
+    "title_no": "Under-steinen-safari",
+    "description_no": "Løft forsiktig steiner, stokker og bark rundt i hagen. Se hva som lever under – trebiller, kjellerbiller, tusenbein, maur. Observer i et minutt, og legg alt tilbake slik det var.",
+    "toys_no": "forstørrelsesglass"
   },
   {
     "title": "Butterfly and Bee Watch",
@@ -1359,7 +1641,10 @@
     "conditions": [
       "Sunny",
       "Cloudy"
-    ]
+    ],
+    "title_no": "Sommerfugl- og bieobservasjon",
+    "description_no": "Velg en blomstereng eller en blomstrende busk og sett dere rolig i nærheten i fem minutter. Tell hvor mange forskjellige insekter som besøker. Hvilke blomster får mest besøk? Snakk om hvorfor.",
+    "toys_no": "ingen"
   },
   {
     "title": "Earthworm Rescue",
@@ -1372,7 +1657,10 @@
     "conditions": [
       "Cloudy",
       "Rainy"
-    ]
+    ],
+    "title_no": "Meitemark-redning",
+    "description_no": "Etter kraftig regn kommer meitemark til overflaten og kan bli strandede på stier og plattinger. Gå på redningsmisjon – plukk dem forsiktig opp og legg dem tilbake i jorda.",
+    "toys_no": "ingen"
   },
   {
     "title": "Pouring Station",
@@ -1387,7 +1675,10 @@
       "Cloudy",
       "Rainy",
       "Snowy"
-    ]
+    ],
+    "title_no": "Hellestasjon",
+    "description_no": "Sett opp en rekke beholdere i ulike størrelser og en vannkilde. La barna helle, flytte og måle fritt. Hvilken rommer mest? Hvor mange små kopper fyller den store bøtten?",
+    "toys_no": "bøtter, mugger, flasker, trakter, kopper"
   },
   {
     "title": "Puddle Painting",
@@ -1402,7 +1693,10 @@
       "Cloudy",
       "Rainy",
       "Snowy"
-    ]
+    ],
+    "title_no": "Pytte-maling",
+    "description_no": "Bruk pinner og steiner til å tegne i gjørmen ved kanten av en pytt, eller dra vått mudder over tørr platting for å lage mønstre. Bare naturmaterialer – hagen er lerretet.",
+    "toys_no": "pinner, steiner, blader"
   },
   {
     "title": "Waterfall Builder",
@@ -1417,7 +1711,10 @@
       "Cloudy",
       "Rainy",
       "Snowy"
-    ]
+    ],
+    "title_no": "Vannfallbygger",
+    "description_no": "Bruk det dere finner til å bygge et rampesystem som fører vann fra ett sted til et annet. Plastrenner, snudde lokk og bøtter fungerer alle. Hvor langt kan dere flytte vannet?",
+    "toys_no": "hageslange, bøtter, plastrenner om tilgjengelig"
   },
   {
     "title": "Flower Pressing",
@@ -1430,7 +1727,10 @@
     "conditions": [
       "Sunny",
       "Cloudy"
-    ]
+    ],
+    "title_no": "Blomsterpressing",
+    "description_no": "Plukk noen små blomster og blader. Legg dem flatt mellom to ark papir inne i en tung bok. Sjekk igjen om en uke – de vil ha tørket flate og beholdt fargen.",
+    "toys_no": "tunge bøker, papir"
   },
   {
     "title": "Petal Potions",
@@ -1443,7 +1743,10 @@
     "conditions": [
       "Sunny",
       "Cloudy"
-    ]
+    ],
+    "title_no": "Blomsterdrikker",
+    "description_no": "Samle falne kronblader, blader og hageting. Bland dem med vann i glass for å lage drikker og parfymer. Lukt på hver en. Gi dem navn. Bestem hvilke magiske krefter de har.",
+    "toys_no": "glass, vann, kronblader, blader"
   },
   {
     "title": "Garden Colour Hunt",
@@ -1456,7 +1759,10 @@
     "conditions": [
       "Sunny",
       "Cloudy"
-    ]
+    ],
+    "title_no": "Fargejakt i hagen",
+    "description_no": "Tegn et fargegitter på papir – rød, gul, oransje, lilla, grønn, hvit. Løp for å finne noe i hagen som matcher hver farge. Bare naturlige ting.",
+    "toys_no": "papir, fargestifter eller fargeprøver"
   },
   {
     "title": "Sit Spot",
@@ -1469,7 +1775,10 @@
     "conditions": [
       "Sunny",
       "Cloudy"
-    ]
+    ],
+    "title_no": "Sitteplass",
+    "description_no": "Hver person velger et sted i hagen og sitter helt stille og rolig i fem minutter. Del etterpå hva dere la merke til – lyder, bevegelser, lukter, skapninger. Gjør det regelmessig og hagen begynner å føles kjent.",
+    "toys_no": "ingen"
   },
   {
     "title": "Tree Climbing",
@@ -1483,7 +1792,10 @@
       "Sunny",
       "Cloudy",
       "Rainy"
-    ]
+    ],
+    "title_no": "Treklatring",
+    "description_no": "Finn riktig tre – et med lave, stabile grener – og la barna klatre i sitt eget tempo. Unngå å styre. Poenget er å finne ut hvordan de skal bevege sin egen kropp gjennom treet.",
+    "toys_no": "ingen"
   },
   {
     "title": "Bark and Leaf Rubbings",
@@ -1496,7 +1808,10 @@
     "conditions": [
       "Sunny",
       "Cloudy"
-    ]
+    ],
+    "title_no": "Bark- og bladavtrykk",
+    "description_no": "Hold papir mot trebarken og gni siden av en fargestift over det for å avsløre teksturen. Gjør det samme med blader på bakken. Sammenlign ulike trær – hvert barkmønster er unikt.",
+    "toys_no": "papir, fargestifter"
   },
   {
     "title": "Weather Watching",
@@ -1509,7 +1824,10 @@
     "conditions": [
       "Sunny",
       "Cloudy"
-    ]
+    ],
+    "title_no": "Værobservasjon",
+    "description_no": "Gå ut på samme tid hver dag og registrer været – sol, skyer, vindretning, temperaturfølelse, regn. Etter en uke blir mønsteret synlig. En enkel vane som bygger ekte observasjonsevner.",
+    "toys_no": "papir, blyant"
   },
   {
     "title": "Pillowcase Cinema",
@@ -1524,7 +1842,10 @@
       "Cloudy",
       "Rainy",
       "Snowy"
-    ]
+    ],
+    "title_no": "Putevarkinosett",
+    "description_no": "Dra alle dyne og puter inn i stuen, lag et stort reir, velg en film sammen og lag popcorn. Bevisst og rolig – det er poenget.",
+    "toys_no": "dyne, snacks, film"
   },
   {
     "title": "Marble Racing",
@@ -1540,6 +1861,9 @@
       "Cloudy",
       "Rainy",
       "Snowy"
-    ]
+    ],
+    "title_no": "Glasskulebane",
+    "description_no": "Bygg en løypebanene med papptuber, rullet papir eller bøker i vinkel. Løp to glasskular side om side og juster helningen for å endre hastigheten. Prøv å bygge en flerstegs bane som snor seg over gulvet.",
+    "toys_no": "glasskular, papprør eller bøker"
   }
 ]
