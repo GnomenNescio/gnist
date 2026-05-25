@@ -1,758 +1,1603 @@
 [
   {
     "title": "Build a blanket fort",
-    "location": "Inside",
+    "location": [
+      "Inside"
+    ],
     "energy": "Calm",
     "toys": "blankets, pillows",
-    "description": "Create a cozy fort with your kids using blankets and pillows. Bring in flashlights for extra fun."
+    "description": "Create a cozy fort with your kids using blankets and pillows. Bring in flashlights for extra fun.",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Snowball Bowling",
-    "location": "Snow",
+    "location": [
+      "Urban",
+      "Garden",
+      "Forest"
+    ],
     "energy": "Active",
     "toys": "plastic bottles, snowballs",
-    "description": "Use snowballs to knock down plastic bottles as bowling pins!"
+    "description": "Use snowballs to knock down plastic bottles as bowling pins!",
+    "season": [
+      "Winter"
+    ]
   },
   {
     "title": "Baking cookies",
-    "location": "Inside",
+    "location": [
+      "Inside"
+    ],
     "energy": "Calm",
     "toys": "baking supplies",
-    "description": "Bake cookies together! Easy and fun. Bonus: you get to eat them!"
+    "description": "Bake cookies together! Easy and fun. Bonus: you get to eat them!",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Build a LEGO Maze",
-    "location": "Inside",
+    "location": [
+      "Inside"
+    ],
     "energy": "Calm",
     "toys": "LEGO bricks",
-    "description": "Create a maze with LEGO bricks and use a marble or a small ball to navigate through it!"
+    "description": "Create a maze with LEGO bricks and use a marble or a small ball to navigate through it!",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Kapla Tower Challenge",
-    "location": "Inside",
+    "location": [
+      "Inside"
+    ],
     "energy": "Calm",
     "toys": "Kapla blocks",
-    "description": "Challenge each other to build the tallest tower you can using only Kapla blocks before it tumbles down!"
+    "description": "Challenge each other to build the tallest tower you can using only Kapla blocks before it tumbles down!",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Magnetic Tile City",
-    "location": "Inside",
+    "location": [
+      "Inside"
+    ],
     "energy": "Calm",
     "toys": "MagnaTiles",
-    "description": "Build a whole city with magnetic tiles! Add tiny figures or use Brio train toys to enhance the setup."
+    "description": "Build a whole city with magnetic tiles! Add tiny figures or use Brio train toys to enhance the setup.",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Train Adventure",
-    "location": "Inside",
+    "location": [
+      "Inside"
+    ],
     "energy": "Calm",
     "toys": "Brio train set",
-    "description": "Set up your wooden train track in a creative new shape and imagine the story of the train's journey. Kids can draw the scenery on paper!"
+    "description": "Set up your wooden train track in a creative new shape and imagine the story of the train's journey. Kids can draw the scenery on paper!",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Chalk Obstacle Course",
-    "location": "Outside",
+    "location": [
+      "Urban"
+    ],
     "energy": "Active",
     "toys": "Chalk",
-    "description": "Draw a course on the pavement with chalk. Include activities like 'jump three times,' 'spin in a circle,' and 'hop like a frog!'"
+    "description": "Draw a course on the pavement with chalk. Include activities like 'jump three times,' 'spin in a circle,' and 'hop like a frog!'",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Football Trick Shots",
-    "location": "Outside",
+    "location": [
+      "Urban",
+      "Garden"
+    ],
     "energy": "Active",
     "toys": "Football",
-    "description": "Try to hit specific targets in the garden with your football (e.g., knock over cones, land the ball in a bucket)."
+    "description": "Try to hit specific targets in the garden with your football (e.g., knock over cones, land the ball in a bucket).",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Backyard Water Fun",
-    "location": "Garden",
+    "location": [
+      "Garden"
+    ],
     "energy": "Active",
     "toys": "Hose, buckets, cups",
-    "description": "Set up a water play zone with a hose, buckets, and cups for pouring. Let kids experiment with how to fill, spill, and squirt in different ways."
+    "description": "Set up a water play zone with a hose, buckets, and cups for pouring. Let kids experiment with how to fill, spill, and squirt in different ways.",
+    "season": [
+      "Spring",
+      "Summer"
+    ]
   },
   {
     "title": "DIY Water Painting",
-    "location": "Garden",
+    "location": [
+      "Garden"
+    ],
     "energy": "Calm",
     "toys": "Water, sponge or paintbrushes",
-    "description": "Give your kids a bucket of water and a paintbrush or sponge, and let them 'paint' the fence, pavement, or garden stones. No mess, all fun!"
+    "description": "Give your kids a bucket of water and a paintbrush or sponge, and let them 'paint' the fence, pavement, or garden stones. No mess, all fun!",
+    "season": [
+      "Spring",
+      "Summer"
+    ]
   },
   {
     "title": "Miniature Cooking Day",
-    "location": "Inside",
+    "location": [
+      "Inside"
+    ],
     "energy": "Calm",
     "toys": "Kitchen tools",
-    "description": "Let them help choose and prepare simple recipes, like cookies, sandwiches, or fruit kabobs!"
+    "description": "Let them help choose and prepare simple recipes, like cookies, sandwiches, or fruit kabobs!",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Mud Kitchen Recipes",
-    "location": "Garden",
+    "location": [
+      "Garden"
+    ],
     "energy": "Calm",
     "toys": "Water, mud, leaves, small bowls",
-    "description": "Set up a 'mud kitchen' to make leafy soup, dirt pies, or grass sandwiches! Let imaginations run wild."
+    "description": "Set up a 'mud kitchen' to make leafy soup, dirt pies, or grass sandwiches! Let imaginations run wild.",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Chalk & Water Science",
-    "location": "Garden",
+    "location": [
+      "Garden"
+    ],
     "energy": "Calm",
     "toys": "Chalk, water spray bottle",
-    "description": "Draw with chalk on the pavement, then spray it with water to watch the colors change and blend. Great mini science experiment!"
+    "description": "Draw with chalk on the pavement, then spray it with water to watch the colors change and blend. Great mini science experiment!",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Bicycle Obstacle Course",
-    "location": "Outside",
+    "location": [
+      "Urban"
+    ],
     "energy": "Active",
     "toys": "Bicycle, chalk",
-    "description": "Use chalk to mark a bike obstacle course on the pavement, including curves, circles, or places to stop and wave."
+    "description": "Use chalk to mark a bike obstacle course on the pavement, including curves, circles, or places to stop and wave.",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "LEGO Cooking Show",
-    "location": "Inside",
+    "location": [
+      "Inside"
+    ],
     "energy": "Calm",
     "toys": "LEGO bricks",
-    "description": "Create a pretend kitchen out of LEGO bricks - cook a pretend LEGO pizza or LEGO burger and serve it to each other!"
+    "description": "Create a pretend kitchen out of LEGO bricks - cook a pretend LEGO pizza or LEGO burger and serve it to each other!",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Magnatile Garden Habitat",
-    "location": "Garden",
+    "location": [
+      "Garden"
+    ],
     "energy": "Calm",
     "toys": "MagnaTiles, natural garden materials",
-    "description": "Build a house or 'habitat' using magnetic tiles and natural materials like leaves, sticks, or small stones."
+    "description": "Build a house or 'habitat' using magnetic tiles and natural materials like leaves, sticks, or small stones.",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Art from Nature",
-    "location": "Garden",
+    "location": [
+      "Garden"
+    ],
     "energy": "Calm",
     "toys": "Art supplies",
-    "description": "Collect leaves, flowers, or sticks and use them to create nature-inspired collages with glue on paper."
+    "description": "Collect leaves, flowers, or sticks and use them to create nature-inspired collages with glue on paper.",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn"
+    ]
   },
   {
     "title": "Snow Painting",
-    "location": "Snow",
+    "location": [
+      "Urban",
+      "Garden",
+      "Forest"
+    ],
     "energy": "Calm",
     "toys": "Spray bottles, food coloring",
-    "description": "Fill spray bottles with water and a few drops of food coloring, then spray colorful patterns onto freshly fallen snow."
+    "description": "Fill spray bottles with water and a few drops of food coloring, then spray colorful patterns onto freshly fallen snow.",
+    "season": [
+      "Winter"
+    ]
   },
   {
     "title": "Snow Sculptures",
-    "location": "Snow",
+    "location": [
+      "Urban",
+      "Garden",
+      "Forest"
+    ],
     "energy": "Active",
     "toys": "Buckets, shovels",
-    "description": "Use buckets and shovels to build snow sculptures — animals, castles, or whatever your imagination conjures!"
+    "description": "Use buckets and shovels to build snow sculptures — animals, castles, or whatever your imagination conjures!",
+    "season": [
+      "Winter"
+    ]
   },
   {
     "title": "Snow Angel Contest",
-    "location": "Snow",
+    "location": [
+      "Urban",
+      "Garden",
+      "Forest"
+    ],
     "energy": "Active",
     "toys": "None",
-    "description": "See who can make the biggest or most creative snow angel. Compare them from above for a fun bird's-eye view!"
+    "description": "See who can make the biggest or most creative snow angel. Compare them from above for a fun bird's-eye view!",
+    "season": [
+      "Winter"
+    ]
   },
   {
     "title": "Snowy Treasure Hunt",
-    "location": "Snow",
+    "location": [
+      "Garden",
+      "Forest"
+    ],
     "energy": "Active",
     "toys": "Small toys or objects",
-    "description": "Hide small objects in the snow and give your kids clues to dig them up. Great for developing problem-solving skills in the cold!"
+    "description": "Hide small objects in the snow and give your kids clues to dig them up. Great for developing problem-solving skills in the cold!",
+    "season": [
+      "Winter"
+    ]
   },
   {
     "title": "Snowflake Science",
-    "location": "Snow",
+    "location": [
+      "Urban",
+      "Garden",
+      "Forest"
+    ],
     "energy": "Calm",
     "toys": "Dark paper or fabric",
-    "description": "Catch snowflakes on dark paper or fabric and use a magnifying glass to look at their unique crystal shapes."
+    "description": "Catch snowflakes on dark paper or fabric and use a magnifying glass to look at their unique crystal shapes.",
+    "season": [
+      "Winter"
+    ]
   },
   {
     "title": "Audiobook Road Trip",
-    "location": "Car",
+    "location": [
+      "Car"
+    ],
     "energy": "Calm",
     "toys": "None",
-    "description": "Put on an age-appropriate audiobook or kids podcast during the drive. Discuss the story together when you arrive."
+    "description": "Put on an age-appropriate audiobook or kids podcast during the drive. Discuss the story together when you arrive.",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Car Bingo",
-    "location": "Car",
+    "location": [
+      "Car"
+    ],
     "energy": "Calm",
     "toys": "Printed bingo cards or paper",
-    "description": "Create bingo cards with things to spot out the window (red car, church, cow, etc.). First to shout 'Bingo!' wins!"
+    "description": "Create bingo cards with things to spot out the window (red car, church, cow, etc.). First to shout 'Bingo!' wins!",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "20 Questions",
-    "location": "Car",
+    "location": [
+      "Car"
+    ],
     "energy": "Calm",
     "toys": "None",
-    "description": "One person thinks of an animal, object, or person. Others take turns asking yes/no questions to guess it within 20 tries."
+    "description": "One person thinks of an animal, object, or person. Others take turns asking yes/no questions to guess it within 20 tries.",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Car Karaoke",
-    "location": "Car",
+    "location": [
+      "Car"
+    ],
     "energy": "Active",
     "toys": "Phone or music player",
-    "description": "Queue up your kids favourite songs and have a sing-along karaoke session. Silly voices encouraged!"
+    "description": "Queue up your kids favourite songs and have a sing-along karaoke session. Silly voices encouraged!",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Alphabet Game",
-    "location": "Car",
+    "location": [
+      "Car"
+    ],
     "energy": "Calm",
     "toys": "None",
-    "description": "Spot words outside the car (signs, shops, number plates) that start with each letter of the alphabet in order."
+    "description": "Spot words outside the car (signs, shops, number plates) that start with each letter of the alphabet in order.",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Storytelling Chain",
-    "location": "Car",
+    "location": [
+      "Car"
+    ],
     "energy": "Calm",
     "toys": "None",
-    "description": "One person starts a story with a sentence, the next person adds a sentence, and so on. See where the story ends up!"
+    "description": "One person starts a story with a sentence, the next person adds a sentence, and so on. See where the story ends up!",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Nature Scavenger Hunt",
-    "location": "Outside",
+    "location": [
+      "Urban",
+      "Forest"
+    ],
     "energy": "Active",
     "toys": "Paper, pencil",
-    "description": "Make a list of natural things to find on your walk — a feather, a round stone, a yellow leaf, a snail shell. Tick them off as you go!"
+    "description": "Make a list of natural things to find on your walk — a feather, a round stone, a yellow leaf, a snail shell. Tick them off as you go!",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Puddle Jumping",
-    "location": "Outside",
+    "location": [
+      "Urban",
+      "Garden",
+      "Forest"
+    ],
     "energy": "Active",
     "toys": "Wellies",
-    "description": "Pull on the wellies and go find the biggest puddles to jump in. Classic, messy, and endlessly entertaining."
+    "description": "Pull on the wellies and go find the biggest puddles to jump in. Classic, messy, and endlessly entertaining.",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Stick Sword Fight",
-    "location": "Outside",
+    "location": [
+      "Urban",
+      "Forest"
+    ],
     "energy": "Active",
     "toys": "Sticks",
-    "description": "Find two similar-sized sticks and have a safe, gentle sword fight. Set rules for fair play and take turns being the winner."
+    "description": "Find two similar-sized sticks and have a safe, gentle sword fight. Set rules for fair play and take turns being the winner.",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Cloud Watching",
-    "location": "Outside",
+    "location": [
+      "Urban",
+      "Garden",
+      "Forest"
+    ],
     "energy": "Calm",
     "toys": "Blanket",
-    "description": "Lie on a blanket and look up at the clouds. What shapes and animals can you spot? Take turns pointing out what you see."
+    "description": "Lie on a blanket and look up at the clouds. What shapes and animals can you spot? Take turns pointing out what you see.",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Bug Safari",
-    "location": "Outside",
+    "location": [
+      "Garden",
+      "Forest"
+    ],
     "energy": "Calm",
     "toys": "Magnifying glass, jar",
-    "description": "Go on a bug safari in the park or garden. Look under logs and leaves for beetles, woodlice, and worms. Observe and release!"
+    "description": "Go on a bug safari in the park or garden. Look under logs and leaves for beetles, woodlice, and worms. Observe and release!",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Shadow Drawing",
-    "location": "Outside",
+    "location": [
+      "Urban",
+      "Garden"
+    ],
     "energy": "Calm",
     "toys": "Chalk",
-    "description": "On a sunny day, trace each other's shadows on the pavement with chalk. Come back later to see how the shadows have moved."
+    "description": "On a sunny day, trace each other's shadows on the pavement with chalk. Come back later to see how the shadows have moved.",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "DIY Obstacle Run",
-    "location": "Outside",
+    "location": [
+      "Urban",
+      "Garden"
+    ],
     "energy": "Active",
     "toys": "Cones, rope, hula hoops",
-    "description": "Set up a fun obstacle run using whatever you have — cones to weave around, a rope to jump over, hoops to hop through. Time each other!"
+    "description": "Set up a fun obstacle run using whatever you have — cones to weave around, a rope to jump over, hoops to hop through. Time each other!",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Kite Flying",
-    "location": "Outside",
+    "location": [
+      "Urban"
+    ],
     "energy": "Active",
     "toys": "Kite",
-    "description": "Head to an open field or hilltop on a breezy day and fly a kite together. Kids can take turns holding the string."
+    "description": "Head to an open field or hilltop on a breezy day and fly a kite together. Kids can take turns holding the string.",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Garden Yoga",
-    "location": "Garden",
+    "location": [
+      "Garden"
+    ],
     "energy": "Calm",
     "toys": "Yoga mat or towel",
-    "description": "Take turns calling out yoga poses for each other to copy — tree, cat, downward dog, warrior, cobra. No instructions needed, just show and mirror. See who can hold each pose the longest."
+    "description": "Take turns calling out yoga poses for each other to copy — tree, cat, downward dog, warrior, cobra. No instructions needed, just show and mirror. See who can hold each pose the longest.",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Indoor Obstacle Course",
-    "location": "Inside",
+    "location": [
+      "Inside"
+    ],
     "energy": "Active",
     "toys": "Cushions, masking tape, chairs",
-    "description": "Tape arrows or 'lava zones' on the floor, wind under chairs, jump over cushions. Time each lap and try to beat your record."
+    "description": "Tape arrows or 'lava zones' on the floor, wind under chairs, jump over cushions. Time each lap and try to beat your record.",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Living Room Dance Party",
-    "location": "Inside",
+    "location": [
+      "Inside"
+    ],
     "energy": "Active",
     "toys": "Speaker, scarves",
-    "description": "Cue up an upbeat playlist, dim the lights, hand out scarves or wooden spoons as microphones. Freeze when the music stops!"
+    "description": "Cue up an upbeat playlist, dim the lights, hand out scarves or wooden spoons as microphones. Freeze when the music stops!",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Balloon Volleyball",
-    "location": "Inside",
+    "location": [
+      "Inside"
+    ],
     "energy": "Active",
     "toys": "Balloon, string or sofa as net",
-    "description": "Stretch a string across the room or use the sofa as a net. Keep a balloon airborne — feet on the floor only!"
+    "description": "Stretch a string across the room or use the sofa as a net. Keep a balloon airborne — feet on the floor only!",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Sock Basketball",
-    "location": "Inside",
+    "location": [
+      "Inside"
+    ],
     "energy": "Active",
     "toys": "Laundry basket, rolled-up socks",
-    "description": "Rolled-up socks, a laundry basket, three rounds of free throws. Move the basket further back each round."
+    "description": "Rolled-up socks, a laundry basket, three rounds of free throws. Move the basket further back each round.",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Animal Walk Races",
-    "location": "Inside",
+    "location": [
+      "Inside"
+    ],
     "energy": "Active",
     "toys": "None",
-    "description": "Bear crawl, crab walk, frog hop, snake slither. Pick an animal and race across the room. Loser picks the next animal."
+    "description": "Bear crawl, crab walk, frog hop, snake slither. Pick an animal and race across the room. Loser picks the next animal.",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Indoor Camping",
-    "location": "Inside",
+    "location": [
+      "Inside"
+    ],
     "energy": "Calm",
     "toys": "Tent or sheets, sleeping bag, torch",
-    "description": "Pitch a real or sheet-and-chair tent in the living room. Pack a 'campsite bag' and tell ghost (or silly) stories by torchlight."
+    "description": "Pitch a real or sheet-and-chair tent in the living room. Pack a 'campsite bag' and tell ghost (or silly) stories by torchlight.",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Story Stones",
-    "location": "Inside",
+    "location": [
+      "Inside"
+    ],
     "energy": "Calm",
     "toys": "Smooth stones, paint pens",
-    "description": "Paint simple pictures on smooth stones — sun, cat, key, house. Take turns drawing one and adding to a shared story."
+    "description": "Paint simple pictures on smooth stones — sun, cat, key, house. Take turns drawing one and adding to a shared story.",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Origami Hour",
-    "location": "Inside",
+    "location": [
+      "At the table"
+    ],
     "energy": "Calm",
     "toys": "Paper, optional folding book",
-    "description": "Fold a paper boat, crane, or jumping frog. Make a small fleet or zoo and play with them afterwards."
+    "description": "Fold a paper boat, crane, or jumping frog. Make a small fleet or zoo and play with them afterwards.",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Puppet Show",
-    "location": "Inside",
+    "location": [
+      "Inside"
+    ],
     "energy": "Calm",
     "toys": "Socks, paper bags, markers",
-    "description": "Make puppets from old socks or paper bags. Hang a blanket over a doorway as the stage and put on a show for the family."
+    "description": "Make puppets from old socks or paper bags. Hang a blanket over a doorway as the stage and put on a show for the family.",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Fairy House Building",
-    "location": "Outside",
+    "location": [
+      "Forest",
+      "Garden"
+    ],
     "energy": "Calm",
     "toys": "Sticks, leaves, moss, stones",
-    "description": "Find a tree base or quiet corner and build a tiny house from sticks, leaves, moss, and stones. Leave it for the fairies to find."
+    "description": "Find a tree base or quiet corner and build a tiny house from sticks, leaves, moss, and stones. Leave it for the fairies to find.",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Leaf Rubbing Art",
-    "location": "Outside",
+    "location": [
+      "Forest",
+      "Garden"
+    ],
     "energy": "Calm",
     "toys": "Paper, crayons, leaves",
-    "description": "Place a leaf under a sheet of paper and rub the side of a crayon over it. Collect a few different shapes for a leaf gallery."
+    "description": "Place a leaf under a sheet of paper and rub the side of a crayon over it. Collect a few different shapes for a leaf gallery.",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn"
+    ]
   },
   {
     "title": "Listening Map",
-    "location": "Outside",
+    "location": [
+      "Forest",
+      "Urban"
+    ],
     "energy": "Calm",
     "toys": "Paper, pencil",
-    "description": "Sit still for two minutes. Mark every sound on a small map — bird right, car behind, wind above. Compare what each person heard."
+    "description": "Sit still for two minutes. Mark every sound on a small map — bird right, car behind, wind above. Compare what each person heard.",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Frozen Tag",
-    "location": "Garden",
+    "location": [
+      "Garden"
+    ],
     "energy": "Active",
     "toys": "None",
-    "description": "Standard tag, but when you're tagged you freeze in place. Others can unfreeze you by crawling between your legs."
+    "description": "Standard tag, but when you're tagged you freeze in place. Others can unfreeze you by crawling between your legs.",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Bubble Chase",
-    "location": "Garden",
+    "location": [
+      "Garden"
+    ],
     "energy": "Active",
     "toys": "Bubble wand and solution",
-    "description": "One person blows bubbles, the others race to pop as many as they can before they hit the ground. One point per pop."
+    "description": "One person blows bubbles, the others race to pop as many as they can before they hit the ground. One point per pop.",
+    "season": [
+      "Spring",
+      "Summer"
+    ]
   },
   {
     "title": "Sprinkler Dash",
-    "location": "Garden",
+    "location": [
+      "Garden"
+    ],
     "energy": "Active",
     "toys": "Sprinkler, swimsuits, towels",
-    "description": "Set up the sprinkler. See who can run through it without getting their hair wet. Spoiler: nobody."
+    "description": "Set up the sprinkler. See who can run through it without getting their hair wet. Spoiler: nobody.",
+    "season": [
+      "Summer"
+    ]
   },
   {
     "title": "Sledding Race",
-    "location": "Snow",
+    "location": [
+      "Urban",
+      "Forest"
+    ],
     "energy": "Active",
     "toys": "Sleds",
-    "description": "Mark a finish line and race down a gentle hill. Best of three. Take turns dragging the sled back up."
+    "description": "Mark a finish line and race down a gentle hill. Best of three. Take turns dragging the sled back up.",
+    "season": [
+      "Winter"
+    ]
   },
   {
     "title": "Snow Fort Building",
-    "location": "Snow",
+    "location": [
+      "Urban",
+      "Garden",
+      "Forest"
+    ],
     "energy": "Active",
     "toys": "Snow, shovels, buckets",
-    "description": "Pack snow into bricks using buckets. Build a wall, then turn it into a proper fort with seats and lookouts."
+    "description": "Pack snow into bricks using buckets. Build a wall, then turn it into a proper fort with seats and lookouts.",
+    "season": [
+      "Winter"
+    ]
   },
   {
     "title": "Winter Picnic",
-    "location": "Snow",
+    "location": [
+      "Urban",
+      "Garden",
+      "Forest"
+    ],
     "energy": "Calm",
     "toys": "Thermos, waterproof blanket, snacks",
-    "description": "Bundle up, find a quiet snowy spot, lay out a waterproof blanket and have hot cocoa and biscuits in the snow."
+    "description": "Bundle up, find a quiet snowy spot, lay out a waterproof blanket and have hot cocoa and biscuits in the snow.",
+    "season": [
+      "Winter"
+    ]
   },
   {
     "title": "Number Plate Words",
-    "location": "Car",
+    "location": [
+      "Car"
+    ],
     "energy": "Calm",
     "toys": "None",
-    "description": "Try to make a word using the letters on each number plate you spot — three letters in order. Silliest word wins the round."
+    "description": "Try to make a word using the letters on each number plate you spot — three letters in order. Silliest word wins the round.",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Map Tracker",
-    "location": "Car",
+    "location": [
+      "Car"
+    ],
     "energy": "Calm",
     "toys": "Printed map or atlas",
-    "description": "Give each kid a printed map of the route. They track where you are with a finger or pencil — extra points for spotting landmarks."
+    "description": "Give each kid a printed map of the route. They track where you are with a finger or pencil — extra points for spotting landmarks.",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Leaf Boat Racing",
-    "location": "Outside",
+    "location": [
+      "Forest",
+      "Urban"
+    ],
     "energy": "Calm",
     "toys": "Leaves, sticks, stream or puddle",
-    "description": "Fold or find leaves and natural materials to make tiny boats. Race them along a stream, puddle, or gutter after rain and see whose survives the longest."
+    "description": "Fold or find leaves and natural materials to make tiny boats. Race them along a stream, puddle, or gutter after rain and see whose survives the longest.",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn"
+    ]
   },
   {
     "title": "Dam Building",
-    "location": "Outside",
+    "location": [
+      "Forest"
+    ],
     "energy": "Active",
     "toys": "Stones, mud, sticks",
-    "description": "Find a small stream and build a dam using stones, mud, and sticks. Watch the water pool behind it — then let it burst. Natural engineering at its best."
+    "description": "Find a small stream and build a dam using stones, mud, and sticks. Watch the water pool behind it — then let it burst. Natural engineering at its best.",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Gutter Sailing",
-    "location": "Outside",
+    "location": [
+      "Urban"
+    ],
     "energy": "Calm",
     "toys": "Small sticks, leaves, paper scraps",
-    "description": "After rain, send small objects down a roadside gutter stream. Race sticks, leaves, and paper boats along the flow. A classic for a reason."
+    "description": "After rain, send small objects down a roadside gutter stream. Race sticks, leaves, and paper boats along the flow. A classic for a reason.",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Poohsticks",
-    "location": "Outside",
+    "location": [
+      "Forest"
+    ],
     "energy": "Calm",
     "toys": "Sticks, a bridge",
-    "description": "Drop sticks from the upstream side of a bridge, then race to the other side to see whose appears first. Simple, timeless, and endlessly repeatable."
+    "description": "Drop sticks from the upstream side of a bridge, then race to the other side to see whose appears first. Simple, timeless, and endlessly repeatable.",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Stone Skimming",
-    "location": "Outside",
+    "location": [
+      "Forest"
+    ],
     "energy": "Calm",
     "toys": "Flat stones, a lake or river",
-    "description": "Find flat stones at the water's edge and practice skimming them across the surface. Count the bounces. Technique improves with practice."
+    "description": "Find flat stones at the water's edge and practice skimming them across the surface. Count the bounces. Technique improves with practice.",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Hopscotch",
-    "location": "Outside",
+    "location": [
+      "Urban"
+    ],
     "energy": "Active",
     "toys": "Chalk, a small stone",
-    "description": "Draw a classic hopscotch grid on the pavement with chalk. Take turns tossing a stone and hopping through. Adjust the grid length for a harder challenge."
+    "description": "Draw a classic hopscotch grid on the pavement with chalk. Take turns tossing a stone and hopping through. Adjust the grid length for a harder challenge.",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Hide and Seek",
-    "location": "Outside",
+    "location": [
+      "Urban",
+      "Garden",
+      "Forest"
+    ],
     "energy": "Active",
     "toys": "None",
-    "description": "One person counts to twenty at base while the others hide. Classic rules, works in gardens, parks, or forests. Shrubs and trees make it more exciting."
+    "description": "One person counts to twenty at base while the others hide. Classic rules, works in gardens, parks, or forests. Shrubs and trees make it more exciting.",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Skipping Rope",
-    "location": "Outside",
+    "location": [
+      "Urban",
+      "Garden"
+    ],
     "energy": "Active",
     "toys": "Skipping rope",
-    "description": "Take turns jumping solo or have two people turn the rope for a third. Count jumps, try tricks, or chant rhymes. A classic playground staple."
+    "description": "Take turns jumping solo or have two people turn the rope for a third. Count jumps, try tricks, or chant rhymes. A classic playground staple.",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Conker Collecting",
-    "location": "Outside",
+    "location": [
+      "Forest"
+    ],
     "energy": "Calm",
     "toys": "None (autumn)",
-    "description": "In autumn, hunt for fallen conkers under horse chestnut trees. Sort them by size, string the best ones, and play the traditional conker-smashing game."
+    "description": "In autumn, hunt for fallen conkers under horse chestnut trees. Sort them by size, string the best ones, and play the traditional conker-smashing game.",
+    "season": [
+      "Autumn"
+    ]
   },
   {
     "title": "Den Building",
-    "location": "Outside",
+    "location": [
+      "Forest",
+      "Garden"
+    ],
     "energy": "Active",
     "toys": "Sticks, leaves, branches",
-    "description": "Find a spot in the woods or garden and build a den using fallen branches, sticks, and leaves. The goal is a structure you can actually sit inside."
+    "description": "Find a spot in the woods or garden and build a den using fallen branches, sticks, and leaves. The goal is a structure you can actually sit inside.",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Marbles",
-    "location": "Outside",
+    "location": [
+      "Urban",
+      "Garden"
+    ],
     "energy": "Calm",
     "toys": "Marbles",
-    "description": "Draw a circle on the ground and place marbles inside. Players take turns flicking a shooter marble to knock others out of the ring. Keeper rules or return-all — decide before you start."
+    "description": "Draw a circle on the ground and place marbles inside. Players take turns flicking a shooter marble to knock others out of the ring. Keeper rules or return-all — decide before you start.",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Jigsaw Puzzle",
-    "location": "Inside",
+    "location": [
+      "At the table"
+    ],
     "energy": "Calm",
     "toys": "Jigsaw puzzle",
-    "description": "Pick a puzzle that's a little challenging but not frustrating. Work on it together — edges first, then colours and patterns. Leave it out and return to it across the day."
+    "description": "Pick a puzzle that's a little challenging but not frustrating. Work on it together — edges first, then colours and patterns. Leave it out and return to it across the day.",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Collage Making",
-    "location": "Inside",
+    "location": [
+      "At the table"
+    ],
     "energy": "Calm",
     "toys": "Old magazines, scissors, glue, paper",
-    "description": "Cut out pictures, colours, and textures from old magazines and glue them onto paper to make a collage. Give it a theme — animals, food, colours — or just free-form."
+    "description": "Cut out pictures, colours, and textures from old magazines and glue them onto paper to make a collage. Give it a theme — animals, food, colours — or just free-form.",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Paper Plane Workshop",
-    "location": "Inside",
+    "location": [
+      "Inside"
+    ],
     "energy": "Active",
     "toys": "Paper",
-    "description": "Look up two or three different paper plane designs and build them all. Then test which flies furthest, which does the best loop, and which is the most accurate."
+    "description": "Look up two or three different paper plane designs and build them all. Then test which flies furthest, which does the best loop, and which is the most accurate.",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Cardboard Box Build",
-    "location": "Inside",
+    "location": [
+      "Inside"
+    ],
     "energy": "Calm",
     "toys": "Cardboard boxes, tape, scissors, markers",
-    "description": "Give kids a pile of cardboard boxes and tape and let them build whatever they want — a rocket, a castle, a shop, a robot. The construction is the game."
+    "description": "Give kids a pile of cardboard boxes and tape and let them build whatever they want — a rocket, a castle, a shop, a robot. The construction is the game.",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Nature Print Art",
-    "location": "Inside",
+    "location": [
+      "Inside"
+    ],
     "energy": "Calm",
     "toys": "Leaves, paint, paper",
-    "description": "Coat leaves, pine cones, or other natural objects in paint and press them onto paper to make prints. Layer different shapes and colours for a rich result."
+    "description": "Coat leaves, pine cones, or other natural objects in paint and press them onto paper to make prints. Layer different shapes and colours for a rich result.",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Card Games",
-    "location": "Inside",
+    "location": [
+      "At the table"
+    ],
     "energy": "Calm",
     "toys": "A deck of cards",
-    "description": "Snap, Go Fish, and Old Maid are easy to learn from age four or five. Crazy Eights and War work well for older kids. One deck, endless options."
+    "description": "Snap, Go Fish, and Old Maid are easy to learn from age four or five. Crazy Eights and War work well for older kids. One deck, endless options.",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Dominoes",
-    "location": "Inside",
+    "location": [
+      "At the table"
+    ],
     "energy": "Calm",
     "toys": "Dominoes",
-    "description": "Play the classic matching game, or skip the rules and use the dominoes to build long toppling chains across the floor. Both are satisfying in different ways."
+    "description": "Play the classic matching game, or skip the rules and use the dominoes to build long toppling chains across the floor. Both are satisfying in different ways.",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Board Game Afternoon",
-    "location": "Inside",
+    "location": [
+      "At the table"
+    ],
     "energy": "Calm",
     "toys": "Board game of choice",
-    "description": "Pick a board game the whole family can play. Classics like Ludo, Snakes and Ladders, or Dobble work across wide age gaps. Agree on the rules before you start."
+    "description": "Pick a board game the whole family can play. Classics like Ludo, Snakes and Ladders, or Dobble work across wide age gaps. Agree on the rules before you start.",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Indoor Treasure Hunt",
-    "location": "Inside",
+    "location": [
+      "Inside"
+    ],
     "energy": "Active",
     "toys": "Paper, pen, small prize",
-    "description": "Write a series of clues that lead from one hiding spot to the next around the house. End at a small prize or treat. Takes ten minutes to set up, half an hour to solve."
+    "description": "Write a series of clues that lead from one hiding spot to the next around the house. End at a small prize or treat. Takes ten minutes to set up, half an hour to solve.",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Kitchen Science",
-    "location": "Inside",
+    "location": [
+      "At the table"
+    ],
     "energy": "Calm",
     "toys": "Baking soda, vinegar, food colouring",
-    "description": "The classic volcano: baking soda in a cup, pour in vinegar, watch it fizz. Add food colouring for drama. Try varying the amounts — more is always more."
+    "description": "The classic volcano: baking soda in a cup, pour in vinegar, watch it fizz. Add food colouring for drama. Try varying the amounts — more is always more.",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Charades",
-    "location": "Inside",
+    "location": [
+      "Inside"
+    ],
     "energy": "Active",
     "toys": "None",
-    "description": "Act out an animal, object, or film title without speaking while the others guess. For young kids, stick to animals — no reading required. Whoever guesses correctly acts next."
+    "description": "Act out an animal, object, or film title without speaking while the others guess. For young kids, stick to animals — no reading required. Whoever guesses correctly acts next.",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Drawing Consequences",
-    "location": "Inside",
+    "location": [
+      "At the table"
+    ],
     "energy": "Calm",
     "toys": "Paper, pencils",
-    "description": "Each person draws a head at the top of a strip of paper, folds it over so only the neck shows, and passes it on. The next person draws a body, folds, passes. Unfold at the end."
+    "description": "Each person draws a head at the top of a strip of paper, folds it over so only the neck shows, and passes it on. The next person draws a body, folds, passes. Unfold at the end.",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Grimm's Rainbow Building",
-    "location": "Inside",
+    "location": [
+      "Inside"
+    ],
     "energy": "Calm",
     "toys": "Grimm's rainbow",
-    "description": "Stack the arches into towers, nest them inside each other, or use them as tunnels and bridges for small figures. No rules — just see what shapes emerge."
+    "description": "Stack the arches into towers, nest them inside each other, or use them as tunnels and bridges for small figures. No rules — just see what shapes emerge.",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Rainbow Small World",
-    "location": "Inside",
+    "location": [
+      "Inside"
+    ],
     "energy": "Calm",
     "toys": "Grimm's rainbow, Ostheimer animals or small figures",
-    "description": "Use the rainbow arches to build a landscape — caves, hills, pens, rivers — and populate it with wooden animals or figures. Let kids invent the story."
+    "description": "Use the rainbow arches to build a landscape — caves, hills, pens, rivers — and populate it with wooden animals or figures. Let kids invent the story.",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Play Silk Dress-Up",
-    "location": "Inside",
+    "location": [
+      "Inside"
+    ],
     "energy": "Calm",
     "toys": "Play silks",
-    "description": "Play silks become capes, crowns, skirts, wings, or wizard robes. No cutting or tying needed — just drape, tuck, and imagine. Let kids lead the transformation."
+    "description": "Play silks become capes, crowns, skirts, wings, or wizard robes. No cutting or tying needed — just drape, tuck, and imagine. Let kids lead the transformation.",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Play Silk Landscapes",
-    "location": "Inside",
+    "location": [
+      "Inside"
+    ],
     "energy": "Calm",
     "toys": "Play silks, small figures or animals",
-    "description": "Lay silks flat as rivers, meadows, or seas for a small world scene. Blue for water, green for fields, brown for earth. Add wooden animals or figures to bring it to life."
+    "description": "Lay silks flat as rivers, meadows, or seas for a small world scene. Blue for water, green for fields, brown for earth. Add wooden animals or figures to bring it to life.",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Play Silk Parachute",
-    "location": "Inside",
+    "location": [
+      "Inside"
+    ],
     "energy": "Active",
     "toys": "Play silks",
-    "description": "Hold a large silk at the corners and billow it up and down together. Place a soft ball or stuffed animal on top and try to keep it bouncing. Works with two or more people."
+    "description": "Hold a large silk at the corners and billow it up and down together. Place a soft ball or stuffed animal on top and try to keep it bouncing. Works with two or more people.",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Peg Puzzle Race",
-    "location": "Inside",
+    "location": [
+      "At the table"
+    ],
     "energy": "Calm",
     "toys": "Wooden peg puzzles",
-    "description": "Take all the pieces out and mix them up. Race to complete the puzzle, or for younger kids, simply sort pieces by colour or shape before placing them. Time it and try to beat the record."
+    "description": "Take all the pieces out and mix them up. Race to complete the puzzle, or for younger kids, simply sort pieces by colour or shape before placing them. Time it and try to beat the record.",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Aquaplay Canal Build",
-    "location": "Garden",
+    "location": [
+      "Garden"
+    ],
     "energy": "Calm",
     "toys": "Aquaplay",
-    "description": "Set up the Aquaplay canal system and experiment with the locks and pumps. Add boats and figures and invent a story about where the cargo is going."
+    "description": "Set up the Aquaplay canal system and experiment with the locks and pumps. Add boats and figures and invent a story about where the cargo is going.",
+    "season": [
+      "Spring",
+      "Summer"
+    ]
   },
   {
     "title": "Aquaplay Boat Race",
-    "location": "Garden",
+    "location": [
+      "Garden"
+    ],
     "energy": "Active",
     "toys": "Aquaplay",
-    "description": "Set up a long straight channel and race the boats from one end to the other using the pump or by blowing gently. First boat to the end wins the round."
+    "description": "Set up a long straight channel and race the boats from one end to the other using the pump or by blowing gently. First boat to the end wins the round.",
+    "season": [
+      "Spring",
+      "Summer"
+    ]
   },
   {
     "title": "Aquaplay Lock Challenge",
-    "location": "Garden",
+    "location": [
+      "Garden"
+    ],
     "energy": "Calm",
     "toys": "Aquaplay",
-    "description": "Focus on the locks — practise raising and lowering boats through each one. For older kids, time how fast they can get a boat through the full system without spilling."
+    "description": "Focus on the locks — practise raising and lowering boats through each one. For older kids, time how fast they can get a boat through the full system without spilling.",
+    "season": [
+      "Spring",
+      "Summer"
+    ]
   },
   {
     "title": "Worm Hunting",
-    "location": "Garden",
+    "location": [
+      "Garden"
+    ],
     "energy": "Calm",
     "toys": "Small trowel or stick, jar",
-    "description": "After rain is the best time. Dig gently in soft soil or lift flat stones and logs to find worms. Look at how they move, count them, then put them back carefully."
+    "description": "After rain is the best time. Dig gently in soft soil or lift flat stones and logs to find worms. Look at how they move, count them, then put them back carefully.",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Bug Hotel",
-    "location": "Garden",
+    "location": [
+      "Garden"
+    ],
     "energy": "Calm",
     "toys": "Sticks, pine cones, bark, straw, a wooden box or milk carton",
-    "description": "Build a bug hotel by filling a box or milk carton with natural materials — pine cones, hollow stems, bark, straw. Place it in a shady corner and check back over days to see who moves in."
+    "description": "Build a bug hotel by filling a box or milk carton with natural materials — pine cones, hollow stems, bark, straw. Place it in a shady corner and check back over days to see who moves in.",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Snail Race",
-    "location": "Garden",
+    "location": [
+      "Garden"
+    ],
     "energy": "Calm",
     "toys": "None",
-    "description": "Find two or three snails after rain. Draw a circle on the paving, place them in the middle, and see which one reaches the edge first. No touching once the race begins."
+    "description": "Find two or three snails after rain. Draw a circle on the paving, place them in the middle, and see which one reaches the edge first. No touching once the race begins.",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Under the Stone Safari",
-    "location": "Garden",
+    "location": [
+      "Garden"
+    ],
     "energy": "Calm",
     "toys": "Magnifying glass",
-    "description": "Gently lift stones, logs, and bark around the garden. Look at what lives underneath — woodlice, beetles, centipedes, ants. Observe for a minute, then replace everything exactly as you found it."
+    "description": "Gently lift stones, logs, and bark around the garden. Look at what lives underneath — woodlice, beetles, centipedes, ants. Observe for a minute, then replace everything exactly as you found it.",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Butterfly and Bee Watch",
-    "location": "Garden",
+    "location": [
+      "Garden"
+    ],
     "energy": "Calm",
     "toys": "None",
-    "description": "Pick a flower patch or bush in bloom and sit quietly nearby for five minutes. Count how many different insects visit. Which flowers get the most? Talk about why."
+    "description": "Pick a flower patch or bush in bloom and sit quietly nearby for five minutes. Count how many different insects visit. Which flowers get the most? Talk about why.",
+    "season": [
+      "Spring",
+      "Summer"
+    ]
   },
   {
     "title": "Earthworm Rescue",
-    "location": "Garden",
+    "location": [
+      "Garden"
+    ],
     "energy": "Calm",
     "toys": "None",
-    "description": "After heavy rain, worms come to the surface and can get stranded on paths and paving. Go on a rescue mission — carefully pick them up and return them to the soil."
+    "description": "After heavy rain, worms come to the surface and can get stranded on paths and paving. Go on a rescue mission — carefully pick them up and return them to the soil.",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Pouring Station",
-    "location": "Garden",
+    "location": [
+      "Garden"
+    ],
     "energy": "Calm",
     "toys": "Buckets, jugs, bottles, funnels, cups",
-    "description": "Set out a row of containers of different sizes and a water source. Let kids pour, transfer, and measure freely. Which holds the most? How many small cups fill the big bucket?"
+    "description": "Set out a row of containers of different sizes and a water source. Let kids pour, transfer, and measure freely. Which holds the most? How many small cups fill the big bucket?",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Puddle Painting",
-    "location": "Garden",
+    "location": [
+      "Garden"
+    ],
     "energy": "Calm",
     "toys": "Sticks, stones, leaves",
-    "description": "Use sticks and stones to draw in the mud at the edge of a puddle, or drag wet mud onto dry paving to make patterns. Natural materials only — the garden is the canvas."
+    "description": "Use sticks and stones to draw in the mud at the edge of a puddle, or drag wet mud onto dry paving to make patterns. Natural materials only — the garden is the canvas.",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Waterfall Builder",
-    "location": "Garden",
+    "location": [
+      "Garden"
+    ],
     "energy": "Active",
     "toys": "Hose, buckets, plastic guttering or ramps if available",
-    "description": "Use whatever you can find to build a ramp system that moves water from one point to another. Plastic guttering, upturned lids, and buckets all work. How far can you move the water?"
+    "description": "Use whatever you can find to build a ramp system that moves water from one point to another. Plastic guttering, upturned lids, and buckets all work. How far can you move the water?",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Flower Pressing",
-    "location": "Garden",
+    "location": [
+      "Garden"
+    ],
     "energy": "Calm",
     "toys": "Heavy books, paper",
-    "description": "Pick a few small flowers and leaves. Lay them flat between two sheets of paper inside a heavy book. Check back in a week — they will have dried flat and kept their colour."
+    "description": "Pick a few small flowers and leaves. Lay them flat between two sheets of paper inside a heavy book. Check back in a week — they will have dried flat and kept their colour.",
+    "season": [
+      "Spring",
+      "Summer"
+    ]
   },
   {
     "title": "Petal Potions",
-    "location": "Garden",
+    "location": [
+      "Garden"
+    ],
     "energy": "Calm",
     "toys": "Jars, water, petals, leaves",
-    "description": "Collect fallen petals, leaves, and garden bits. Mix them with water in jars to make potions and perfumes. Smell each one. Name them. Decide what magical powers they have."
+    "description": "Collect fallen petals, leaves, and garden bits. Mix them with water in jars to make potions and perfumes. Smell each one. Name them. Decide what magical powers they have.",
+    "season": [
+      "Spring",
+      "Summer"
+    ]
   },
   {
     "title": "Garden Colour Hunt",
-    "location": "Garden",
+    "location": [
+      "Garden"
+    ],
     "energy": "Active",
     "toys": "Paper, crayons or paint swatches",
-    "description": "Draw a colour grid on paper — red, yellow, orange, purple, green, white. Race to find something in the garden that matches each colour. Natural things only."
+    "description": "Draw a colour grid on paper — red, yellow, orange, purple, green, white. Race to find something in the garden that matches each colour. Natural things only.",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn"
+    ]
   },
   {
     "title": "Sit Spot",
-    "location": "Garden",
+    "location": [
+      "Garden"
+    ],
     "energy": "Calm",
     "toys": "None",
-    "description": "Each person picks a spot in the garden and sits completely still and quiet for five minutes. Afterwards share what you noticed — sounds, movements, smells, creatures. Do it regularly and the garden starts to feel familiar."
+    "description": "Each person picks a spot in the garden and sits completely still and quiet for five minutes. Afterwards share what you noticed — sounds, movements, smells, creatures. Do it regularly and the garden starts to feel familiar.",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Tree Climbing",
-    "location": "Garden",
+    "location": [
+      "Garden"
+    ],
     "energy": "Active",
     "toys": "None",
-    "description": "Find the right tree — one with low sturdy branches — and let kids climb at their own pace. Resist the urge to direct. The point is working out how to move their own body through the tree."
+    "description": "Find the right tree — one with low sturdy branches — and let kids climb at their own pace. Resist the urge to direct. The point is working out how to move their own body through the tree.",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Bark and Leaf Rubbings",
-    "location": "Garden",
+    "location": [
+      "Garden"
+    ],
     "energy": "Calm",
     "toys": "Paper, crayons",
-    "description": "Hold paper against tree bark and rub a crayon sideways to reveal the texture. Do the same with leaves on the ground. Compare different trees — every bark pattern is unique."
+    "description": "Hold paper against tree bark and rub a crayon sideways to reveal the texture. Do the same with leaves on the ground. Compare different trees — every bark pattern is unique.",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Weather Watching",
-    "location": "Garden",
+    "location": [
+      "Garden"
+    ],
     "energy": "Calm",
     "toys": "Paper, pencil",
-    "description": "Step outside at the same time each day and record the weather — sun, clouds, wind direction, temperature feel, rain. After a week the pattern becomes visible. A simple habit that builds real observation skills."
+    "description": "Step outside at the same time each day and record the weather — sun, clouds, wind direction, temperature feel, rain. After a week the pattern becomes visible. A simple habit that builds real observation skills.",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Pillowcase Cinema",
-    "location": "Inside",
+    "location": [
+      "Inside"
+    ],
     "energy": "Calm",
     "toys": "Duvet, snacks, a film",
-    "description": "Pull all the duvets and cushions into the living room, make a big nest, pick a film together, and make popcorn. Deliberate and slow — that is the point."
+    "description": "Pull all the duvets and cushions into the living room, make a big nest, pick a film together, and make popcorn. Deliberate and slow — that is the point.",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   },
   {
     "title": "Marble Racing",
-    "location": "Inside",
+    "location": [
+      "Inside",
+      "At the table"
+    ],
     "energy": "Calm",
     "toys": "Marbles, cardboard tubes or books",
-    "description": "Build a race track using cardboard tubes, rolled-up paper, or books propped at an angle. Race two marbles side by side and adjust the slope to change the speed. Try building a multi-stage course that winds across the floor."
+    "description": "Build a race track using cardboard tubes, rolled-up paper, or books propped at an angle. Race two marbles side by side and adjust the slope to change the speed. Try building a multi-stage course that winds across the floor.",
+    "season": [
+      "Spring",
+      "Summer",
+      "Autumn",
+      "Winter"
+    ]
   }
 ]
