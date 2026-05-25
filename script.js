@@ -424,7 +424,7 @@ function buildBottomSheet(group) {
   const desktopItems = document.querySelectorAll(`.dropdown-item[data-group="${group}"]`);
   desktopItems.forEach(original => {
     const clone = document.createElement('div');
-    clone.className = 'dropdown-item bottom-item' + (original.classList.contains('selected') ? ' selected' : '');
+    clone.className = 'bottom-item' + (original.classList.contains('selected') ? ' selected' : '');
     clone.setAttribute('role', 'checkbox');
     clone.setAttribute('aria-checked', original.getAttribute('aria-checked'));
     clone.setAttribute('tabindex', '0');
