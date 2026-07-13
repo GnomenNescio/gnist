@@ -1865,5 +1865,76 @@
     "title_no": "Glasskulebane",
     "description_no": "Bygg en bane med papptuber eller bøker i vinkel og løp to glasskular side om side.",
     "toys_no": "glasskular, papprør eller bøker"
+  },
+  {
+    "title": "Garden Picnic",
+    "location": [
+      "Garden"
+    ],
+    "energy": "Calm",
+    "toys": "Blanket, food, drinks",
+    "description": "Spread a blanket on the grass, pack simple snacks, and eat outside together. Let the kids help choose and prepare the food. Eating in the garden turns an ordinary meal into something memorable.",
+    "conditions": [
+      "Sunny"
+    ],
+    "title_no": "Hagepiknick",
+    "description_no": "Legg et teppe på gresset, pak enkel mat og spis ute sammen. La barna hjelpe til med å velge og lage maten.",
+    "toys_no": "teppe, mat, drikke"
+  },
+  {
+    "title": "Tree Identification",
+    "location": [
+      "Forest",
+      "Garden",
+      "Urban"
+    ],
+    "energy": "Calm",
+    "toys": "Field guide or phone, paper, pencil",
+    "description": "Walk around the neighbourhood or park and try to identify trees by their leaves, bark, and shape. Sketch or photograph each one. See how many different species you can find in a single outing.",
+    "conditions": [
+      "Sunny",
+      "Cloudy"
+    ],
+    "title_no": "Treidentifisering",
+    "description_no": "Gå rundt i nabolaget eller parken og prøv å identifisere trær etter blader, bark og form. Tegn eller fotografer hvert tre.",
+    "toys_no": "feltguide eller telefon, papir, blyant"
+  },
+  {
+    "title": "Shadow Puppets",
+    "location": [
+      "Inside"
+    ],
+    "energy": "Calm",
+    "toys": "Flashlight or lamp, white wall or sheet",
+    "description": "Shine a torch or lamp at a white wall and use your hands to make animal and character shapes. Take turns telling a story with the shadows. Older kids can cut puppet shapes from cardboard and put on a full show.",
+    "conditions": [
+      "Sunny",
+      "Cloudy",
+      "Rainy",
+      "Snowy"
+    ],
+    "title_no": "Skyggeteater",
+    "description_no": "Rett en lommelykt mot en hvit vegg og bruk hendene til å lage dyr og figurer. Fortell en historie med skygger.",
+    "toys_no": "lommelykt eller lampe, hvit vegg eller laken"
+  },
+  {
+    "title": "Paper Planes",
+    "location": [
+      "Inside",
+      "Garden",
+      "Urban"
+    ],
+    "energy": "Active",
+    "toys": "Paper",
+    "description": "Fold paper planes and test different designs to see which flies furthest or stays up longest. Mark a launch line and measure each flight. Try tweaking the wings or nose to improve performance.",
+    "conditions": [
+      "Sunny",
+      "Cloudy",
+      "Rainy",
+      "Snowy"
+    ],
+    "title_no": "Papirfly",
+    "description_no": "Brett papirfly og test ulike design for å se hvilket som flyr lengst eller holder seg oppe lengst. Mål hver flytur.",
+    "toys_no": "papir"
   }
 ]
